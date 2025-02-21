@@ -59,24 +59,52 @@ impulsionou o desenvolvimento da ciência e da tecnologia moderna.
 
                        "Comparação entre Notação Posicional e Não Posicional"
 
-Ao longo da história, diferentes sistemas numéricos foram desenvolvidos para representar quantidades, e eles podem ser divididos em duas grandes categorias: notação posicional e notação não posicional. A principal diferença entre esses sistemas está na maneira como os valores são atribuídos aos símbolos. Na notação posicional, o valor de um número depende tanto do símbolo utilizado quanto da posição em que ele aparece. Já na notação não posicional, cada símbolo tem um valor fixo, independentemente de onde esteja na sequência.
+ Como já vimos, ao longo da história, diferentes sistemas numéricos foram desenvolvidos para representar 
+quantidades, e eles podem ser divididos em duas grandes categorias: notação posicional e notação não posicional. A 
+principal diferença entre esses sistemas está na maneira como os valores são atribuídos aos símbolos. Na notação 
+posicional, o valor de um número depende tanto do símbolo utilizado quanto da posição em que ele aparece. Já na 
+notação não posicional, cada símbolo tem um valor fixo, independentemente de onde esteja na sequência.
 
-Essa distinção pode parecer sutil, mas tem um impacto gigantesco na forma como os números são representados e manipulados. Sistemas não posicionais, como os números romanos, foram amplamente utilizados em civilizações antigas, mas tinham limitações que dificultavam cálculos complexos. Já a notação posicional, que se tornou padrão nos sistemas modernos, permite realizar operações matemáticas com muito mais eficiência e simplicidade. 
+ Essa distinção pode parecer sutil, mas tem um impacto gigantesco na forma como os números são representados e 
+manipulados. Sistemas não posicionais, como os números romanos, foram amplamente utilizados em civilizações 
+antigas, mas tinham limitações que dificultavam cálculos complexos. Já a notação posicional, que se tornou padrão 
+nos sistemas modernos, permite realizar operações matemáticas com muito mais eficiência e simplicidade. 
 
-Para entender melhor essas diferenças, vamos explorar cada um desses sistemas separadamente.
+ Para entender melhor essas diferenças, vamos explorar cada um desses sistemas separadamente.
 
-Notação Posicional: A notação posicional é a forma mais comum de representação numérica hoje. Seu principal benefício é a maneira eficiente de expressar números usando um conjunto limitado de símbolos e a posição de cada um para indicar seu valor real. Esse sistema permite representar qualquer número, por maior que seja, de forma compacta e compreensível.
+ * Notação Posicional: A notação posicional é a forma mais comum de representação numérica hoje. Seu principal 
+  benefício é a maneira eficiente de expressar números usando um conjunto limitado de símbolos e a posição de cada 
+  um para indicar seu valor real. Esse sistema permite representar qualquer número, por maior que seja, de forma 
+  compacta e compreensível.
 
-Para ilustrar, pense no número 432 no sistema decimal. O dígito "4" não significa apenas "quatro", mas sim "quatro centenas", porque sua posição determina que ele vale 400. O mesmo vale para o "3", que representa "três dezenas" (30), e o "2", que mantém seu valor original porque está na posição das unidades. Essa lógica se aplica a qualquer base numérica, como o sistema binário (base 2), onde cada posição representa uma potência de 2.
+   Para ilustrar, pense no número 432 no sistema decimal. O dígito "4" não significa apenas "quatro", mas sim 
+  "quatro centenas", porque sua posição determina que ele vale 400. O mesmo vale para o "3", que representa "três 
+  dezenas" (30), e o "2", que mantém seu valor original porque está na posição das unidades. Essa lógica se aplica 
+  a qualquer base numérica, como o sistema binário (base 2), onde cada posição representa uma potência de 2.
 
-A notação posicional tornou os cálculos matemáticos muito mais práticos. Operações como soma, subtração, multiplicação e divisão podem ser feitas de maneira sistemática e eficiente. Além disso, ela foi essencial para o desenvolvimento da matemática avançada e da computação, pois permite representar números de forma estruturada e organizada.
+   A notação posicional tornou os cálculos matemáticos muito mais práticos. Operações como soma, subtração, 
+  multiplicação e divisão podem ser feitas de maneira sistemática e eficiente. Além disso, ela foi essencial para o 
+  desenvolvimento da matemática avançada e da computação, pois permite representar números de forma estruturada e   
+  organizada.
 
 
-Notação Não Posicional: A notação não posicional, por outro lado, não depende da posição dos símbolos para indicar valores diferentes. Cada símbolo tem um valor fixo, independentemente de onde esteja na sequência numérica. Esse tipo de notação era muito comum em civilizações antigas, sendo um dos exemplos mais conhecidos o sistema de numeração romano.
+ * Notação Não Posicional: A notação não posicional, por outro lado, não depende da posição dos símbolos para 
+  indicar valores diferentes. Cada símbolo tem um valor fixo, independentemente de onde esteja na sequência 
+  numérica. Esse tipo de notação era muito comum em civilizações antigas, sendo um dos exemplos mais conhecidos o 
+  sistema de numeração romano.
 
-No sistema romano, por exemplo, o numeral "X" sempre representa 10, não importa onde esteja. No entanto, existe uma regra de subtração em alguns casos específicos: "IX" representa 9, pois significa "10 menos 1". Isso torna o sistema menos intuitivo e mais difícil de ser utilizado para cálculos matemáticos. Imagine tentar multiplicar LXVII × XIII (67 × 13) sem um sistema posicional! A complexidade rapidamente se torna um obstáculo.
+   No sistema romano, por exemplo, o numeral "X" sempre representa 10, não importa onde esteja. No entanto, existe 
+  uma regra de subtração em alguns casos específicos: "IX" representa 9, pois significa "10 menos 1". Isso torna o 
+  sistema menos intuitivo e mais difícil de ser utilizado para cálculos matemáticos. Imagine tentar multiplicar 
+  LXVII × XIII (67 × 13) sem um sistema posicional! A complexidade rapidamente se torna um obstáculo.
 
-Embora sistemas não posicionais tenham sido úteis para registro de quantidades e contagem em culturas antigas, eles eram ineficientes para operações matemáticas complexas. Foi por isso que, com o tempo, a notação posicional se tornou dominante, pois facilitava os cálculos e permitia avanços significativos na ciência e na tecnologia.
+   Embora sistemas não posicionais tenham sido úteis para registro de quantidades e contagem em culturas antigas, 
+  eles eram ineficientes para operações matemáticas complexas. Foi por isso que, com o tempo, a notação posicional 
+  se tornou dominante, pois facilitava os cálculos e permitia avanços significativos na ciência e na tecnologia.
 
-
-Em suma, a transição dos sistemas não posicionais para os sistemas posicionais foi um marco essencial no desenvolvimento da matemática. Enquanto a notação não posicional foi um passo inicial importante na representação numérica, ela apresentava limitações que tornavam cálculos complexos difíceis de serem realizados. A notação posicional trouxe uma maneira mais eficiente e flexível de lidar com os números, permitindo avanços que vão desde a matemática básica até o funcionamento dos computadores modernos. Graças a esse sistema, podemos representar qualquer número com um pequeno conjunto de símbolos e realizar cálculos com rapidez e precisão.
+ Em suma, a transição dos sistemas não posicionais para os sistemas posicionais foi um marco essencial no 
+desenvolvimento da matemática. Enquanto a notação não posicional foi um passo inicial importante na representação 
+numérica, ela apresentava limitações que tornavam cálculos complexos difíceis de serem realizados. A notação 
+posicional trouxe uma maneira mais eficiente e flexível de lidar com os números, permitindo avanços que vão desde a 
+matemática básica até o funcionamento dos computadores modernos. Graças a esse sistema, podemos representar 
+qualquer número com um pequeno conjunto de símbolos e realizar cálculos com rapidez e precisão.
