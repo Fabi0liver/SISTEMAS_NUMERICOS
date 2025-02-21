@@ -156,89 +156,113 @@ sistemática e representar números grandes ou pequenos com precisão, tornando-
 
 
 
-                     "Notação Posicional em Sistemas de Bases Comuns"
+                        "Notação Posicional em Sistemas de Bases Comuns"
 
-Os sistemas numéricos podem ser representados por diferentes bases, e a notação posicional se adapta a cada uma delas. O sistema decimal (base 10) é o mais utilizado no dia a dia, enquanto sistemas como o binário (base 2), octal (base 8) e hexadecimal (base 16) são amplamente usados em computação. Cada sistema possui seu próprio conjunto de símbolos e regras para representar valores, mas todos seguem a mesma estrutura da notação posicional.
+ Os sistemas numéricos podem ser representados por diferentes bases, e a notação posicional se adapta a cada uma 
+delas. O sistema decimal (base 10) é o mais utilizado no dia a dia, enquanto sistemas como o binário (base 2), 
+octal (base 8) e hexadecimal (base 16) são amplamente usados em computação. Cada sistema possui seu próprio 
+conjunto de símbolos e regras para representar valores, mas todos seguem a mesma estrutura da notação posicional.
 
-A diferença entre essas bases está no número de dígitos disponíveis e no fator pelo qual cada posição é multiplicada. No sistema decimal, cada posição é uma potência de 10, enquanto no sistema binário é uma potência de 2, no octal de 8 e no hexadecimal de 16. Isso permite que qualquer número possa ser representado nesses sistemas com base em sua posição e valor correspondente.
+ A diferença entre essas bases está no número de dígitos disponíveis e no fator pelo qual cada posição é 
+multiplicada. No sistema decimal, cada posição é uma potência de 10, enquanto no sistema binário é uma potência de 
+2, no octal de 8 e no hexadecimal de 16. Isso permite que qualquer número possa ser representado nesses sistemas 
+com base em sua posição e valor correspondente.
 
-Abaixo, veremos como a notação posicional se aplica a cada uma dessas bases.
+ Abaixo, veremos como a notação posicional se aplica a cada uma dessas bases.
 
-Sistema Decimal (Base 10): É o mais familiar para nós, pois usamos no cotidiano para contar, medir e calcular. Ele utiliza 10 dígitos (0 a 9) e cada posição representa uma potência de 10.
+ * Sistema Decimal (Base 10): É o mais familiar para nós, pois usamos no cotidiano para contar, medir e calcular. 
+  Ele utiliza 10 dígitos (0 a 9) e cada posição representa uma potência de 10.
 
-Exemplo de Notação Posicional no Decimal:
+   Exemplo de Notação Posicional no Decimal:
 
-Número: 352,67 (Base 10)
+           Número: 352,67 (Base 10)
 
-Posição   | Potência de 10 |   Cálculo 
---------------------------------------------
-Centena   | 10^2           | 3 × 100 = 300
-Dezena    | 10^1           | 5 × 10  = 50
-Unidade   | 10^0           | 2 × 1   = 2
-Décimo    | 10^-1          | 6 × 0.1 = 0.6
-Centésimo | 10^-2          | 7 × 0.01 = 0.07
+           Posição   | Potência de 10 |   Cálculo 
+          --------------------------------------------
+           Centena   | 10^2           | 3 × 100 = 300
+           Dezena    | 10^1           | 5 × 10  = 50
+           Unidade   | 10^0           | 2 × 1   = 2
+           Décimo    | 10^-1          | 6 × 0.1 = 0.6
+           Centésimo | 10^-2          | 7 × 0.01 = 0.07
+  
+           Resultado final: 300 + 50 + 2 + 0.6 + 0.07 = 352,67
 
-Resultado final: 300 + 50 + 2 + 0.6 + 0.07 = 352,67
-
-O sistema decimal é a base mais intuitiva para os seres humanos, pois está diretamente ligado à forma como aprendemos a contar e calcular desde cedo. Sua notação posicional torna os cálculos mais organizados e facilita o entendimento de números grandes ou fracionários.
-
-
-Sistema Binário (Base 2): É a base da computação e eletrônica digital, pois usa apenas dois dígitos: 0 e 1. Cada posição representa uma potência de 2.
-
-Exemplo de Notação Posicional no Binário:
-
-Número: 1011,01 (Base 2)
-
-Posição   | Potência de 2 |   Cálculo  
---------------------------------------------
-2^3       | 8             | 1 × 8  = 8
-2^2       | 4             | 0 × 4  = 0
-2^1       | 2             | 1 × 2  = 2
-2^0       | 1             | 1 × 1  = 1
-2^-1      | 0.5           | 0 × 0.5 = 0
-2^-2      | 0.25          | 1 × 0.25 = 0.25
-
-Resultado final: 8 + 0 + 2 + 1 + 0 + 0.25 = 11,25 (Base 10)
-
-O sistema binário é fundamental para o funcionamento dos computadores, pois é simples de ser implementado eletronicamente com circuitos que diferenciam apenas dois estados (ligado e desligado). Embora menos intuitivo para os humanos, é extremamente eficiente para o processamento digital.
+   O sistema decimal é a base mais intuitiva para os seres humanos, pois está diretamente ligado à forma como 
+  aprendemos a contar e calcular desde cedo. Sua notação posicional torna os cálculos mais organizados e facilita o 
+  entendimento de números grandes ou fracionários.
 
 
-Sistema Octal (Base 8): É usado em algumas aplicações de computação, pois é mais compacto do que o binário e mais fácil de converter. Ele usa 8 dígitos: 0 a 7, e cada posição representa uma potência de 8.
+ * Sistema Binário (Base 2): É a base da computação e eletrônica digital, pois usa apenas dois dígitos: 0 e 1. Cada   
+  posição representa uma potência de 2.
 
-Exemplo de Notação Posicional no Octal:
+   Exemplo de Notação Posicional no Binário:
 
-Número: 345,6 (Base 8)
+           Número: 1011,01 (Base 2)
 
-Posição   | Potência de 8 |     Cálculo  
----------------------------------------------
-8^2       | 64            | 3 × 64  = 192
-8^1       | 8             | 4 × 8   = 32
-8^0       | 1             | 5 × 1   = 5
-8^-1      | 0.125         | 6 × 0.125 = 0.75
+           Posição | Potência de 2 | Cálculo  
+          ----------------------------------------
+           8       | 2^3           | 1 × 8  = 8
+           4       | 2^2           | 0 × 4  = 0
+           2       | 2^1           | 1 × 2  = 2
+           1       | 2^0           | 1 × 1  = 1
+           0.5     | 2^-1          | 0 × 0.5 = 0
+           0.25    | 2^-2          | 1 × 0.25 = 0.25
 
-Resultado final: 192 + 32 + 5 + 0.75 = 229,75 (Base 10)
+           Resultado final: 8 + 0 + 2 + 1 + 0 + 0.25 = 11,25 (Base 10)
 
-O sistema octal já foi amplamente utilizado na computação, especialmente em linguagens de programação mais antigas e em sistemas embarcados. Embora tenha perdido espaço para o hexadecimal, ainda é útil para representar grupos de bits de maneira mais compacta.
+   O sistema binário é fundamental para o funcionamento dos computadores, pois é simples de ser implementado 
+  eletronicamente com circuitos que diferenciam apenas dois estados (ligado e desligado). Embora menos intuitivo 
+  para os humanos, é extremamente eficiente para o processamento digital.
 
 
-Sistema Hexadecimal (Base 16): É amplamente utilizado na programação e eletrônica, pois representa números grandes de forma compacta. Ele usa 16 símbolos (0-9 e A-F), onde A = 10, B = 11, ..., F = 15. Cada posição representa uma potência de 16.
+ * Sistema Octal (Base 8): É usado em algumas aplicações de computação, pois é mais compacto do que o binário e 
+  mais fácil de converter. Ele usa 8 dígitos: 0 a 7, e cada posição representa uma potência de 8.
 
-Exemplo de Notação Posicional no Hexadecimal:
 
-Número: 2F3,8 (Base 16)
+   Exemplo de Notação Posicional no Octal:
 
-Posição   | Potência de 16 | Cálculo  
------------------------------------
-16^2      | 256           | 2 × 256  = 512
-16^1      | 16            | F (15) × 16 = 240
-16^0      | 1             | 3 × 1    = 3
-16^-1     | 0.0625        | 8 × 0.0625 = 0.5
+           Número: 345,6 (Base 8)
 
-Resultado final: 512 + 240 + 3 + 0.5 = 755,5 (Base 10)
+           Posição    |  Potência de 8 |     Cálculo  
+          ---------------------------------------------
+           64         | 8^2            | 3 × 64  = 192
+            8         | 8^1            | 4 × 8   = 32
+            1         | 8^0            | 5 × 1   = 5
+           0.125      | 8^-1           | 6 × 0.125 = 0.75
 
-O sistema hexadecimal é um dos mais eficientes para representar números grandes em computação, sendo amplamente usado para definir endereços de memória, cores em design digital e outras aplicações técnicas. Sua relação direta com o binário facilita conversões rápidas e compactas.
+           Resultado final: 192 + 32 + 5 + 0.75 = 229,75 (Base 10)
 
-Em suma, a notação posicional se adapta a diferentes sistemas numéricos, permitindo a representação eficiente de valores em diferentes bases. O sistema decimal é o mais comum no dia a dia, enquanto o binário é essencial para a computação. O octal e o hexadecimal são frequentemente utilizados para representar grandes quantidades de dados de forma compacta. Entender como cada base funciona e como os valores são calculados em cada uma delas facilita o trabalho com conversões numéricas e aplicações em programação e eletrônica.
+   O sistema octal já foi amplamente utilizado na computação, especialmente em linguagens de programação mais 
+  antigas e em sistemas embarcados. Embora tenha perdido espaço para o hexadecimal, ainda é útil para representar 
+  grupos de bits de maneira mais compacta.
+
+
+ * Sistema Hexadecimal (Base 16): É amplamente utilizado na programação e eletrônica, pois representa números 
+  grandes de forma compacta. Ele usa 16 símbolos (0-9 e A-F), onde A = 10, B = 11, ..., F = 15. Cada posição 
+  representa uma potência de 16.
+
+   Exemplo de Notação Posicional no Hexadecimal:
+
+           Número: 2F3,8 (Base 16)
+
+           Posição   | Potência de 16 | Cálculo  
+           ------------------------------------
+           256       | 16^2           | 2 × 256  = 512
+           16        | 16^1           | F (15) × 16 = 240
+           1         | 16^0           | 3 × 1    = 3
+           0.0625    | 16^-1        | 8 × 0.0625 = 0.5
+
+           Resultado final: 512 + 240 + 3 + 0.5 = 755,5 (Base 10)
+
+   O sistema hexadecimal é um dos mais eficientes para representar números grandes em computação, sendo amplamente 
+  usado para definir endereços de memória, cores em design digital e outras aplicações técnicas. Sua relação direta 
+  com o binário facilita conversões rápidas e compactas.
+
+ Em suma, a notação posicional se adapta a diferentes sistemas numéricos, permitindo a representação eficiente de 
+valores em diferentes bases. O sistema decimal é o mais comum no dia a dia, enquanto o binário é essencial para a 
+computação. O octal e o hexadecimal são frequentemente utilizados para representar grandes quantidades de dados de 
+forma compacta. Entender como cada base funciona e como os valores são calculados em cada uma delas facilita o 
+trabalho com conversões numéricas e aplicações em programação e eletrônica.
 
 
 
