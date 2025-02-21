@@ -1,4 +1,4 @@
-                                       NOTAÇÃO POSICIONAL
+                                           NOTAÇÃO POSICIONAL
 
  
  Imagine que você está olhando para um número, como 345. Já parou para pensar por que o 3, o 4 e o 5 não têm o 
@@ -108,3 +108,55 @@ numérica, ela apresentava limitações que tornavam cálculos complexos difíce
 posicional trouxe uma maneira mais eficiente e flexível de lidar com os números, permitindo avanços que vão desde a 
 matemática básica até o funcionamento dos computadores modernos. Graças a esse sistema, podemos representar 
 qualquer número com um pequeno conjunto de símbolos e realizar cálculos com rapidez e precisão.
+
+
+
+                             "Como a Notação Posicional Funciona"
+
+ A notação posicional permite representar números de maneira eficiente atribuindo valores diferentes a um mesmo 
+símbolo dependendo de sua posição dentro da sequência numérica. Esse sistema segue um padrão matemático que 
+facilita a interpretação e manipulação dos números, tornando possível realizar cálculos de forma prática e 
+organizada. Cada posição em um número tem um peso específico, determinado por uma base numérica e potências dessa 
+base, o que possibilita a escrita de qualquer valor com um conjunto limitado de símbolos.
+
+ A grande vantagem desse sistema é sua flexibilidade, pois a mesma notação pode ser aplicada a diferentes bases 
+numéricas, como o sistema decimal (base 10), o sistema binário (base 2), o octal (base 8) e o hexadecimal (base 
+16). Isso permite que a notação posicional seja usada em diversas áreas, desde a matemática cotidiana até a 
+computação e a engenharia. 
+
+ Para entender como essa notação é expressa matematicamente, vejamos a seguinte fórmula:
+
+   x = e(n-1) * b^(n-1) + e(n-2) * b^(n-2) + ... + e(1) * b^1 + e(0) * b^0 + e(-1) * b^(-1) + ... + e(-m) * b^(-m)
+
+ Matematicamente, um número x em uma base b pode ser expresso como um polinômio da seguinte forma:
+
+  * e(n-1), e(n-2), ..., e(-m) são os coeficientes (os dígitos do número), que variam de 0 até b-1.
+
+  * b é a base do sistema numérico (por exemplo, 10 no sistema decimal, 2 no binário).
+
+  * O expoente determina a posição do dígito, onde valores positivos representam potências crescentes da base, e 
+   valores negativos representam frações (se houver parte decimal).
+
+ 
+ Para exemplificar, no sistema decimal, o número 345,67 pode ser representado assim:
+
+   345,67 = 3 * 10^2 + 4 * 10^1 + 5 * 10^0 + 6 * 10^(-1) + 7 * 10^(-2)
+
+  Isso significa:
+
+    345,67 = 300 + 40 + 5 + 0.6 + 0.07
+
+  Isso reforça como cada dígito assume um valor proporcional à sua posição, tornando a notação posicional eficiente  
+ para representar qualquer número.
+
+ Em suma, a notação posicional é um sistema poderoso que permite representar números de maneira organizada e 
+eficiente. Sua estrutura baseada em potências facilita cálculos e amplia a aplicabilidade da matemática em diversas 
+áreas, como computação, engenharia e física. Graças a essa notação, podemos realizar operações matemáticas de forma 
+sistemática e representar números grandes ou pequenos com precisão, tornando-a indispensável no mundo moderno.
+
+
+
+
+
+
+
