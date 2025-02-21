@@ -111,7 +111,7 @@ qualquer número com um pequeno conjunto de símbolos e realizar cálculos com r
 
 
 
-                             "Como a Notação Posicional Funciona"
+                               "Como a Notação Posicional Funciona"
 
  A notação posicional permite representar números de maneira eficiente atribuindo valores diferentes a um mesmo 
 símbolo dependendo de sua posição dentro da sequência numérica. Esse sistema segue um padrão matemático que 
@@ -156,7 +156,7 @@ sistemática e representar números grandes ou pequenos com precisão, tornando-
 
 
 
-                        "Notação Posicional em Sistemas de Bases Comuns"
+                            "Notação Posicional em Sistemas de Bases Comuns"
 
  Os sistemas numéricos podem ser representados por diferentes bases, e a notação posicional se adapta a cada uma 
 delas. O sistema decimal (base 10) é o mais utilizado no dia a dia, enquanto sistemas como o binário (base 2), 
@@ -266,7 +266,7 @@ trabalho com conversões numéricas e aplicações em programação e eletrônic
 
 
 
-                         "Importância da Notação Posicional na Computação"
+                              "Importância da Notação Posicional na Computação"
 
  A notação posicional desempenha um papel fundamental na computação moderna, sendo essencial para a forma como os 
 computadores processam e armazenam dados. Nos sistemas de computadores, especialmente no uso do sistema binário, 
@@ -292,7 +292,7 @@ computação moderna.
 
 
 
-                            "Conclusão sobre a Notação Posicional"
+                                  "Conclusão sobre a Notação Posicional"
 
  A notação posicional é, sem dúvida, um dos pilares fundamentais da matemática e da computação moderna. Ao longo da 
 nossa conversa, vimos como ela organiza os números de maneira simples e eficiente, atribuindo um valor específico a 
