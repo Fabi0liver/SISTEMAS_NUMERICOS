@@ -51,4 +51,11 @@ Em suma, as bases numéricas são formas diferentes de representar números, e c
 
 
 
-                                     
+                                       O que são os Dígitos?
+
+Os dígitos, também chamados de algarismos, são os símbolos básicos usados para formar os números. Eles funcionam como as "letras" dos números, sendo as peças fundamentais que, combinadas de diferentes formas, permitem representar quantidades variadas. Assim como o alfabeto nos permite escrever palavras e expressar ideias, os dígitos nos permitem criar números para medir, contar e calcular. Sem eles, não conseguiríamos estruturar a matemática da forma como a conhecemos hoje.
+
+Cada sistema numérico define quais dígitos são utilizados e como eles se combinam para formar números maiores. No sistema decimal, por exemplo, temos dez dígitos (de 0 a 9), enquanto outros sistemas podem ter mais ou menos símbolos disponíveis. O importante é que os dígitos não possuem valor fixo por si só; o valor que representam depende da posição em que estão dentro de um número. Esse conceito é essencial para entender como diferentes sistemas numéricos organizam as quantidades.
+
+Para visualizar melhor, imagine um cofre com várias gavetas. Cada gaveta pode conter um dígito, mas o valor total do cofre depende de como esses dígitos estão organizados. Se trocarmos a ordem dos números, o valor final pode mudar completamente. É exatamente assim que os dígitos funcionam dentro de um sistema numérico: sozinhos, são apenas símbolos, mas juntos e organizados conforme certas regras, tornam-se uma ferramenta poderosa para representar e manipular quantidades.
+
