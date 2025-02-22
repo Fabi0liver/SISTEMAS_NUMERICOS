@@ -21,7 +21,7 @@ Além de ajudar na contagem, os números também servem para expressar grandezas
 
 
 
-                                    "O que são as Bases Numéricas?"
+                                   "O que são as Bases Numéricas?"
 
 Como já vimos, os números fazem parte do nosso dia a dia, seja ao contar objetos, medir distâncias ou até mesmo ao interagir com a tecnologia. Mas o que poucos percebem é que existem diferentes formas de representar os números, dependendo do sistema que estamos utilizando. Essas diferentes formas de organização numérica seguem um conceito fundamental chamado base numérica, que define quantos símbolos diferentes são usados para formar os números e como eles são combinados para representar quantidades.
 
@@ -51,11 +51,32 @@ Em suma, as bases numéricas são formas diferentes de representar números, e c
 
 
 
-                                       O que são os Dígitos?
+                                      O que são os Dígitos?
 
 Os dígitos, também chamados de algarismos, são os símbolos básicos usados para formar os números. Eles funcionam como as "letras" dos números, sendo as peças fundamentais que, combinadas de diferentes formas, permitem representar quantidades variadas. Assim como o alfabeto nos permite escrever palavras e expressar ideias, os dígitos nos permitem criar números para medir, contar e calcular. Sem eles, não conseguiríamos estruturar a matemática da forma como a conhecemos hoje.
 
 Cada sistema numérico define quais dígitos são utilizados e como eles se combinam para formar números maiores. No sistema decimal, por exemplo, temos dez dígitos (de 0 a 9), enquanto outros sistemas podem ter mais ou menos símbolos disponíveis. O importante é que os dígitos não possuem valor fixo por si só; o valor que representam depende da posição em que estão dentro de um número. Esse conceito é essencial para entender como diferentes sistemas numéricos organizam as quantidades.
 
 Para visualizar melhor, imagine um cofre com várias gavetas. Cada gaveta pode conter um dígito, mas o valor total do cofre depende de como esses dígitos estão organizados. Se trocarmos a ordem dos números, o valor final pode mudar completamente. É exatamente assim que os dígitos funcionam dentro de um sistema numérico: sozinhos, são apenas símbolos, mas juntos e organizados conforme certas regras, tornam-se uma ferramenta poderosa para representar e manipular quantidades.
+
+
+
+                                          "O que são as Potências?"
+
+Quando olhamos para um número como 3.572, dificilmente pensamos no motivo pelo qual cada dígito tem um valor diferente dependendo de onde está. O número 3 na casa dos milhares não vale o mesmo que o número 2 na casa das unidades. Isso acontece porque os sistemas numéricos seguem um princípio chamado posição, onde a posição de cada dígito dentro do número define seu peso. Esse peso é determinado por potências, que são multiplicações sucessivas de um número base. Isso significa que, ao movermos um dígito para a esquerda ou para a direita, ele pode valer muito mais ou muito menos, dependendo da sua posição.
+
+Para entender melhor, pense nas potências como "níveis de importância" dentro do número. Cada posição representa uma potência da base utilizada. No sistema decimal (base 10), por exemplo, cada casa decimal representa uma potência de 10. 
+
+Veja a estrutura do número 3.572 com suas potências associadas:
+
+3 × 10³  =  3 × 1000  =  3.000  
+5 × 10²  =  5 × 100   =    500  
+7 × 10¹  =  7 × 10    =     70  
+2 × 10⁰  =  2 × 1     =      2  
+--------------------------------  
+Valor total = 3.572  
+
+Isso significa que, mesmo que o 3 e o 2 pareçam iguais como símbolos, seus valores são muito diferentes por causa da posição que ocupam. Esse conceito é fundamental para qualquer sistema numérico e explica por que, ao somarmos 1 a 99, ele se transforma em 100 – o dígito da casa das dezenas ultrapassa o limite da sua posição e gera um impacto na casa seguinte.
+
+O uso de potências também é essencial na computação, pois os computadores utilizam sistemas numéricos baseados nesse mesmo princípio, mas com bases diferentes, como o binário (base 2). Entender o papel das potências nos ajuda a interpretar números corretamente e facilita o aprendizado de operações matemáticas e computacionais mais avançadas.
 
