@@ -267,32 +267,46 @@ e influencia diretamente a forma como manipulamos informações matemáticas no 
 
 
 
-                                       "Números Fracionados"
+                                          "Números Fracionados"
 
-Os números fracionados são aqueles que representam partes de um todo. Diferente dos números inteiros, que indicam quantidades exatas, os fracionados expressam divisões, como metade de um bolo, um quarto de um terreno ou 0,75 de um litro de suco. Eles são essenciais para medir, calcular proporções e representar valores que não podem ser expressos com precisão usando apenas números inteiros. No nosso cotidiano, encontramos números fracionados em preços, medições e até no tempo — afinal, dizer que algo durou "meia hora" é uma forma de fracionar o tempo em partes menores.
+ Os números fracionados ou reais, são aqueles que representam partes de um todo. Diferente dos números inteiros, 
+que indicam quantidades exatas, os fracionados expressam divisões, como metade de um bolo, um quarto de um terreno 
+ou 0,75 de um litro de suco. Eles são essenciais para medir, calcular proporções e representar valores que não 
+podem ser expressos com precisão usando apenas números inteiros. No nosso cotidiano, encontramos números 
+fracionados em preços, medições e até no tempo; afinal, dizer que algo durou "meia hora" é uma forma de fracionar o 
+tempo em partes menores.
 
-Na matemática e na computação, os números fracionados podem ser escritos de duas formas principais: como frações (por exemplo, 1/2, 3/4) ou como números decimais (0,5; 0,75). A conversão entre essas representações é baseada na divisão, onde o numerador (a parte de cima da fração) é dividido pelo denominador (a parte de baixo). No caso dos decimais, cada casa após a vírgula representa uma fração com base em potências de 10. Por exemplo, o número 0,25 significa 2 décimos mais 5 centésimos, ou seja, 25/100.
+ Na matemática e na computação, os números fracionados podem ser escritos de duas formas principais: como frações 
+(por exemplo, 1/2, 3/4) ou como números decimais (0,5; 0,75). A conversão entre essas representações é baseada na 
+divisão, onde o numerador (a parte de cima da fração) é dividido pelo denominador (a parte de baixo). No caso dos 
+decimais, cada casa após a vírgula representa uma fração com base em potências de 10. Por exemplo, o número 0,25 
+significa 2 décimos mais 5 centésimos, ou seja, 25/100.
 
-Para entender como os números fracionados funcionam no sistema decimal, podemos olhar para as potências de 10, que definem o valor de cada casa decimal. 
+ Para entender como os números fracionados funcionam no sistema decimal, podemos olhar para as potências de 10, que 
+definem o valor de cada casa decimal. 
 
-Veja a tabela abaixo:
+ Veja a tabela abaixo:
 
-    Posição Decimal     | Potência de 10  | Valor da Casa Decimal  
-----------------------------------------------------------------------
- 1ª casa após a vírgula |       10⁻¹      |      1/10  = 0,1  
- 2ª casa após a vírgula |       10⁻²      |      1/100 = 0,01  
- 3ª casa após a vírgula |       10⁻³      |      1/1000 = 0,001  
- 4ª casa após a vírgula |       10⁻⁴      |      1/10000 = 0,0001  
+           Posição Decimal     | Potência de 10  | Valor da Casa Decimal  
+      ----------------------------------------------------------------------
+        1ª casa após a vírgula |       10⁻¹      |      1/10  = 0,1  
+        2ª casa após a vírgula |       10⁻²      |      1/100 = 0,01  
+        3ª casa após a vírgula |       10⁻³      |      1/1000 = 0,001  
+        4ª casa após a vírgula |       10⁻⁴      |      1/10000 = 0,0001  
 
-Isso significa que o número 0,432, por exemplo, pode ser decomposto como:
+ Isso significa que o número 0,432, por exemplo, pode ser decomposto como:
 
-4 x 10⁻¹ + 3 x 10⁻² +  2 x 10⁻³ = 
-4 × (1/10) + 3 × (1/100) + 2 × (1/1000) = 
-4 x 0,1 +  3 x 0,01 + 2 x 0,001 = 
-0,4 + 0,03 + 0,002 =
-0,432
+         4 x 10⁻¹ + 3 x 10⁻² +  2 x 10⁻³ = 
+      4 × (1/10) + 3 × (1/100) + 2 × (1/1000) = 
+         4 x 0,1 +  3 x 0,01 + 2 x 0,001 = 
+               0,4 + 0,03 + 0,002 =
+                      0,432
 
-Os números fracionados são fundamentais para diversas áreas da tecnologia e da ciência. Na computação, por exemplo, a forma como os computadores armazenam números decimais pode causar pequenas imprecisões devido à conversão entre sistemas de numeração diferentes. Isso é algo que se observa ao tentar representar frações simples, como 1/3, que gera um número decimal infinito (0,3333...). Esses detalhes fazem com que os números fracionados sejam estudados com atenção, garantindo cálculos mais precisos e sistemas numéricos mais eficientes.
+ Os números fracionados são fundamentais para diversas áreas da tecnologia e da ciência. Na computação, por 
+exemplo, a forma como os computadores armazenam números decimais pode causar pequenas imprecisões devido à 
+conversão entre sistemas de numeração diferentes. Isso é algo que se observa ao tentar representar frações simples, 
+como 1/3, que gera um número decimal infinito (0,3333...). Esses detalhes fazem com que os números fracionados 
+sejam estudados com atenção, garantindo cálculos mais precisos e sistemas numéricos mais eficientes.
 
 
 
