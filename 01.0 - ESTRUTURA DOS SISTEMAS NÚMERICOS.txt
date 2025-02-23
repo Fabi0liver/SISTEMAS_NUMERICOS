@@ -310,10 +310,21 @@ sejam estudados com atenção, garantindo cálculos mais precisos e sistemas num
 
 
 
-Conclusão sobre as Estrutura dos Sistemas Numéricos
+                      "Conclusão sobre as Estruturas dos Sistemas Numéricos"
 
-Os sistemas numéricos são como os alicerces de um edifício: eles sustentam toda a estrutura da matemática e da computação. São eles que nos permitem representar e manipular números de maneira lógica e eficiente, possibilitando desde cálculos simples até operações complexas em áreas como engenharia, ciência de dados e tecnologia. Sem essa organização, seria impossível desenvolver algoritmos, armazenar informações ou até mesmo exibir imagens em uma tela de computador.
+ Os sistemas numéricos são como os alicerces de um edifício: eles sustentam toda a estrutura da matemática e da 
+computação. São eles que nos permitem representar e manipular números de maneira lógica e eficiente, possibilitando 
+desde cálculos simples até operações complexas em áreas como engenharia, ciência de dados e tecnologia. Sem essa 
+organização, seria impossível desenvolver algoritmos, armazenar informações ou até mesmo exibir imagens em uma tela 
+de computador.
 
-Compreender a estrutura dos sistemas numéricos não é apenas uma questão teórica, mas uma necessidade prática. Da programação à segurança digital, passando por redes de computadores e bancos de dados, tudo depende de uma representação numérica bem estruturada. Saber como os números são organizados e processados ajuda a evitar erros, otimizar cálculos e criar soluções mais eficientes para os desafios tecnológicos do dia a dia.
+ Compreender a estrutura dos sistemas numéricos não é apenas uma questão teórica, mas uma necessidade prática. Da 
+programação à segurança digital, passando por redes de computadores e bancos de dados, tudo depende de uma 
+representação numérica bem estruturada. Saber como os números são organizados e processados ajuda a evitar erros, 
+otimizar cálculos e criar soluções mais eficientes para os desafios tecnológicos do dia a dia.
 
-Ao aprofundar-se nesses conceitos, estudantes, desenvolvedores e engenheiros de computação adquirem uma base sólida para inovar e aprimorar sistemas. Assim como um arquiteto precisa entender a estrutura de um prédio antes de projetá-lo, quem trabalha com tecnologia se beneficia ao conhecer os fundamentos dos sistemas numéricos. Esse conhecimento não apenas facilita o desenvolvimento de software e hardware, mas também abre portas para avanços na computação e na ciência de forma geral.
+ Ao aprofundar-se nesses conceitos, estudantes, desenvolvedores e engenheiros de computação adquirem uma base 
+sólida para inovar e aprimorar sistemas. Assim como um arquiteto precisa entender a estrutura de um prédio antes de 
+projetá-lo, quem trabalha com tecnologia se beneficia ao conhecer os fundamentos dos sistemas numéricos. Esse 
+conhecimento não apenas facilita o desenvolvimento de software e hardware, mas também abre portas para avanços na 
+computação e na ciência de forma geral.
