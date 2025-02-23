@@ -237,7 +237,7 @@ que os números sejam processados e utilizados de maneira eficiente.
 
 
 
-                                  "Números com Sinal e Sem Sinal"
+                                    "Números com Sinal e Sem Sinal"
 
 Os números podem ser classificados de diferentes formas dependendo da maneira como os interpretamos. Uma das distinções mais importantes é entre números com sinal e números sem sinal. Essa diferenciação se refere à capacidade de um número representar valores positivos e negativos ou apenas positivos. Em nosso cotidiano, estamos acostumados a lidar com números negativos e positivos naturalmente, como quando vemos temperaturas abaixo de zero ou calculamos dívidas e créditos em uma conta bancária. No entanto, na matemática e na computação, essa distinção tem um papel fundamental na forma como os números são armazenados e processados.
 
