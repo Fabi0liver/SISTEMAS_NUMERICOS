@@ -73,7 +73,7 @@ Para visualizar melhor, imagine um cofre com várias gavetas. Cada gaveta pode c
 
 
 
-                                          "O que são as Potências?"
+                                     "O que são as Potências?"
 
 Quando olhamos para um número como 3.572, dificilmente pensamos no motivo pelo qual cada dígito tem um valor diferente dependendo de onde está. O número 3 na casa dos milhares não vale o mesmo que o número 2 na casa das unidades. Isso acontece porque os sistemas numéricos seguem um princípio chamado posição, onde a posição de cada dígito dentro do número define seu peso. Esse peso é determinado por potências, que são multiplicações sucessivas de um número base. Isso significa que, ao movermos um dígito para a esquerda ou para a direita, ele pode valer muito mais ou muito menos, dependendo da sua posição.
 
@@ -91,4 +91,36 @@ Valor total = 3.572
 Isso significa que, mesmo que o 3 e o 2 pareçam iguais como símbolos, seus valores são muito diferentes por causa da posição que ocupam. Esse conceito é fundamental para qualquer sistema numérico e explica por que, ao somarmos 1 a 99, ele se transforma em 100 – o dígito da casa das dezenas ultrapassa o limite da sua posição e gera um impacto na casa seguinte.
 
 O uso de potências também é essencial na computação, pois os computadores utilizam sistemas numéricos baseados nesse mesmo princípio, mas com bases diferentes, como o binário (base 2). Entender o papel das potências nos ajuda a interpretar números corretamente e facilita o aprendizado de operações matemáticas e computacionais mais avançadas.
+
+
+
+                                          "O que é o Valor?"
+
+Quando olhamos para um número, a primeira coisa que pensamos é no seu significado prático: quantas coisas ele representa. Esse conceito é o que chamamos de valor ou quantidade, que nada mais é do que a medida numérica associada a algo. Se você vê o número "5" em um pacote de maçãs, ele indica que há cinco unidades da fruta ali. Esse valor é o que dá sentido aos números, permitindo que possamos contar, medir e comparar diferentes quantidades no mundo real.
+
+O valor de um número está diretamente ligado ao sistema que usamos para escrevê-lo. Por exemplo, no sistema decimal (que usamos no dia a dia), cada posição de um número representa uma potência de 10. Isso significa que o mesmo dígito pode ter valores diferentes dependendo de onde está na sequência. 
+
+Para entender melhor, veja como funciona a relação entre posição e potência:
+
+ Posição | Potência |   Valor
+-------------------------------
+    4    |    10⁴   |  10000     
+    3    |    10³   |  1000 
+    2    |    10²   |  100
+    1    |    10¹   |  10
+    0    |    10⁰   |  1
+
+
+Isso quer dizer que, no número 3.245, por exemplo, o dígito "3" não vale apenas três unidades, mas sim três mil (3 × 1000), porque está na terceira posição. Assim, o valor de um número não é apenas uma soma de dígitos, mas uma composição que depende da posição de cada um dentro do sistema em que está escrito.
+
+Essa relação entre valor e posição é o que torna os números tão poderosos e versáteis. Sem essa estrutura, não poderíamos trabalhar com grandes quantidades, representar medidas exatas ou fazer cálculos precisos. É essa organização que permite que os números sejam usados para desde simples contagens até operações avançadas em ciência, engenharia e computação.
+
+
+
+
+
+
+
+
+ 
 
