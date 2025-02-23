@@ -107,11 +107,23 @@ atender a diversas necessidades.
 
                                       O que são os Dígitos?
 
-Os dígitos, também chamados de algarismos, são os símbolos básicos usados para formar os números. Eles funcionam como as "letras" dos números, sendo as peças fundamentais que, combinadas de diferentes formas, permitem representar quantidades variadas. Assim como o alfabeto nos permite escrever palavras e expressar ideias, os dígitos nos permitem criar números para medir, contar e calcular. Sem eles, não conseguiríamos estruturar a matemática da forma como a conhecemos hoje.
+ Os dígitos, também chamados de algarismos, são os símbolos básicos usados para formar os números. Eles funcionam 
+como as "letras" dos números, sendo as peças fundamentais que, combinadas de diferentes formas, permitem 
+representar quantidades variadas. Assim como o alfabeto nos permite escrever palavras e expressar ideias, os 
+dígitos nos permitem criar números para medir, contar e calcular. Sem eles, não conseguiríamos estruturar a 
+matemática da forma como a conhecemos hoje.
 
-Cada sistema numérico define quais dígitos são utilizados e como eles se combinam para formar números maiores. No sistema decimal, por exemplo, temos dez dígitos (de 0 a 9), enquanto outros sistemas podem ter mais ou menos símbolos disponíveis. O importante é que os dígitos não possuem valor fixo por si só; o valor que representam depende da posição em que estão dentro de um número. Esse conceito é essencial para entender como diferentes sistemas numéricos organizam as quantidades.
+ Cada sistema numérico define quais dígitos são utilizados e como eles se combinam para formar números maiores. No 
+sistema decimal, por exemplo, temos dez dígitos (de 0 a 9), enquanto outros sistemas podem ter mais ou menos 
+símbolos disponíveis. O importante é que os dígitos não possuem valor fixo por si só; o valor que representam 
+depende da posição em que estão dentro de um número. Esse conceito é essencial para entender como diferentes 
+sistemas numéricos organizam as quantidades.
 
-Para visualizar melhor, imagine um cofre com várias gavetas. Cada gaveta pode conter um dígito, mas o valor total do cofre depende de como esses dígitos estão organizados. Se trocarmos a ordem dos números, o valor final pode mudar completamente. É exatamente assim que os dígitos funcionam dentro de um sistema numérico: sozinhos, são apenas símbolos, mas juntos e organizados conforme certas regras, tornam-se uma ferramenta poderosa para representar e manipular quantidades.
+ Para visualizar melhor, imagine um cofre com várias gavetas. Cada gaveta pode conter um dígito, mas o valor total 
+do cofre depende de como esses dígitos estão organizados. Se trocarmos a ordem dos números, o valor final pode 
+mudar completamente. É exatamente assim que os dígitos funcionam dentro de um sistema numérico: sozinhos, são 
+apenas símbolos, mas juntos e organizados conforme certas regras, tornam-se uma ferramenta poderosa para 
+representar e manipular quantidades.
 
 
 
@@ -175,3 +187,15 @@ Algarismo Menos Significativo (LSD - Least Significant Digit): É aquele que tem
 Esse conceito é fundamental em contextos como precisão de cálculos e arredondamentos. Em operações matemáticas, os números menos significativos podem ser descartados para simplificar uma conta sem alterar muito o resultado final. No mundo da computação, a importância do LSD é ainda mais evidente, pois ele define a menor unidade de variação dentro de um número armazenado digitalmente, sendo crucial para operações binárias e armazenamento de dados.
 
 Em suma, os conceitos de algarismo mais e menos significativo nos ajudam a compreender como os números são estruturados e interpretados. O MSD define a grandeza do número, enquanto o LSD representa os detalhes finais. Essa distinção é essencial para diversas aplicações, desde cálculos manuais até algoritmos computacionais, garantindo que os números sejam processados e utilizados de maneira eficiente.
+
+
+
+                                  "Números com Sinal e Sem Sinal"
+
+Os números podem ser classificados de diferentes formas dependendo da maneira como os interpretamos. Uma das distinções mais importantes é entre números com sinal e números sem sinal. Essa diferenciação se refere à capacidade de um número representar valores positivos e negativos ou apenas positivos. Em nosso cotidiano, estamos acostumados a lidar com números negativos e positivos naturalmente, como quando vemos temperaturas abaixo de zero ou calculamos dívidas e créditos em uma conta bancária. No entanto, na matemática e na computação, essa distinção tem um papel fundamental na forma como os números são armazenados e processados.
+
+Os números com sinal são aqueles que podem representar tanto valores positivos quanto negativos. Para isso, um símbolo como “+” ou “−” pode ser colocado antes do número para indicar sua direção. Na prática, quando vemos "-5", sabemos que esse valor está abaixo de zero, enquanto "+5" ou simplesmente "5" indicam um valor positivo. Essa capacidade de representar negativos é essencial em diversas aplicações, desde cálculos matemáticos simples até algoritmos complexos que lidam com variações e diferenças entre valores.
+
+Já os números sem sinal são aqueles que só podem assumir valores positivos ou zero. Eles não possuem um indicador de negatividade e, portanto, qualquer número dentro desse sistema será sempre igual ou maior que zero. Podemos pensar nisso como uma escada onde o primeiro degrau é o zero e os números só crescem para cima, sem a possibilidade de descer. Em muitas situações, esse tipo de número é útil, como na contagem de objetos físicos (já que não podemos ter -3 maçãs) ou em sistemas computacionais que priorizam eficiência e precisão ao evitar valores negativos.
+
+A escolha entre números com sinal e sem sinal depende do contexto e da necessidade da aplicação. Em sistemas computacionais, por exemplo, usar números sem sinal pode dobrar a quantidade máxima que um valor pode representar, já que todo o espaço disponível é usado para armazenar valores positivos. Por outro lado, quando precisamos lidar com cálculos envolvendo perdas, deslocamentos ou mudanças de direção, os números com sinal se tornam indispensáveis. Esse equilíbrio entre flexibilidade e precisão é um dos pilares da estrutura dos sistemas numéricos e influencia diretamente a forma como manipulamos informações matemáticas no dia a dia e na tecnologia.
