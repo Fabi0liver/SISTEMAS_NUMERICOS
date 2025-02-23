@@ -23,13 +23,23 @@ moldam a forma como lidamos com os números no dia a dia.
 
 
 
-                                      "O que são os números?"
+                                       "O que são os números?"
 
-Os números são uma das criações mais fundamentais da humanidade. Eles nasceram da necessidade de contar, medir e organizar o mundo ao nosso redor. Desde os tempos mais antigos, as pessoas utilizam números para representar quantidades, seja para saber quantos animais possuem, medir distâncias ou marcar o tempo. Com o passar dos séculos, essa ideia evoluiu para algo muito mais sofisticado, tornando-se a base da matemática, da ciência e da tecnologia.
+ Os números são uma das criações mais fundamentais da humanidade. Eles nasceram da necessidade de contar, medir e 
+organizar o mundo ao nosso redor. Desde os tempos mais antigos, as pessoas utilizam números para representar 
+quantidades, seja para saber quantos animais possuem, medir distâncias ou marcar o tempo. Com o passar dos séculos, 
+essa ideia evoluiu para algo muito mais sofisticado, tornando-se a base da matemática, da ciência e da tecnologia.
 
-Mas os números não são apenas símbolos escritos no papel. Eles representam conceitos abstratos que nos permitem comparar, calcular e compreender padrões. Por exemplo, o número "5" não é apenas um desenho específico, mas sim uma ideia que pode ser aplicada a cinco maçãs, cinco cadeiras ou cinco estrelas no céu. Essa capacidade de representar quantidades de forma universal é o que torna os números tão poderosos e essenciais para o nosso dia a dia.
+ Mas os números não são apenas símbolos escritos no papel. Eles representam conceitos abstratos que nos permitem 
+comparar, calcular e compreender padrões. Por exemplo, o número "5" não é apenas um desenho específico, mas sim uma 
+ideia que pode ser aplicada a cinco maçãs, cinco cadeiras ou cinco estrelas no céu. Essa capacidade de representar 
+quantidades de forma universal é o que torna os números tão poderosos e essenciais para o nosso dia a dia.
 
-Além de ajudar na contagem, os números também servem para expressar grandezas como temperatura, velocidade, tempo e até mesmo emoções, como quando dizemos que estamos "100% felizes". Eles se tornam ainda mais úteis quando organizados dentro de sistemas que permitem operações matemáticas e representações mais complexas. Essa estrutura bem definida dos números possibilita que eles sejam usados desde simples transações comerciais até cálculos avançados em computadores e foguetes espaciais.
+ Além de ajudar na contagem, os números também servem para expressar grandezas como temperatura, velocidade, tempo 
+e até mesmo emoções, como quando dizemos que estamos "100% felizes". Eles se tornam ainda mais úteis quando 
+organizados dentro de sistemas que permitem operações matemáticas e representações mais complexas. Essa estrutura 
+bem definida dos números possibilita que eles sejam usados desde simples transações comerciais até cálculos 
+avançados em computadores e foguetes espaciais.
 
 
 
