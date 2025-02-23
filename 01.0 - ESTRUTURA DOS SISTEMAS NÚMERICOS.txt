@@ -127,24 +127,33 @@ representar e manipular quantidades.
 
 
 
-                                     "O que são as Potências?"
+                                       "O que são as Potências?"
 
-Quando olhamos para um número como 3.572, dificilmente pensamos no motivo pelo qual cada dígito tem um valor diferente dependendo de onde está. O número 3 na casa dos milhares não vale o mesmo que o número 2 na casa das unidades. Isso acontece porque os sistemas numéricos seguem um princípio chamado posição, onde a posição de cada dígito dentro do número define seu peso. Esse peso é determinado por potências, que são multiplicações sucessivas de um número base. Isso significa que, ao movermos um dígito para a esquerda ou para a direita, ele pode valer muito mais ou muito menos, dependendo da sua posição.
+ Quando olhamos para um número como 3.572, dificilmente pensamos no motivo pelo qual cada dígito tem um valor 
+diferente dependendo de onde está. O número 3 na casa dos milhares não vale o mesmo que o número 2 na casa das 
+unidades. Isso acontece porque os sistemas numéricos seguem um princípio chamado posição, onde a posição de cada 
+dígito dentro do número define seu peso. Esse peso é determinado por potências, que são multiplicações sucessivas 
+de um número base. Isso significa que, ao movermos um dígito para a esquerda ou para a direita, ele pode valer 
+muito mais ou muito menos, dependendo da sua posição.
 
-Para entender melhor, pense nas potências como "níveis de importância" dentro do número. Cada posição representa uma potência da base utilizada. No sistema decimal (base 10), por exemplo, cada casa decimal representa uma potência de 10. 
+ Para entender melhor, pense nas potências como "níveis de importância" dentro do número. Cada posição representa  uma potência da base utilizada. No sistema decimal (base 10), por exemplo, cada casa decimal representa uma  potência de 10. 
 
-Veja a estrutura do número 3.572 com suas potências associadas:
+ Veja a estrutura do número 3.572 com suas potências associadas:
 
-3 × 10³  =  3 × 1000  =  3.000  
-5 × 10²  =  5 × 100   =    500  
-7 × 10¹  =  7 × 10    =     70  
-2 × 10⁰  =  2 × 1     =      2  
---------------------------------  
-Valor total = 3.572  
+          3 × 10³  =  3 × 1000  =  3.000  
+          5 × 10²  =  5 × 100   =    500  
+          7 × 10¹  =  7 × 10    =     70  
+          2 × 10⁰  =  2 × 1     =      2  
 
-Isso significa que, mesmo que o 3 e o 2 pareçam iguais como símbolos, seus valores são muito diferentes por causa da posição que ocupam. Esse conceito é fundamental para qualquer sistema numérico e explica por que, ao somarmos 1 a 99, ele se transforma em 100 – o dígito da casa das dezenas ultrapassa o limite da sua posição e gera um impacto na casa seguinte.
+ Isso significa que, mesmo que o 3 e o 2 pareçam iguais como símbolos, seus valores são muito diferentes por causa  
+da posição que ocupam. Esse conceito é fundamental para qualquer sistema numérico e explica por que, ao somarmos 1 
+a 99, ele se transforma em 100 – o dígito da casa das dezenas ultrapassa o limite da sua posição e gera um impacto 
+na casa seguinte.
 
-O uso de potências também é essencial na computação, pois os computadores utilizam sistemas numéricos baseados nesse mesmo princípio, mas com bases diferentes, como o binário (base 2). Entender o papel das potências nos ajuda a interpretar números corretamente e facilita o aprendizado de operações matemáticas e computacionais mais avançadas.
+ O uso de potências também é essencial na computação, pois os computadores utilizam sistemas numéricos baseados 
+nesse mesmo princípio, mas com bases diferentes, como o binário (base 2). Entender o papel das potências nos ajuda 
+a interpretar números corretamente e facilita o aprendizado de operações matemáticas e computacionais mais 
+avançadas.
 
 
 
@@ -199,3 +208,30 @@ Os números com sinal são aqueles que podem representar tanto valores positivos
 Já os números sem sinal são aqueles que só podem assumir valores positivos ou zero. Eles não possuem um indicador de negatividade e, portanto, qualquer número dentro desse sistema será sempre igual ou maior que zero. Podemos pensar nisso como uma escada onde o primeiro degrau é o zero e os números só crescem para cima, sem a possibilidade de descer. Em muitas situações, esse tipo de número é útil, como na contagem de objetos físicos (já que não podemos ter -3 maçãs) ou em sistemas computacionais que priorizam eficiência e precisão ao evitar valores negativos.
 
 A escolha entre números com sinal e sem sinal depende do contexto e da necessidade da aplicação. Em sistemas computacionais, por exemplo, usar números sem sinal pode dobrar a quantidade máxima que um valor pode representar, já que todo o espaço disponível é usado para armazenar valores positivos. Por outro lado, quando precisamos lidar com cálculos envolvendo perdas, deslocamentos ou mudanças de direção, os números com sinal se tornam indispensáveis. Esse equilíbrio entre flexibilidade e precisão é um dos pilares da estrutura dos sistemas numéricos e influencia diretamente a forma como manipulamos informações matemáticas no dia a dia e na tecnologia.
+
+
+
+                                       "Números Fracionados"
+
+Os números fracionados são aqueles que representam partes de um todo. Diferente dos números inteiros, que indicam quantidades exatas, os fracionados expressam divisões, como metade de um bolo, um quarto de um terreno ou 0,75 de um litro de suco. Eles são essenciais para medir, calcular proporções e representar valores que não podem ser expressos com precisão usando apenas números inteiros. No nosso cotidiano, encontramos números fracionados em preços, medições e até no tempo — afinal, dizer que algo durou "meia hora" é uma forma de fracionar o tempo em partes menores.
+
+Na matemática e na computação, os números fracionados podem ser escritos de duas formas principais: como frações (por exemplo, 1/2, 3/4) ou como números decimais (0,5; 0,75). A conversão entre essas representações é baseada na divisão, onde o numerador (a parte de cima da fração) é dividido pelo denominador (a parte de baixo). No caso dos decimais, cada casa após a vírgula representa uma fração com base em potências de 10. Por exemplo, o número 0,25 significa 2 décimos mais 5 centésimos, ou seja, 25/100.
+
+Para entender como os números fracionados funcionam no sistema decimal, podemos olhar para as potências de 10, que definem o valor de cada casa decimal. 
+
+Veja a tabela abaixo:
+
+   Posição Decimal        | Potência de 10  | Valor da Casa Decimal  
+------------------------------------------------------------------------------  
+1ª casa após a vírgula  |               10⁻¹            |        1/10  = 0,1  
+2ª casa após a vírgula  |               10⁻²            |        1/100 = 0,01  
+3ª casa após a vírgula  |               10⁻³            |        1/1000 = 0,001  
+4ª casa após a vírgula  |               10⁻⁴            |        1/10000 = 0,0001  
+
+Isso significa que o número 0,432, por exemplo, pode ser decomposto como:
+
+4 x 10⁻¹ + 3 x 10⁻² +  2 x 10⁻³ = 
+4 × (1/10) + 3 × (1/100) + 2 × (1/1000) = 
+4 x 0,1 +  3 x 0,01 + 2 x 0,001 = 
+0,4 + 0,03 + 0,002 =
+0,432
