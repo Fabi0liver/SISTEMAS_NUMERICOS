@@ -45,31 +45,63 @@ avançados em computadores e foguetes espaciais.
 
                                    "O que são as Bases Numéricas?"
 
-Como já vimos, os números fazem parte do nosso dia a dia, seja ao contar objetos, medir distâncias ou até mesmo ao interagir com a tecnologia. Mas o que poucos percebem é que existem diferentes formas de representar os números, dependendo do sistema que estamos utilizando. Essas diferentes formas de organização numérica seguem um conceito fundamental chamado base numérica, que define quantos símbolos diferentes são usados para formar os números e como eles são combinados para representar quantidades.
+ Como já vimos, os números fazem parte do nosso dia a dia, seja ao contar objetos, medir distâncias ou até mesmo ao 
+interagir com a tecnologia. Mas o que poucos percebem é que existem diferentes formas de representar os números, 
+dependendo do sistema que estamos utilizando. Essas diferentes formas de organização numérica seguem um conceito 
+fundamental chamado base numérica, que define quantos símbolos diferentes são usados para formar os números e como 
+eles são combinados para representar quantidades.
 
-Podemos pensar nas bases numéricas como diferentes "modos de contar". Assim como em idiomas diferentes as palavras mudam, mas o significado pode ser o mesmo, as bases numéricas mudam a maneira como escrevemos os números, mas a quantidade representada continua igual. Essa ideia é essencial na matemática e na computação, pois alguns sistemas são mais eficientes para determinadas aplicações. 
+ Podemos pensar nas bases numéricas como diferentes "modos de contar". Assim como em idiomas diferentes as palavras 
+mudam, mas o significado pode ser o mesmo, as bases numéricas mudam a maneira como escrevemos os números, mas a 
+quantidade representada continua igual. Essa ideia é essencial na matemática e na computação, pois alguns sistemas 
+são mais eficientes para determinadas aplicações. 
 
-Agora, vamos conhecer algumas das bases numéricas mais comuns e como elas funcionam.
+ Agora, vamos conhecer algumas das bases numéricas mais comuns e como elas funcionam.
 
-Base Decimal (Base 10): É a mais comum e é aquela que utilizamos no nosso dia a dia. Como o próprio nome sugere, ela usa dez dígitos diferentes (0, 1, 2, 3, 4, 5, 6, 7, 8 e 9) para representar qualquer número. Quando atingimos o número 9 e precisamos continuar contando, adicionamos um novo dígito à esquerda e começamos novamente do zero, como ao passar de 9 para 10.
+ * Base Decimal (Base 10): É a mais comum e é aquela que utilizamos no nosso dia a dia. Como o próprio nome sugere, 
+  ela usa dez dígitos diferentes (0, 1, 2, 3, 4, 5, 6, 7, 8 e 9) para representar qualquer número. Quando atingimos 
+  o número 9 e precisamos continuar contando, adicionamos um novo dígito à esquerda e começamos novamente do zero, 
+  como ao passar de 9 para 10.
 
-Essa forma de contagem é tão natural para nós porque provavelmente surgiu a partir da contagem com os dedos. Desde crianças, aprendemos a somar e subtrair com essa base, e a maioria dos sistemas financeiros e científicos a utilizam. No entanto, apesar de ser a base mais comum para os humanos, ela não é a única, e outros sistemas numéricos são muito mais eficientes em certas aplicações, como a computação.
+   Essa forma de contagem é tão natural para nós porque provavelmente surgiu a partir da contagem com os dedos. 
+  Desde crianças, aprendemos a somar e subtrair com essa base, e a maioria dos sistemas financeiros e científicos a 
+  utilizam. No entanto, apesar de ser a base mais comum para os humanos, ela não é a única, e outros sistemas 
+  numéricos são muito mais eficientes em certas aplicações, como a computação.
 
 
-Base Binária (Base 2): Essa base é a linguagem dos computadores. Ao contrário da base decimal, que usa dez dígitos, a base binária utiliza apenas dois dígitos: 0 e 1. Essa simplicidade faz com que seja ideal para os sistemas eletrônicos, já que qualquer circuito pode representar um estado como ligado (1) ou desligado (0).
+ * Base Binária (Base 2): Essa base é a linguagem dos computadores. Ao contrário da base decimal, que usa dez 
+  dígitos, a base binária utiliza apenas dois dígitos: 0 e 1. Essa simplicidade faz com que seja ideal para os 
+  sistemas eletrônicos, já que qualquer circuito pode representar um estado como ligado (1) ou desligado (0).
 
-Cada número na base binária é formado por uma combinação desses dois valores, e isso permite representar qualquer quantidade, assim como fazemos na base decimal. Por exemplo, o número decimal 5, que conhecemos, é representado no sistema binário como "101". Embora pareça um código estranho para quem não está acostumado, essa base é fundamental para o funcionamento de toda a tecnologia digital que usamos diariamente.
+   Cada número na base binária é formado por uma combinação desses dois valores, e isso permite representar 
+  qualquer quantidade, assim como fazemos na base decimal. Por exemplo, o número decimal 5, que conhecemos, é 
+  representado no sistema binário como "101". Embora pareça um código estranho para quem não está acostumado, essa 
+  base é fundamental para o funcionamento de toda a tecnologia digital que usamos diariamente.
 
 
-Base Octal (Base 8): Essa base utiliza oito dígitos diferentes (0, 1, 2, 3, 4, 5, 6 e 7) para formar os números. Embora não seja tão popular quanto a decimal ou a binária, essa base é usada em algumas áreas da computação porque facilita a conversão de números binários.
+ * Base Octal (Base 8): Essa base utiliza oito dígitos diferentes (0, 1, 2, 3, 4, 5, 6 e 7) para formar os números. 
+  Embora não seja tão popular quanto a decimal ou a binária, essa base é usada em algumas áreas da computação 
+  porque facilita a conversão de números binários.
 
-Isso acontece porque cada grupo de três bits no sistema binário pode ser representado diretamente por um dígito octal, simplificando a leitura e a manipulação dos dados. Essa base foi mais usada no passado em algumas arquiteturas de computadores, mas hoje é menos comum, sendo substituída pelo sistema hexadecimal.
+   Isso acontece porque cada grupo de três bits no sistema binário pode ser representado diretamente por um dígito 
+  octal, simplificando a leitura e a manipulação dos dados. Essa base foi mais usada no passado em algumas 
+  arquiteturas de computadores, mas hoje é menos comum, sendo substituída pelo sistema hexadecimal.
 
-Base Hexadecimal (Base 16): É amplamente utilizada em computação e programação. Diferente da base decimal e da binária, ela usa dezesseis símbolos para representar os números: os dígitos de 0 a 9 e as letras de A a F (onde A vale 10, B vale 11, e assim por diante até F, que vale 15).
 
-Esse sistema é muito útil porque permite representar grandes quantidades de forma compacta. Cada quatro bits do sistema binário correspondem exatamente a um único dígito hexadecimal, tornando a conversão entre essas bases rápida e eficiente. Por isso, é muito usado na representação de cores em HTML, endereços de memória e codificação de dados em computadores.
+ * Base Hexadecimal (Base 16): É amplamente utilizada em computação e programação. Diferente da base decimal e da 
+  binária, ela usa dezesseis símbolos para representar os números: os dígitos de 0 a 9 e as letras de A a F (onde A 
+  vale 10, B vale 11, e assim por diante até F, que vale 15).
 
-Em suma, as bases numéricas são formas diferentes de representar números, e cada uma tem suas vantagens dependendo da aplicação. Enquanto usamos a base decimal no nosso cotidiano, os computadores trabalham com a base binária, e sistemas como octal e hexadecimal ajudam a facilitar a manipulação desses números. Entender essas bases nos permite enxergar melhor como a computação funciona e como os números podem ser organizados de diferentes maneiras para atender a diversas necessidades.
+   Esse sistema é muito útil porque permite representar grandes quantidades de forma compacta. Cada quatro bits do 
+  sistema binário correspondem exatamente a um único dígito hexadecimal, tornando a conversão entre essas bases 
+  rápida e eficiente. Por isso, é muito usado na representação de cores em HTML, endereços de memória e codificação 
+  de dados em computadores.
+
+ Em suma, as bases numéricas são formas diferentes de representar números, e cada uma tem suas vantagens dependendo 
+da aplicação. Enquanto usamos a base decimal no nosso cotidiano, os computadores trabalham com a base binária, e 
+sistemas como octal e hexadecimal ajudam a facilitar a manipulação desses números. Entender essas bases nos permite 
+enxergar melhor como a computação funciona e como os números podem ser organizados de diferentes maneiras para 
+atender a diversas necessidades.
 
 
 
@@ -127,10 +159,4 @@ Essa relação entre valor e posição é o que torna os números tão poderosos
 
 
 
-
-
-
-
-
- 
-
+                      
