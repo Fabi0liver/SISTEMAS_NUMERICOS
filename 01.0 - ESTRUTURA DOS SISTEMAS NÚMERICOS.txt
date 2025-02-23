@@ -1,13 +1,25 @@
-                                 ESTRUTURA DOS SISTEMAS NÚMERICOS
+                                 ESTRUTURA DOS SISTEMAS NUMÉRICOS
 
  
-Os números são parte essencial da nossa vida. Desde o simples ato de contar até os cálculos mais avançados da ciência e tecnologia, eles nos ajudam a compreender e organizar o mundo ao nosso redor. Mas, por trás dos números que usamos no dia a dia, existe uma estrutura bem definida, que segue regras precisas para representar quantidades e valores de forma lógica e consistente. Essa organização é o que chamamos de sistemas numéricos.
+ Os números são parte essencial da nossa vida. Desde o simples ato de contar até os cálculos mais avançados da 
+ciência e tecnologia, eles nos ajudam a compreender e organizar o mundo ao nosso redor. Mas, por trás dos números 
+que usamos no dia a dia, existe uma estrutura bem definida, que segue regras precisas para representar quantidades 
+e valores de forma lógica e consistente. Essa organização é o que chamamos de sistemas numéricos.
 
-Os sistemas numéricos são conjuntos de regras e símbolos que definem como os números são escritos, interpretados e manipulados. Cada sistema tem sua própria forma de representar valores e realizar operações matemáticas, garantindo que possamos expressar desde pequenas frações até números extremamente grandes. Seja na matemática, na economia ou na computação, tudo o que envolve números depende dessas estruturas para funcionar corretamente.
+ Os sistemas numéricos são conjuntos de regras e símbolos que definem como os números são escritos, interpretados e 
+manipulados. Cada sistema tem sua própria forma de representar valores e realizar operações matemáticas, garantindo 
+que possamos expressar desde pequenas frações até números extremamente grandes. Seja na matemática, na economia ou 
+na computação, tudo o que envolve números depende dessas estruturas para funcionar corretamente.
 
-Para entender a importância dos sistemas numéricos, imagine que eles são como diferentes idiomas para falar sobre quantidades. Assim como línguas possuem gramáticas e vocabulários próprios, os sistemas numéricos seguem regras específicas para estruturar os números. Quando aprendemos a maneira como esses sistemas funcionam, conseguimos compreender melhor como os números são usados na matemática e na tecnologia.
+ Para entender a importância dos sistemas numéricos, imagine que eles são como diferentes idiomas para falar sobre 
+quantidades. Assim como línguas possuem gramáticas e vocabulários próprios, os sistemas numéricos seguem regras 
+específicas para estruturar os números. Quando aprendemos a maneira como esses sistemas funcionam, conseguimos 
+compreender melhor como os números são usados na matemática e na tecnologia.
 
-Nesta explicação, vamos explorar os principais elementos que compõem a estrutura dos sistemas numéricos. Veremos como os números são organizados, quais são os princípios que determinam seu funcionamento e como essas regras influenciam áreas como computação e engenharia. Com essa base, será mais fácil entender como os sistemas numéricos moldam a forma como lidamos com os números no dia a dia.
+ Nesta explicação, vamos explorar os principais elementos que compõem a estrutura dos sistemas numéricos. Veremos 
+como os números são organizados, quais são os princípios que determinam seu funcionamento e como essas regras 
+influenciam áreas como computação e engenharia. Com essa base, será mais fácil entender como os sistemas numéricos 
+moldam a forma como lidamos com os números no dia a dia.
 
 
 
