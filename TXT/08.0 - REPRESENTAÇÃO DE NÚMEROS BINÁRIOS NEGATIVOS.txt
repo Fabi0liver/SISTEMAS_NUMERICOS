@@ -107,68 +107,125 @@ conforme esperado.
 
                               Representação em Sinal e Magnitude
 
-Quando os computadores precisam representar números negativos, uma das abordagens mais diretas e intuitivas é a Representação em Sinal e Magnitude. Essa técnica é inspirada na forma como representamos números no dia a dia: usamos um sinal positivo (+) ou negativo (-) antes do número para indicar se ele é maior ou menor que zero. No sistema binário, onde só existem os dígitos 0 e 1, essa ideia é aplicada reservando o bit mais à esquerda (chamado de bit de sinal) para indicar se o número é positivo ou negativo, enquanto os demais bits representam o valor absoluto, ou seja, a magnitude do número.
+ Quando os computadores precisam representar números negativos, uma das abordagens mais diretas e intuitivas é a 
+Representação em Sinal e Magnitude. Essa técnica é inspirada na forma como representamos números no dia a dia: 
+usamos um sinal positivo (+) ou negativo (-) antes do número para indicar se ele é maior ou menor que zero. No 
+sistema binário, onde só existem os dígitos 0 e 1, essa ideia é aplicada reservando o bit mais à esquerda (chamado 
+de bit de sinal) para indicar se o número é positivo ou negativo, enquanto os demais bits representam o valor 
+absoluto, ou seja, a magnitude do número.
 
-Essa abordagem tem a vantagem de ser simples de entender e implementar, já que segue um conceito próximo ao nosso sistema decimal. No entanto, ela apresenta algumas limitações, especialmente em operações matemáticas como soma e subtração, que precisam de ajustes extras para funcionar corretamente. Além disso, a duplicação do zero (existem tanto +0 quanto -0) pode causar problemas em certos cálculos. 
+ Essa abordagem tem a vantagem de ser simples de entender e implementar, já que segue um conceito próximo ao nosso 
+sistema decimal. No entanto, ela apresenta algumas limitações, especialmente em operações matemáticas como soma e 
+subtração, que precisam de ajustes extras para funcionar corretamente. Além disso, a duplicação do zero (existem 
+tanto +0 quanto -0) pode causar problemas em certos cálculos. 
 
-Para compreender melhor essa técnica, vamos explorar seus detalhes, funcionamento e implicações práticas:
+ Para compreender melhor essa técnica, vamos explorar seus detalhes, funcionamento e implicações práticas:
 
-* Estrutura da Representação: Para representar números negativos em binário usando Sinal e Magnitude, dividimos o número em duas partes bem definidas: o bit de sinal e a magnitude. Cada um desses elementos tem um papel fundamental na forma como o número é interpretado dentro do computador.
+ * Estrutura da Representação: Para representar números negativos em binário usando Sinal e Magnitude, dividimos o 
+  número em duas partes bem definidas: o bit de sinal e a magnitude. Cada um desses elementos tem um papel 
+  fundamental na forma como o número é interpretado dentro do computador.
 
-Bit de Sinal: O primeiro bit, localizado mais à esquerda na sequência binária, é reservado exclusivamente para indicar o sinal do número.
+   Bit de Sinal: O primeiro bit, localizado mais à esquerda na sequência binária, é reservado exclusivamente para 
+                indicar o sinal do número.
 
-Se esse bit for 0, o número é positivo.
+                 - Se esse bit for 0, o número é positivo.
 
-Se esse bit for 1, o número é negativo.
+                 - Se esse bit for 1, o número é negativo.
 
-Essa ideia é parecida com o que fazemos na matemática convencional: colocamos um "+" ou um "−" antes do número para indicar seu sinal. No entanto, enquanto no nosso sistema decimal usamos símbolos separados, no sistema binário essa informação precisa estar dentro do próprio número, e o bit de sinal cumpre essa função.
+                 Essa ideia é parecida com o que fazemos na matemática convencional: colocamos um "+" ou um "−" 
+                antes do número para indicar seu sinal. No entanto, enquanto no nosso sistema decimal usamos 
+                símbolos separados, no sistema binário essa informação precisa estar dentro do próprio número, e o 
+                bit de sinal cumpre essa função.
 
-Magnitude: Os bits restantes, ou seja, aqueles que não são o bit de sinal, representam a magnitude do número, ou seja, seu valor absoluto, sem levar em conta se ele é positivo ou negativo. Isso significa que a parte da magnitude funciona exatamente como um número binário normal, sem qualquer modificação. Se ignorarmos o bit de sinal, os números positivos e negativos teriam exatamente os mesmos valores.
+   Magnitude: Os bits restantes, ou seja, aqueles que não são o bit de sinal, representam a magnitude do número, ou 
+             seja, seu valor absoluto, sem levar em conta se ele é positivo ou negativo. Isso significa que a parte 
+             da magnitude funciona exatamente como um número binário normal, sem qualquer modificação. Se 
+             ignorarmos o bit de sinal, os números positivos e negativos teriam exatamente os mesmos valores.
 
-Essa abordagem facilita a leitura e a interpretação dos números, pois a parte da magnitude se comporta como um número binário comum. O único detalhe a ser observado é o bit de sinal, que indica se estamos lidando com um valor positivo ou negativo.
+              Essa abordagem facilita a leitura e a interpretação dos números, pois a parte da magnitude se 
+             comporta como um número binário comum. O único detalhe a ser observado é o bit de sinal, que indica se 
+             estamos lidando com um valor positivo ou negativo.
 
-Se pensarmos em um elevador, o bit de sinal pode ser visto como a informação que diz se estamos indo para cima (positivo) ou para baixo (negativo), enquanto a magnitude representa quantos andares estamos subindo ou descendo.
-
-
-* Exemplo de Representação: Vamos agora visualizar como a Representação em Sinal e Magnitude funciona em um número binário de 8 bits. Como explicado antes, o bit mais à esquerda (bit de sinal) indica se o número é positivo ou negativo, enquanto os 7 bits restantes representam o valor absoluto (a magnitude).
-
-Imagine que queremos representar o número +18 e -18 em Sinal e Magnitude com 8 bits:
-
- Se quisermos representar o número +18 em Sinal e Magnitude, ele ficaria assim: 00010010
-
-  O primeiro bit é 0, indicando que o número é positivo.
-
-  Os sete bits seguintes (0010010) representam a magnitude do número 18 em binário.
-
- Agora, se quisermos representar -18, apenas alteramos o bit de sinal para 1, mantendo a mesma magnitude: 10010010
-
-  O primeiro bit agora é 1, indicando que o número é negativo.
-
-  Os sete bits seguintes continuam sendo 0010010, pois a magnitude do número não muda.
-
-Isso significa que a única diferença entre um número positivo e negativo nessa representação é o bit de sinal, enquanto a parte da magnitude permanece a mesma. Porém, como mencionamos antes, essa abordagem tem algumas limitações, como a duplicação do zero e a dificuldade em realizar operações matemáticas diretamente.
+   Se pensarmos em um elevador, o bit de sinal pode ser visto como a informação que diz se estamos indo para cima 
+  (positivo) ou para baixo (negativo), enquanto a magnitude representa quantos andares estamos subindo ou descendo.
 
 
-* Vantagens e Desvantagens: Como vimos, a Representação em Sinal e Magnitude é uma das formas mais simples de representar números negativos em sistemas binários, pois segue a lógica que usamos na matemática cotidiana: um número positivo ou negativo acompanhado de seu valor absoluto. No entanto, quando aplicamos esse conceito em computadores, percebemos que a simplicidade nem sempre significa eficiência. Embora essa abordagem seja intuitiva, ela traz desafios quando realizamos operações matemáticas e manipulações de dados. 
+ * Exemplo de Representação: Vamos agora visualizar como a Representação em Sinal e Magnitude funciona em um número  
+  binário de 8 bits. Como explicado antes, o bit mais à esquerda (bit de sinal) indica se o número é positivo ou 
+  negativo, enquanto os 7 bits restantes representam o valor absoluto (a magnitude).
 
-Vamos analisar com mais detalhes suas vantagens e desvantagens para entender seu impacto no funcionamento dos sistemas computacionais.
+   Imagine que queremos representar o número +18 e -18 em Sinal e Magnitude com 8 bits:
 
- Vantagens:
+    Se quisermos representar o número +18 em Sinal e Magnitude, ele ficaria assim: 
+ 
+                              00010010
 
-  Facilidade de entendimento e implementação conceitual: Como essa representação separa claramente o sinal do valor numérico, ela se torna intuitiva para quem já está familiarizado com a forma como representamos números no dia a dia. O bit de sinal age como um simples indicador de positivo ou negativo, enquanto os demais bits representam o valor absoluto, tornando sua leitura direta e fácil de interpretar.
+     - O primeiro bit é 0, indicando que o número é positivo.
 
- Conversão simples entre números positivos e negativos: Para transformar um número positivo em negativo ou vice-versa, basta inverter o bit de sinal. Isso significa que, diferentemente de outros métodos mais complexos, a conversão é uma operação trivial, sem necessidade de cálculos adicionais.
+     - Os sete bits seguintes (0010010) representam a magnitude do número 18 em binário.
 
- Adequada para aplicações simples: Em situações onde operações matemáticas complexas não são necessárias, como em algumas aplicações de hardware mais básicas ou sistemas antigos, a Representação em Sinal e Magnitude pode ser suficiente. Sua implementação direta permite que seja usada em sistemas que não exigem alto desempenho computacional.
+    Agora, se quisermos representar -18, apenas alteramos o bit de sinal para 1, mantendo a mesma magnitude:   
 
-Desvantagens: 
+                             10010010
 
- Presença de dois zeros: Uma das maiores falhas desse método é que ele permite a existência de dois valores distintos para o zero: 0000 (+0) e 1000 (-0), se estivermos usando um sistema de 4 bits. Isso pode causar inconsistências e dificuldades para os processadores lidarem com operações matemáticas, já que, idealmente, o zero deveria ser único e universal.
+     - O primeiro bit agora é 1, indicando que o número é negativo.
 
- Dificuldade nas operações matemáticas: Diferente de representações mais eficientes, como o Complemento de Dois, a Representação em Sinal e Magnitude não permite que as operações aritméticas sejam executadas diretamente pelos circuitos do processador. Somas e subtrações exigem tratamento especial para considerar o bit de sinal, tornando os cálculos mais complexos e menos eficientes.
+     - Os sete bits seguintes continuam sendo 0010010, pois a magnitude do número não muda.
 
- Uso ineficiente de hardware: Como essa representação complica as operações matemáticas, os circuitos que lidam com aritmética precisam de lógica adicional para diferenciar cálculos de números positivos e negativos. Isso resulta em maior complexidade na implementação dos processadores e, consequentemente, em menor desempenho em cálculos numéricos.
+   Isso significa que a única diferença entre um número positivo e negativo nessa representação é o bit de sinal, 
+  enquanto a parte da magnitude permanece a mesma. Porém, como mencionamos antes, essa abordagem tem algumas 
+  limitações, como a duplicação do zero e a dificuldade em realizar operações matemáticas diretamente.
 
-Em suma, a Representação em Sinal e Magnitude foi uma das primeiras tentativas de lidar com números negativos no sistema binário, oferecendo uma abordagem clara e próxima da forma como interpretamos números na matemática tradicional. No entanto, apesar de sua simplicidade, ela apresenta desafios significativos, especialmente na realização de operações matemáticas, já que a presença de dois zeros distintos pode complicar cálculos e lógica computacional.
 
-Devido a essas limitações, esse método não é amplamente utilizado nos computadores modernos, sendo substituído por representações mais eficientes, como o Complemento de Dois. No entanto, compreender a Representação em Sinal e Magnitude é essencial para quem estuda computação, pois ajuda a construir uma base sólida sobre como os números são armazenados e processados em sistemas digitais.
+ * Vantagens e Desvantagens: Como já vimos, a Representação em Sinal e Magnitude é uma das formas mais simples de 
+  representar números negativos em sistemas binários, pois segue a lógica que usamos na matemática cotidiana: um 
+  número positivo ou negativo acompanhado de seu valor absoluto. No entanto, quando aplicamos esse conceito em 
+  computadores, percebemos que a simplicidade nem sempre significa eficiência. Embora essa abordagem seja 
+  intuitiva, ela traz desafios quando realizamos operações matemáticas e manipulações de dados. 
+
+   Vamos analisar com mais detalhes suas vantagens e desvantagens para entender seu impacto no funcionamento dos 
+  sistemas computacionais.
+
+   Vantagens:
+
+    - Facilidade de entendimento e implementação conceitual: Como essa representação separa claramente o sinal do 
+     valor numérico, ela se torna intuitiva para quem já está familiarizado com a forma como representamos números 
+     no dia a dia. O bit de sinal age como um simples indicador de positivo ou negativo, enquanto os demais bits 
+     representam o valor absoluto, tornando sua leitura direta e fácil de interpretar.
+
+    - Conversão simples entre números positivos e negativos: Para transformar um número positivo em negativo ou 
+     vice-versa, basta inverter o bit de sinal. Isso significa que, diferentemente de outros métodos mais 
+     complexos, a conversão é uma operação trivial, sem necessidade de cálculos adicionais.
+
+    - Adequada para aplicações simples: Em situações onde operações matemáticas complexas não são necessárias, como 
+     em algumas aplicações de hardware mais básicas ou sistemas antigos, a Representação em Sinal e Magnitude pode 
+     ser suficiente. Sua implementação direta permite que seja usada em sistemas que não exigem alto desempenho 
+     computacional.
+
+   Desvantagens: 
+
+    - Presença de dois zeros: Uma das maiores falhas desse método é que ele permite a existência de dois valores 
+     distintos para o zero: 0000 (+0) e 1000 (-0), se estivermos usando um sistema de 4 bits. Isso pode causar 
+     inconsistências e dificuldades para os processadores lidarem com operações matemáticas, já que, idealmente, o 
+     zero deveria ser único e universal.
+
+    - Dificuldade nas operações matemáticas: Diferente de representações mais eficientes, como o Complemento de 
+     Dois, a Representação em Sinal e Magnitude não permite que as operações aritméticas sejam executadas 
+     diretamente pelos circuitos do processador. Somas e subtrações exigem tratamento especial para considerar o 
+     bit de sinal, tornando os cálculos mais complexos e menos eficientes.
+
+    - Uso ineficiente de hardware: Como essa representação complica as operações matemáticas, os circuitos que 
+     lidam com aritmética precisam de lógica adicional para diferenciar cálculos de números positivos e negativos. 
+     Isso resulta em maior complexidade na implementação dos processadores e, consequentemente, em menor desempenho 
+     em cálculos numéricos.
+
+ Em suma, a Representação em Sinal e Magnitude foi uma das primeiras tentativas de lidar com números negativos no 
+sistema binário, oferecendo uma abordagem clara e próxima da forma como interpretamos números na matemática 
+tradicional. No entanto, apesar de sua simplicidade, ela apresenta desafios significativos, especialmente na 
+realização de operações matemáticas, já que a presença de dois zeros distintos pode complicar cálculos e lógica 
+computacional.
+
+ Devido a essas limitações, esse método não é amplamente utilizado nos computadores modernos, sendo substituído por 
+representações mais eficientes, como o Complemento de Dois. No entanto, compreender a Representação em Sinal e 
+Magnitude é essencial para quem estuda computação, pois ajuda a construir uma base sólida sobre como os números são 
+armazenados e processados em sistemas digitais.
