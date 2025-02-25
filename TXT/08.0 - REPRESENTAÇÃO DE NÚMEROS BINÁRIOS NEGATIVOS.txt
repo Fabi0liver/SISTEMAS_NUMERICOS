@@ -149,7 +149,7 @@ Imagine que queremos representar o número +18 e -18 em Sinal e Magnitude com 8 
 Isso significa que a única diferença entre um número positivo e negativo nessa representação é o bit de sinal, enquanto a parte da magnitude permanece a mesma. Porém, como mencionamos antes, essa abordagem tem algumas limitações, como a duplicação do zero e a dificuldade em realizar operações matemáticas diretamente.
 
 
-* Vantagens e Desvantagens: A Representação em Sinal e Magnitude é uma das formas mais simples de representar números negativos em sistemas binários, pois segue a lógica que usamos na matemática cotidiana: um número positivo ou negativo acompanhado de seu valor absoluto. No entanto, quando aplicamos esse conceito em computadores, percebemos que a simplicidade nem sempre significa eficiência. Embora essa abordagem seja intuitiva, ela traz desafios quando realizamos operações matemáticas e manipulações de dados. 
+* Vantagens e Desvantagens: Como vimos, a Representação em Sinal e Magnitude é uma das formas mais simples de representar números negativos em sistemas binários, pois segue a lógica que usamos na matemática cotidiana: um número positivo ou negativo acompanhado de seu valor absoluto. No entanto, quando aplicamos esse conceito em computadores, percebemos que a simplicidade nem sempre significa eficiência. Embora essa abordagem seja intuitiva, ela traz desafios quando realizamos operações matemáticas e manipulações de dados. 
 
 Vamos analisar com mais detalhes suas vantagens e desvantagens para entender seu impacto no funcionamento dos sistemas computacionais.
 
