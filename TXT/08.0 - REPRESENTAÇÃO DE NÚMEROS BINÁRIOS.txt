@@ -1,13 +1,29 @@
-                               REPRESENTAÇÃO DE NÚMEROS BINÁRIOS
+                                 REPRESENTAÇÃO DE NÚMEROS BINÁRIOS
 
 
-Os computadores, em sua essência, operam com um sistema numérico muito diferente do que usamos no dia a dia. Enquanto nós contamos e realizamos cálculos com o sistema decimal, que utiliza dez dígitos (0 a 9), os computadores trabalham exclusivamente com o sistema binário, composto apenas pelos números 0 e 1. Essa diferença fundamental se deve à forma como os circuitos eletrônicos funcionam, onde estados de alta e baixa tensão representam esses dois valores, formando a base da computação digital.
+ Os computadores, em sua essência, operam com um sistema numérico muito diferente do que usamos no dia a dia. 
+Enquanto nós contamos e realizamos cálculos com o sistema decimal, que utiliza dez dígitos (0 a 9), os computadores 
+trabalham exclusivamente com o sistema binário, composto apenas pelos números 0 e 1. Essa diferença fundamental se 
+deve à forma como os circuitos eletrônicos funcionam, onde estados de alta e baixa tensão representam esses dois 
+valores, formando a base da computação digital.
 
-Dentro desse universo binário, é necessário representar uma grande variedade de números, desde pequenos valores positivos até números negativos e valores muito grandes. Para isso, existem diferentes formas de representação dos números binários, que podem ser categorizadas, de maneira geral, em duas abordagens: números sem sinal e números com sinal. Essa diferenciação é essencial porque os computadores precisam saber interpretar corretamente os valores armazenados na memória e realizar operações matemáticas sem ambiguidades.
+ Dentro desse universo binário, é necessário representar uma grande variedade de números, desde pequenos valores 
+positivos até números negativos e valores muito grandes. Para isso, existem diferentes formas de representação dos 
+números binários, que podem ser categorizadas, de maneira geral, em duas abordagens: números sem sinal e números 
+com sinal. Essa diferenciação é essencial porque os computadores precisam saber interpretar corretamente os valores 
+armazenados na memória e realizar operações matemáticas sem ambiguidades.
 
-A representação sem sinal é utilizada quando sabemos que todos os números serão positivos, como em contagens ou tamanhos de arquivos. Já a representação com sinal permite que os computadores lidem tanto com valores positivos quanto negativos, o que é essencial para muitos tipos de cálculos matemáticos e aplicações computacionais, como operações financeiras e físicas. Cada uma dessas abordagens possui suas regras específicas de codificação e interpretação, garantindo que os números sejam manipulados corretamente dentro do sistema.
+ A representação sem sinal é utilizada quando sabemos que todos os números serão positivos, como em contagens ou 
+tamanhos de arquivos. Já a representação com sinal permite que os computadores lidem tanto com valores positivos 
+quanto negativos, o que é essencial para muitos tipos de cálculos matemáticos e aplicações computacionais, como 
+operações financeiras e físicas. Cada uma dessas abordagens possui suas regras específicas de codificação e 
+interpretação, garantindo que os números sejam manipulados corretamente dentro do sistema.
 
-Entender como essas representações funcionam é fundamental para quem estuda computação, pois elas influenciam diretamente no armazenamento de dados, na precisão dos cálculos e no desempenho dos sistemas. Saber distinguir entre números com e sem sinal ajuda a evitar erros de interpretação e permite um controle mais preciso sobre o processamento de informações. Nos próximos tópicos, exploraremos mais a fundo como esses números são estruturados e utilizados na prática computacional.
+ Entender como essas representações funcionam é fundamental para quem estuda computação, pois elas influenciam 
+diretamente no armazenamento de dados, na precisão dos cálculos e no desempenho dos sistemas. Saber distinguir 
+entre números com e sem sinal ajuda a evitar erros de interpretação e permite um controle mais preciso sobre o 
+processamento de informações. Nos próximos tópicos, exploraremos mais a fundo como esses números são estruturados e 
+utilizados na prática computacional.
 
 
 
