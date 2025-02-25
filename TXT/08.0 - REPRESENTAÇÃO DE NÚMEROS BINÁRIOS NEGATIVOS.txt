@@ -32,11 +32,22 @@ processadores modernos.
 
                                    "Representações Com e Sem Sinal"
 
- Agora que entendemos a importância de representar números negativos no sistema binário, é essencial diferenciar duas abordagens fundamentais: as representações com e sem sinal. Como os computadores lidam apenas com bits (0s e 1s), precisamos definir uma forma de armazenar tanto números positivos quanto negativos. Em uma abordagem sem sinal, todos os números são tratados como positivos, aproveitando toda a capacidade dos bits disponíveis para representar valores maiores. Já na abordagem com sinal, parte dos bits é utilizada para indicar se o número é positivo ou negativo, permitindo que cálculos envolvendo valores negativos sejam realizados corretamente.
+ Agora que entendemos a importância de representar números negativos no sistema binário, é essencial diferenciar 
+duas abordagens fundamentais: as representações com e sem sinal. Como os computadores lidam apenas com bits (0s e 
+1s), precisamos definir uma forma de armazenar tanto números positivos quanto negativos. Em uma abordagem sem 
+sinal, todos os números são tratados como positivos, aproveitando toda a capacidade dos bits disponíveis para 
+representar valores maiores. Já na abordagem com sinal, parte dos bits é utilizada para indicar se o número é 
+positivo ou negativo, permitindo que cálculos envolvendo valores negativos sejam realizados corretamente.
 
-A escolha entre essas representações afeta diretamente como os números são manipulados na memória e processados em cálculos matemáticos. Sistemas sem sinal são mais simples e eficientes para operações que nunca envolvem números negativos, como contagens e endereços de memória. Já os sistemas com sinal são essenciais em áreas como cálculos financeiros, gráficos computacionais e inteligência artificial, onde operações com valores negativos são frequentes. Compreender essas diferenças é fundamental para projetar programas e algoritmos eficientes, garantindo que a representação escolhida seja adequada às necessidades do sistema. 
+ A escolha entre essas representações afeta diretamente como os números são manipulados na memória e processados em 
+cálculos matemáticos. Sistemas sem sinal são mais simples e eficientes para operações que nunca envolvem números 
+negativos, como contagens e endereços de memória. Já os sistemas com sinal são essenciais em áreas como cálculos 
+financeiros, gráficos computacionais e inteligência artificial, onde operações com valores negativos são 
+frequentes. Compreender essas diferenças é fundamental para projetar programas e algoritmos eficientes, garantindo 
+que a representação escolhida seja adequada às necessidades do sistema. 
 
- Agora, para entender melhor como cada uma dessas representações funcionam na prática, vamos explorar mais  os conceitos de representação sem sinal e com sinal, destacando suas características, vantagens e desafios.
+ Agora, para entender melhor como cada uma dessas representações funcionam na prática, vamos explorar mais  os 
+conceitos de representação sem sinal e com sinal, destacando suas características, vantagens e desafios.
 
  * Representação Sem Sinal: É uma forma simples e direta de armazenar números binários, utilizada quando não há 
   necessidade de lidar com valores negativos. Nesse método, todo o espaço disponível para armazenar o número é 
