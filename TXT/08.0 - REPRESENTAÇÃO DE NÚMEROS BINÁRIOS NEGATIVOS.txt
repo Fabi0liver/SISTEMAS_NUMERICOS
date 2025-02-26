@@ -500,6 +500,33 @@ Obtemos 11111010₂, que é a forma completa e correta do -5 no sistema de Compl
 O cálculo do Complemento de Dois envolve três etapas principais: escrever o número em binário, inverter os bits e adicionar 1 ao resultado da inversão. Esse processo permite que os computadores representem e manipulem números negativos de maneira mais eficiente, tornando as operações matemáticas mais diretas e sem complicação. Ao aplicar o Complemento de Dois, o sistema computacional elimina problemas de duplicação de zero e torna as operações com números negativos mais rápidas e simples. Esse método, ao ser adotado, facilita imensamente os cálculos em larga escala, essencial para o funcionamento otimizado dos computadores.
 
 
+Recuperação da Magnitude (Obtendo o Valor Absoluto): Quando um número negativo está representado em Complemento de Dois e precisamos encontrar sua magnitude original, o processo envolve dois passos simples: inverter todos os bits e somar 1 ao resultado. Isso desfaz a transformação que foi aplicada ao número quando ele foi convertido para sua versão negativa.
+
+Diferente do Complemento de Um, onde bastava inverter os bits, no Complemento de Dois precisamos adicionar esse pequeno ajuste (somar 1) para garantir que o valor obtido seja corretamente restaurado à sua versão positiva. Esse método é fundamental para diversas operações aritméticas em computadores, pois permite a conversão direta de um número negativo de volta para sua magnitude real. 
+
+Vamos entender o passo a passo desse processo supondo que temos o número 11111011₂, que representa -5 no sistema de Complemento de Dois. Para recuperar sua magnitude, seguimos os seguintes passos:
+
+ Transformamos cada 1 em 0 e cada 0 em 1.
+
+       [1] [1] [1] [1] [1] [0] [1] [1]      
+        |   |   |   |   |   |   |   |
+        V   V   V   V   V   V   V   V
+       [0] [0] [0] [0] [0] [1] [0] [0]
+
+Agora, adicionamos 1 ao número obtido para completar a conversão.
+
+       00000100
+       +      1 
+       ---------
+       00000101
+
+Agora, temos 00000101₂, que corresponde a 5₁₀, ou seja, a magnitude original do número.
+
+Esse processo pode ser visto como uma espécie de "caminho de volta" para recuperar o valor absoluto de um número negativo. Ele é essencial para cálculos matemáticos e operações computacionais que precisam lidar tanto com números positivos quanto negativos, permitindo que os sistemas operacionais e processadores realizem subtrações, comparações e outras operações numéricas de forma eficiente.
+
+O Complemento de Dois se destaca por sua consistência e simplicidade, pois essa técnica de recuperação da magnitude funciona de maneira unificada para qualquer número, sem a ambiguidade da duplicação do zero, como ocorre em outras representações numéricas.
+
+
  Outra Técnica para Calcular o Complemento de Dois: Além do método tradicional de cálculo do Complemento de Dois, existe outra técnica prática que pode ser usada para encontrar o complemento de um número binário: a técnica de copiar até o primeiro 1 da direita para a esquerda e inverter os bits restantes. O que torna essa abordagem interessante é que ela funciona tanto para converter um número positivo em seu equivalente negativo quanto para transformar um número negativo de volta em positivo. Isso significa que podemos aplicá-la em ambas as direções sem precisar modificar a lógica do processo.
 
 Essa técnica é especialmente eficiente para operações rápidas, sendo amplamente utilizada em circuitos digitais e na manipulação de registros em memória. Como não exige operações adicionais além da inversão dos bits, ela se torna uma forma simples e direta de alternar entre as representações positiva e negativa de um número em Complemento de Dois.
