@@ -234,112 +234,183 @@ armazenados e processados em sistemas digitais.
 
                               "Representação em Complemento de Um"
 
-Quando os computadores precisam lidar com números negativos, uma das abordagens utilizadas é a Representação em Complemento de Um. Essa técnica oferece uma maneira sistemática de representar valores negativos sem precisar de um bit de sinal separado, como ocorre no método de Sinal e Magnitude. A ideia central do Complemento de Um é simples: um número positivo é representado normalmente, e seu equivalente negativo é obtido invertendo todos os seus bits, transformando 0s em 1s e 1s em 0s.
+ Quando os computadores precisam lidar com números negativos, uma das abordagens utilizadas é a Representação em 
+Complemento de Um. Essa técnica oferece uma maneira sistemática de representar valores negativos sem precisar de um 
+bit de sinal separado, como ocorre no método de Sinal e Magnitude. A ideia central do Complemento de Um é simples: 
+um número positivo é representado normalmente, e seu equivalente negativo é obtido invertendo todos os seus bits, 
+transformando 0s em 1s e 1s em 0s.
 
-Essa abordagem tem como principal vantagem a simplicidade no processo de inversão dos números, tornando a conversão entre valores positivos e negativos extremamente fácil. No entanto, assim como outras representações, ela também apresenta algumas limitações, como a existência de dois valores distintos para o zero (+0 e -0), o que pode gerar inconsistências em operações matemáticas.
+ Essa abordagem tem como principal vantagem a simplicidade no processo de inversão dos números, tornando a 
+conversão entre valores positivos e negativos extremamente fácil. No entanto, assim como outras representações, ela 
+também apresenta algumas limitações, como a existência de dois valores distintos para o zero (+0 e -0), o que pode 
+gerar inconsistências em operações matemáticas.
 
-Para entender melhor como essa técnica funciona e quais são suas implicações, vamos explorar sua estrutura, funcionamento e impacto nas operações computacionais:
+ Para entender melhor como essa técnica funciona e quais são suas implicações, vamos explorar sua estrutura, 
+funcionamento e impacto nas operações computacionais:
 
+ * Como Calcular o Complemento de Um: A representação em Complemento de Um é uma técnica usada para representar 
+  números negativos no sistema binário, resolvendo algumas limitações da abordagem Sinal e Magnitude. No método de 
+  Sinal e Magnitude, o bit mais à esquerda indica o sinal do número (0 para positivo e 1 para negativo), enquanto 
+  os outros bits representam a magnitude. No entanto, essa abordagem tem o problema de possuir duas representações 
+  para o zero (+0 e -0), além de tornar operações matemáticas mais complicadas.
 
-Como Calcular o Complemento de Um: A representação em Complemento de Um é uma técnica usada para representar números negativos no sistema binário, resolvendo algumas limitações da abordagem Sinal e Magnitude. No método de Sinal e Magnitude, o bit mais à esquerda indica o sinal do número (0 para positivo e 1 para negativo), enquanto os outros bits representam a magnitude. No entanto, essa abordagem tem o problema de possuir duas representações para o zero (+0 e -0), além de tornar operações matemáticas mais complicadas.
+   O Complemento de Um surge como uma alternativa, tornando mais eficiente a forma como os computadores lidam com 
+  números negativos e operações aritméticas. O método consiste basicamente em inverter todos os bits do número para 
+  obter sua versão negativa. 
 
-O Complemento de Um surge como uma alternativa, tornando mais eficiente a forma como os computadores lidam com números negativos e operações aritméticas. O método consiste basicamente em inverter todos os bits do número para obter sua versão negativa. 
+   A seguir, vamos detalhar esse processo passo a passo.
 
-A seguir, vamos detalhar esse processo passo a passo.
+   - Escreva o Número em Binário: O primeiro passo para representar um número no sistema de Complemento de Um é 
+                                 escrever sua versão em binário da forma convencional, sem nenhuma modificação. 
+                                 Isso significa simplesmente converter o número decimal positivo para sua forma 
+                                 binária, como faríamos normalmente.
 
-Escreva o Número em Binário: O primeiro passo para representar um número no sistema de Complemento de Um é escrever sua versão em binário da forma convencional, sem nenhuma modificação. Isso significa simplesmente converter o número decimal positivo para sua forma binária, como faríamos normalmente.
+                                  Para isso, escolhemos uma quantidade fixa de bits para garantir que todos os 
+                                 números sigam um padrão consistente. O número de bits influencia diretamente na 
+                                 faixa de valores que podemos representar. Em geral, os computadores trabalham com 
+                                 tamanhos fixos como 4, 8, 16, 32 ou 64 bits, dependendo da aplicação.
 
-Para isso, escolhemos uma quantidade fixa de bits para garantir que todos os números sigam um padrão consistente. O número de bits influencia diretamente na faixa de valores que podemos representar. Em geral, os computadores trabalham com tamanhos fixos como 4, 8, 16, 32 ou 64 bits, dependendo da aplicação.
+                                  Por exemplo se quisermos representar o número 5 usando 4 bits com sinal, a 
+                                 conversão para binário nos dá:
 
-Por exemplo se quisermos representar o número 5 usando 4 bits com sinal, a conversão para binário nos dá:
+                                           5₁₀ = 0101₂ 
 
-           5₁₀ = 0101₂ 
+                                  Representando 5 com 4 bits, o primeiro bit (bit mais à esquerda) será utilizado 
+                                 posteriormente como bit de sinal, então por enquanto, ele apenas faz parte da 
+                                 contagem total de bits.
 
-Representando 5 com 4 bits, o primeiro bit (bit mais à esquerda) será utilizado posteriormente como bit de sinal, então por enquanto, ele apenas faz parte da contagem total de bits.
+                                  Se precisarmos de mais espaço para representar números maiores, podemos aumentar 
+                                 a quantidade de bits. Por exemplo, se usarmos 8 bits, o número 5 seria escrito 
+                                 como:
 
-Se precisarmos de mais espaço para representar números maiores, podemos aumentar a quantidade de bits. Por exemplo, se usarmos 8 bits, o número 5 seria escrito como:
+                                          5₁₀ = 00000101₂
 
-         5₁₀ = 00000101₂
+                                   Perceba que adicionamos zeros à esquerda para manter a estrutura de 8 bits. Isso 
+                                  não altera o valor do número, apenas garante que ele siga um formato padronizado, 
+                                  o que é essencial para que o processador possa interpretar corretamente os 
+                                  valores armazenados na memória.
 
-Perceba que adicionamos zeros à esquerda para manter a estrutura de 8 bits. Isso não altera o valor do número, apenas garante que ele siga um formato padronizado, o que é essencial para que o processador possa interpretar corretamente os valores armazenados na memória.
+                                   Definir um tamanho fixo de bits é essencial, pois sem essa padronização, 
+                                  cálculos podem se tornar imprecisos. Se um sistema espera sempre números com 8 
+                                  bits e recebe um com apenas 5 bits, ele pode interpretar os dados incorretamente, 
+                                  gerando erros no processamento.
 
-Definir um tamanho fixo de bits é essencial, pois sem essa padronização, cálculos podem se tornar imprecisos. Se um sistema espera sempre números com 8 bits e recebe um com apenas 5 bits, ele pode interpretar os dados incorretamente, gerando erros no processamento.
+   - Interprete o Primeiro Bit (Bit de Sinal): No sistema de Complemento de Dois, o bit de sinal tem a mesma função 
+                              que no sistema de Sinal e Magnitude: ele indica se o número é positivo ou negativo. 
+                              Esse bit está localizado à esquerda do número binário, sendo o primeiro bit na 
+                              sequência.
 
+                               A principal diferença entre o Complemento de Dois e o método de Sinal e Magnitude é 
+                              a maneira como os números negativos são armazenados e interpretados, o que faz com 
+                              que o Complemento de Dois seja mais eficiente para operações aritméticas, 
+                              especialmente em computadores. O bit de sinal, sendo o mais à esquerda, é um 
+                              indicativo direto de qual é a "natureza" do número.
 
-Interprete o Primeiro Bit (Bit de Sinal): No sistema de Complemento de Dois, o bit de sinal tem a mesma função que no sistema de Sinal e Magnitude: ele indica se o número é positivo ou negativo. Esse bit está localizado à esquerda do número binário, sendo o primeiro bit na sequência.
+                                Se o bit de sinal for 0, isso significa que o número é positivo.
 
-A principal diferença entre o Complemento de Dois e o método de Sinal e Magnitude é a maneira como os números negativos são armazenados e interpretados, o que faz com que o Complemento de Dois seja mais eficiente para operações aritméticas, especialmente em computadores. O bit de sinal, sendo o mais à esquerda, é um indicativo direto de qual é a "natureza" do número.
+                                Se o bit de sinal for 1, isso significa que o número é negativo.
 
-Se o bit de sinal for 0, isso significa que o número é positivo.
-Se o bit de sinal for 1, isso significa que o número é negativo.
+                               Esse processo é importante porque permite que o computador entenda rapidamente se 
+                              está lidando com um número positivo ou negativo, sem precisar de um símbolo extra, 
+                              como o "+" ou o "−" que usamos em notação decimal. O bit de sinal simplifica essa 
+                              distinção, armazenando essa informação diretamente no próprio número, facilitando a 
+                              manipulação e os cálculos.
 
-Esse processo é importante porque permite que o computador entenda rapidamente se está lidando com um número positivo ou negativo, sem precisar de um símbolo extra, como o "+" ou o "−" que usamos em notação decimal. O bit de sinal simplifica essa distinção, armazenando essa informação diretamente no próprio número, facilitando a manipulação e os cálculos.
-
-Essa simplicidade e clareza são cruciais para a eficiência das operações matemáticas nos computadores, especialmente quando lidamos com grandes volumes de cálculos ou com números negativos, como em operações de subtração e multiplicação.
-
-
-Inverta todos os bits (Complementação): Agora, chegamos ao processo mais importante do Complemento de Um: inverter todos os bits do número. Esse passo é essencial para transformar um número positivo em sua contraparte negativa. Vamos entender com mais detalhes.
-
-Quando falamos em "inverter os bits", estamos dizendo que cada 0 será transformado em 1, e cada 1 será transformado em 0. Esse processo é chamado de complementação porque, ao realizá-lo, estamos criando uma "versão oposta" do número original. É como se você estivesse criando o reflexo binário do número positivo, ou seja, sua contraparte negativa.
-
-Se começarmos com o número 5, representado em binário como:
-
-              5₁₀ = 0101₂
-
-Agora, aplicamos a inversão bit a bit. A transformação fica assim:
-
-            [0] [1] [0] [1]
-             |   |   |   |
-             V   V   V   V
-            [1] [0] [1] [0]
-
-O 0 mais a esquerda do numero se torna 1.
-
-O 1 que vem logo a seguir se torna 0.
-
-O 0 seguinte se torna 1.
-
-O 1 que é o ultimo numero mais se torna 0.
-
-Portanto, ao invertermos todos os bits de 0101₂, obtemos 1010₂, que é a representação binária de -5 no sistema de Complemento de Um.
-
-Em vez de apenas colocar um sinal de negativo na frente do número, como fazemos no sistema decimal (por exemplo, "-5"), no sistema binário, precisamos manipular a própria representação do número para indicar que ele é negativo. Ao inverter todos os bits, criamos uma versão "espelhada" do número original, que, no caso de 5, nos dá -5.
-
-Em resumo, a representação em  complementação de 1 é o processo de "virar o espelho" do número, criando a versão negativa de um número positivo de maneira simples e eficiente. Isso torna as operações matemáticas com números negativos mais diretas e facilita o trabalho dos computadores.
-
-
-Recuperação da Magnitude (Obter o Valor Absoluto): Quando temos um número negativo representado em Complemento de Um e precisamos encontrar sua magnitude original, o processo é bem simples: basta inverter todos os bits novamente. Isso é como se estivéssemos "desfazendo" a transformação que fizemos quando geramos o número negativo.
-
-Vamos considerar o número 1010₂, que no sistema de Complemento de Um representa -5. Para recuperarmos a magnitude original, ou seja, para voltarmos ao valor positivo de 5, precisamos inverter todos os bits desse número, transformando os 1s em 0s e os 0s em 1s:
-
-     -5₁₀ = 1010₂
-
-Invertemos todos os bits:
-
-      5₁₀ = 0101₂
-
-Agora, 0101₂ é simplesmente 5 em binário, que é a magnitude original do número. A operação de inversão "desfaz" a transformação feita quando convertíamos um número positivo em negativo. Isso é útil, por exemplo, quando queremos entender o valor absoluto de um número negativo ou quando precisamos trabalhar apenas com a parte positiva de um número, sem o sinal negativo.
-
-Esse processo de recuperação da magnitude é essencial em cálculos e operações dentro dos computadores, pois muitas vezes, ao trabalhar com números negativos, precisamos saber qual é o valor absoluto do número (sem o sinal) para realizar certas operações, como somas e subtrações. O Complemento de Um facilita esse processo ao permitir que, com uma simples inversão, possamos sempre voltar ao valor positivo correspondente.
+                               Essa simplicidade e clareza são cruciais para a eficiência das operações matemáticas 
+                              nos computadores, especialmente quando lidamos com grandes volumes de cálculos ou com 
+                              números negativos, como em operações de subtração e multiplicação.
 
 
-Vantagens e Desvantagens: A Representação em Complemento de Um oferece uma maneira simples e eficaz de representar números negativos. No entanto, como qualquer abordagem, ela apresenta tanto vantagens quanto desvantagens que afetam sua aplicabilidade em sistemas computacionais. 
+   - Inverta todos os bits (Complementação): Agora, chegamos ao processo mais importante do Complemento de Um: 
+                           inverter todos os bits do número. Esse passo é essencial para transformar um número 
+                           positivo em sua contraparte negativa. Vamos entender com mais detalhes.
 
-Vamos explorar mais detalhadamente essas vantagens e limitações para entender o impacto dessa representação nas operações de cálculos e processamento de dados.
+                            Quando falamos em "inverter os bits", estamos dizendo que cada 0 será transformado em 
+                           1, e cada 1 será transformado em 0. Esse processo é chamado de complementação porque, ao 
+                           realizá-lo, estamos criando uma "versão oposta" do número original. É como se você 
+                           estivesse criando o reflexo binário do número positivo, ou seja, sua contraparte 
+                           negativa.
 
-Vantagens
+                            Se começarmos com o número 5, representado em binário como:
 
-Conversão simples entre números positivos e negativos: Assim como o Sinal e Magnitude, o Complemento de Um permite uma conversão direta entre números positivos e negativos, mas de uma forma mais simples. Inverter todos os bits de um número é uma operação rápida e fácil, tornando a conversão eficiente.
+                                      5₁₀ = 0101₂
 
-Uso mais eficiente de espaço: Ao contrário da representação em Sinal e Magnitude, que requer um bit extra para indicar o sinal do número, o Complemento de Um não precisa de um bit separado para o sinal, o que resulta em uma representação mais compacta.
+                            Agora, aplicamos a inversão bit a bit. A transformação fica assim:
 
-Aplicações simples e eficientes: Em sistemas que não requerem cálculos complexos, o Complemento de Um pode ser uma opção prática, especialmente quando comparado com outras representações que exigem maior processamento para conversões e cálculos.
+                                   [0] [1] [0] [1]
+                                    |   |   |   |
+                                    V   V   V   V
+                                   [1] [0] [1] [0]
 
-Desvantagens
+                            Portanto, ao invertermos todos os bits de 0101₂, obtemos 1010₂, que é a representação 
+                           binária de -5 no sistema de Complemento de Um.
 
-Presença de dois zeros: Semelhante ao Sinal e Magnitude, a Representação em Complemento de Um também sofre com o problema dos dois zeros. Ou seja, existe a representação de +0 e -0, que são binariamente distintas, o que pode causar complicações nas operações matemáticas, principalmente quando se lida com comparação e aritmética de números.
+                            Em vez de apenas colocar um sinal de negativo na frente do número, como fazemos no 
+                           sistema decimal (por exemplo, "-5"), no sistema binário, precisamos manipular a própria  
+                           representação do número para indicar que ele é negativo. Ao inverter todos os bits, 
+                           criamos uma versão "espelhada" do número original, que, no caso de 5, nos dá -5.
 
-Dificuldade nas operações matemáticas: Embora o Complemento de Um seja mais eficiente que o Sinal e Magnitude em termos de conversão, ele ainda apresenta desafios ao realizar operações matemáticas. A soma de números positivos e negativos exige ajustes específicos, o que pode aumentar a complexidade do processo.
+   Em resumo, a representação em  complementação de 1 é o processo de "virar o espelho" do número, criando a versão 
+  negativa de um número positivo de maneira simples e eficiente. Isso torna as operações matemáticas com números 
+  negativos mais diretas e facilita o trabalho dos computadores.
+
+
+ * Recuperação da Magnitude (Obtendo o Valor Absoluto): Quando temos um número negativo representado em Complemento 
+  de Um e precisamos encontrar sua magnitude original, o processo é bem simples: basta inverter todos os bits 
+  novamente. Isso é como se estivéssemos "desfazendo" a transformação que fizemos quando geramos o número negativo.
+
+   Vamos considerar o número 1010₂, que no sistema de Complemento de Um representa -5. Para recuperarmos a 
+  magnitude original, ou seja, para voltarmos ao valor positivo de 5, precisamos inverter todos os bits desse 
+  número, transformando os 1s em 0s e os 0s em 1s:
+
+       -5₁₀ = 1010₂
+
+   Invertemos todos os bits:
+
+        5₁₀ = 0101₂
+
+   Agora, 0101₂ é simplesmente 5 em binário, que é a magnitude original do número. A operação de inversão "desfaz"  
+  a transformação feita quando convertíamos um número positivo em negativo. Isso é útil, por exemplo, quando 
+  queremos entender o valor absoluto de um número negativo ou quando precisamos trabalhar apenas com a parte p
+  ositiva de um número, sem o sinal negativo.
+
+   Esse processo de recuperação da magnitude é essencial em cálculos e operações dentro dos computadores, pois 
+  muitas vezes, ao trabalhar com números negativos, precisamos saber qual é o valor absoluto do número (sem o 
+  sinal) para realizar certas operações, como somas e subtrações. O Complemento de Um facilita esse processo ao 
+  permitir que, com uma simples inversão, possamos sempre voltar ao valor positivo correspondente.
+
+
+ * Vantagens e Desvantagens: A Representação em Complemento de Um oferece uma maneira simples e eficaz de 
+  representar números negativos. No entanto, como qualquer abordagem, ela apresenta tanto vantagens quanto 
+  desvantagens que afetam sua aplicabilidade em sistemas computacionais. 
+
+   Vamos explorar mais detalhadamente essas vantagens e limitações para entender o impacto dessa representação nas 
+  operações de cálculos e processamento de dados.
+
+   Vantagens:
+
+    - Conversão simples entre números positivos e negativos: Assim como o Sinal e Magnitude, o Complemento de Um 
+     permite uma conversão direta entre números positivos e negativos, mas de uma forma mais simples. Inverter 
+     todos os bits de um número é uma operação rápida e fácil, tornando a conversão eficiente.
+
+    - Uso mais eficiente de espaço: Ao contrário da representação em Sinal e Magnitude, que requer um bit extra 
+     para indicar o sinal do número, o Complemento de Um não precisa de um bit separado para o sinal, o que resulta 
+     em uma representação mais compacta.
+
+    - Aplicações simples e eficientes: Em sistemas que não requerem cálculos complexos, o Complemento de Um pode 
+     ser uma opção prática, especialmente quando comparado com outras representações que exigem maior processamento 
+     para conversões e cálculos.
+
+   Desvantagens:
+
+    - Presença de dois zeros: Semelhante ao Sinal e Magnitude, a Representação em Complemento de Um também sofre 
+     com o problema dos dois zeros. Ou seja, existe a representação de +0 e -0, que são binariamente distintas, o 
+     que pode causar complicações nas operações matemáticas, principalmente quando se lida com comparação e 
+     aritmética de números.
+
+   - Dificuldade nas operações matemáticas: Embora o Complemento de Um seja mais eficiente que o Sinal e Magnitude 
+    em termos de conversão, ele ainda apresenta desafios ao realizar operações matemáticas. A soma de números 
+    positivos e negativos exige ajustes específicos, o que pode aumentar a complexidade do processo.
 
 Desempenho inferior em comparação ao Complemento de Dois: Em termos de eficiência computacional, o Complemento de Dois supera o Complemento de Um, já que ele elimina o problema de dois zeros e torna as operações aritméticas mais diretas. Portanto, apesar de sua simplicidade, o Complemento de Um não é tão eficiente quanto o Complemento de Dois, que é amplamente utilizado nos sistemas modernos.
 
