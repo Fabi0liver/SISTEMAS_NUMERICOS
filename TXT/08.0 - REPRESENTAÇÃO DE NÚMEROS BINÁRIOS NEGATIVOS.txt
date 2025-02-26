@@ -316,8 +316,29 @@ Vamos considerar o número 1010₂, que no sistema de Complemento de Um represen
 
 Invertemos todos os bits:
 
-                 5₁₀ = 0101₂
+      5₁₀ = 0101₂
 
 Agora, 0101₂ é simplesmente 5 em binário, que é a magnitude original do número. A operação de inversão "desfaz" a transformação feita quando convertíamos um número positivo em negativo. Isso é útil, por exemplo, quando queremos entender o valor absoluto de um número negativo ou quando precisamos trabalhar apenas com a parte positiva de um número, sem o sinal negativo.
 
 Esse processo de recuperação da magnitude é essencial em cálculos e operações dentro dos computadores, pois muitas vezes, ao trabalhar com números negativos, precisamos saber qual é o valor absoluto do número (sem o sinal) para realizar certas operações, como somas e subtrações. O Complemento de Um facilita esse processo ao permitir que, com uma simples inversão, possamos sempre voltar ao valor positivo correspondente.
+
+
+Vantagens e Desvantagens: A Representação em Complemento de Um oferece uma maneira simples e eficaz de representar números negativos. No entanto, como qualquer abordagem, ela apresenta tanto vantagens quanto desvantagens que afetam sua aplicabilidade em sistemas computacionais. 
+
+Vamos explorar mais detalhadamente essas vantagens e limitações para entender o impacto dessa representação nas operações de cálculos e processamento de dados.
+
+Vantagens
+
+Conversão simples entre números positivos e negativos: Assim como o Sinal e Magnitude, o Complemento de Um permite uma conversão direta entre números positivos e negativos, mas de uma forma mais simples. Inverter todos os bits de um número é uma operação rápida e fácil, tornando a conversão eficiente.
+
+Uso mais eficiente de espaço: Ao contrário da representação em Sinal e Magnitude, que requer um bit extra para indicar o sinal do número, o Complemento de Um não precisa de um bit separado para o sinal, o que resulta em uma representação mais compacta.
+
+Aplicações simples e eficientes: Em sistemas que não requerem cálculos complexos, o Complemento de Um pode ser uma opção prática, especialmente quando comparado com outras representações que exigem maior processamento para conversões e cálculos.
+
+Desvantagens
+
+Presença de dois zeros: Semelhante ao Sinal e Magnitude, a Representação em Complemento de Um também sofre com o problema dos dois zeros. Ou seja, existe a representação de +0 e -0, que são binariamente distintas, o que pode causar complicações nas operações matemáticas, principalmente quando se lida com comparação e aritmética de números.
+
+Dificuldade nas operações matemáticas: Embora o Complemento de Um seja mais eficiente que o Sinal e Magnitude em termos de conversão, ele ainda apresenta desafios ao realizar operações matemáticas. A soma de números positivos e negativos exige ajustes específicos, o que pode aumentar a complexidade do processo.
+
+Desempenho inferior em comparação ao Complemento de Dois: Em termos de eficiência computacional, o Complemento de Dois supera o Complemento de Um, já que ele elimina o problema de dois zeros e torna as operações aritméticas mais diretas. Portanto, apesar de sua simplicidade, o Complemento de Um não é tão eficiente quanto o Complemento de Dois, que é amplamente utilizado nos sistemas modernos.
