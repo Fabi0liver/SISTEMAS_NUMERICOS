@@ -105,7 +105,7 @@ conforme esperado.
 
 
 
-                              Representação em Sinal e Magnitude
+                              "Representação em Sinal e Magnitude"
 
  Quando os computadores precisam representar números negativos, uma das abordagens mais diretas e intuitivas é a 
 Representação em Sinal e Magnitude. Essa técnica é inspirada na forma como representamos números no dia a dia: 
