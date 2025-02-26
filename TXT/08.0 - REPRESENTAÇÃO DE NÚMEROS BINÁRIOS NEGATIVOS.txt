@@ -433,7 +433,7 @@ de números no mundo binário.
 
 
 
-                                "Representação em Complemento de Um"
+                                "Representação em Complemento de dois"
 
 Quando os computadores precisam lidar com números negativos, uma das abordagens mais modernas e eficientes é a Representação em Complemento de Dois. Essa técnica é uma evolução do Complemento de Um e é amplamente utilizada porque resolve algumas das limitações que o método anterior apresentava, especialmente no que diz respeito à duplicação do zero. A ideia básica por trás do Complemento de Dois é semelhante à do Complemento de Um, mas com um passo extra para garantir que haja apenas um único valor para o zero, tornando as operações matemáticas mais consistentes e eficientes.
 
@@ -570,4 +570,26 @@ Em suma, essa técnica de calcular o Complemento de Dois, copiando até o primei
 
 Essa abordagem é útil em sistemas de hardware que precisam de um processo ágil para calcular o complemento de números binários. A eficiência e clareza no cálculo tornam essa técnica uma ferramenta prática e poderosa no contexto de computação digital.
 
+
+Vantagens e Desvantagens: Como já vimos, o Complemento de Dois é o método mais utilizado para representar números negativos em sistemas computacionais. Sua eficiência e simplicidade operacional fazem dele a escolha predominante para processadores e cálculos binários. No entanto, como qualquer sistema de representação numérica, ele apresenta tanto vantagens quanto desvantagens que influenciam seu uso.
+
+Vamos explorar esses pontos para entender melhor o impacto do Complemento de Dois nas operações matemáticas e no processamento de dados.
+
+Vantagens:
+
+Operações aritméticas diretas e eficientes: Diferente do Complemento de Um ou da representação em Sinal e Magnitude, o Complemento de Dois permite que operações de soma e subtração sejam realizadas sem a necessidade de ajustes manuais. O hardware pode executar cálculos como se estivesse lidando apenas com números positivos, o que simplifica bastante o design dos circuitos eletrônicos.
+
+Eliminação do problema dos dois zeros: Em outras representações, como o Complemento de Um, existe o problema de dois zeros distintos (+0 e -0), o que pode complicar comparações e cálculos. No Complemento de Dois, esse problema não existe, pois há apenas uma única representação para o zero (0000...0000), tornando as operações matemáticas mais consistentes.
+
+Facilidade na conversão de números negativos: Para obter o complemento de um número positivo, basta inverter os bits e somar 1. Da mesma forma, para recuperar a magnitude original de um número negativo, seguimos o mesmo processo. Isso torna a conversão simples e eficiente, ideal para processadores que precisam realizar cálculos rapidamente.
+
+Uso otimizado do espaço binário: O Complemento de Dois aproveita ao máximo os bits disponíveis, permitindo que o maior número negativo possível tenha a mesma magnitude que o maior número positivo possível (exceto por um bit de diferença). Esse equilíbrio facilita o armazenamento e a manipulação de números em memória.
+
+Desvantagens:
+
+Conversão manual menos intuitiva: Embora o Complemento de Dois seja eficiente para os computadores, para um ser humano a conversão pode não ser tão direta quanto no Complemento de Um, onde basta inverter os bits. Aqui, precisamos inverter os bits e somar 1, o que pode exigir um pouco mais de atenção ao realizar cálculos mentalmente.
+
+Assimetria nos valores extremos: No Complemento de Dois, a faixa de representação é assimétrica, pois o menor número negativo tem um valor absoluto maior que o maior número positivo. Por exemplo, em uma representação de 8 bits, podemos representar de -128 a +127, criando um pequeno desequilíbrio que pode afetar certas operações, especialmente em algoritmos que lidam com valores extremos.
+
+Dificuldade para leitura direta: Enquanto um número em Sinal e Magnitude ou Complemento de Um pode ser interpretado rapidamente apenas olhando os bits, no Complemento de Dois é necessário um pequeno processo mental para entender exatamente qual valor ele representa. Isso pode ser um desafio em tarefas que exigem depuração de dados binários.
 
