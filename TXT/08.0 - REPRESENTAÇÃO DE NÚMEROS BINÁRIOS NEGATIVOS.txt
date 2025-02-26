@@ -430,3 +430,117 @@ Complemento de Um é um passo importante para compreender como os computadores l
 operações aritméticas podem ser realizadas de forma mais prática e rápida. Em termos simples, é como aprender a 
 utilizar uma ferramenta básica que, com o tempo, nos leva a soluções mais sofisticadas e robustas na representação 
 de números no mundo binário.
+
+
+
+                                "Representação em Complemento de Um"
+
+Quando os computadores precisam lidar com números negativos, uma das abordagens mais modernas e eficientes é a Representação em Complemento de Dois. Essa técnica é uma evolução do Complemento de Um e é amplamente utilizada porque resolve algumas das limitações que o método anterior apresentava, especialmente no que diz respeito à duplicação do zero. A ideia básica por trás do Complemento de Dois é semelhante à do Complemento de Um, mas com um passo extra para garantir que haja apenas um único valor para o zero, tornando as operações matemáticas mais consistentes e eficientes.
+
+No Complemento de Dois, o número positivo é representado de maneira usual em binário. Para representar um número negativo, o processo envolve dois passos: primeiro, invertem-se todos os bits, como no Complemento de Um, e depois adiciona-se 1 ao resultado da inversão. Esse processo simples de "inversão e soma" traz muitas vantagens, como a eliminação de problemas com o zero duplicado e a possibilidade de realizar operações de adição e subtração de maneira mais direta e rápida. No entanto, como todo sistema, ele também tem suas limitações, e seu comportamento em relação aos valores de limite precisa ser bem compreendido.
+
+Ao adotarmos o Complemento de Dois, conseguimos uma solução elegante e eficaz para representar números negativos. Esse sistema não apenas simplifica o design das operações aritméticas no computador, como também otimiza o desempenho das máquinas, tornando o cálculo de somas e subtrações mais rápido e sem a necessidade de ajustes complicados. 
+
+Vamos agora explorar como essa técnica funciona na prática e os impactos dela no processamento de dados no nível do hardware.
+
+Como Calcular ou Complemento de Dois: A representação em Complemento de Dois é uma técnica eficaz utilizada pelos computadores para representar números negativos em binários. Ela surgiu como uma melhoria do Complemento de Um, resolvendo limitações como a duplicação do zero e tornando as operações aritméticas mais diretas e rápidas. Esse método facilita o trabalho com números negativos, tornando a manipulação de cálculos no computador mais eficiente. 
+
+A seguir, vamos entender como funciona esse processo passo a passo e como ele pode ser aplicado de maneira simples e eficaz:
+
+ Escreva o Número em Binário: O primeiro passo para calcular o Complemento de Dois é escrever o número original em binário, sem qualquer modificação. Isso significa que, se estamos tratando de um número decimal positivo, basta convertê-lo para binário da maneira convencional. Por exemplo, para representar o número 5, teríamos:
+
+5₁₀ = 0101₂
+
+A quantidade de bits utilizada é fundamental porque define a gama de valores que podemos representar. O número de bits deve ser fixado para garantir um padrão consistente — normalmente, utiliza-se 8, 16, 32 ou até 64 bits, dependendo da aplicação. No nosso exemplo, se quisermos usar 8 bits, o número 5 seria escrito como:
+
+5₁₀ = 00000101₂
+
+Aqui, estamos apenas preenchendo com zeros à esquerda para garantir que o número tenha 8 bits. Isso é importante para que o computador possa interpretar corretamente o valor sem perder dados. Ao usar um número fixo de bits, evitamos erros de interpretação e garantimos a precisão nos cálculos.
+
+ Interprete o Primeiro Bit (Bit de Sinal): No sistema de Complemento de Dois, o bit mais à esquerda, também conhecido como o bit de sinal, tem a função de indicar se o número é positivo ou negativo. A diferença principal entre o Complemento de Dois e o método de Sinal e Magnitude é a forma como lidamos com os números negativos. O Complemento de Dois simplifica o processo, tornando as operações matemáticas mais eficientes.
+
+Se o bit de sinal for 0, o número é positivo.
+
+Se o bit de sinal for 1, o número é negativo.
+
+Essa distinção é importante porque permite que o computador entenda, de maneira simples e rápida, se está lidando com um número positivo ou negativo, sem a necessidade de usar símbolos como o "+" ou o "−" que utilizamos no sistema decimal. O bit de sinal facilita a manipulação desses números, o que é crucial para o bom desempenho das operações aritméticas.
+
+ Inverta Todos os Bits (Complementação): Agora chegamos ao passo essencial do Complemento de Dois: inverter todos os bits do número. Ao contrário de outras representações, como o Complemento de Um, onde apenas invertemos os bits, no Complemento de Dois fazemos algo mais. Ao inverter os bits, estamos criando a versão "espelhada" do número.
+
+Por exemplo, ao começarmos com o número 5 em binário de 8 bits:
+
+   5₁₀ = 00000101₂
+
+Ao invertermos cada bit, transformando 0s em 1s e 1s em 0s:
+
+       [0] [0] [0] [0] [0] [1] [0] [1] 
+        |   |   |   |   |   |   |   |
+        V   V   V   V   V   V   V   V
+       [1] [1] [1] [1] [1] [0] [1] [0] 
+
+Obtemos: 11111010₂ que é igual a -5₁₀
+
+Mas esse  número, mas ainda não está completo. A inversão dos bits dá a "cópia invertida", mas falta um ajuste final para representar corretamente o valor negativo no sistema binário.
+
+ Adicione 1 ao Resultado da Inversão: Aqui, no Complemento de Dois, damos o passo final: somamos 1 ao número obtido após a inversão dos bits. Esse ajuste é necessário para que o número negativo seja corretamente representado. Esse processo garante que o sistema de Complemento de Dois resolva o problema da duplicação do zero, criando uma representação única para zero e evitando confusões.
+
+Vamos continuar com o exemplo. Após inverter os bits de 5, obtemos:
+
+         -5₁₀ = 11111010₂
+
+Agora, somamos 1 ao resultado da inversão:
+
+              11111010 
+              +      1 
+             ----------
+              11111011
+
+Obtemos 11111010₂, que é a forma completa e correta do -5 no sistema de Complemento de Dois.
+
+O cálculo do Complemento de Dois envolve três etapas principais: escrever o número em binário, inverter os bits e adicionar 1 ao resultado da inversão. Esse processo permite que os computadores representem e manipulem números negativos de maneira mais eficiente, tornando as operações matemáticas mais diretas e sem complicação. Ao aplicar o Complemento de Dois, o sistema computacional elimina problemas de duplicação de zero e torna as operações com números negativos mais rápidas e simples. Esse método, ao ser adotado, facilita imensamente os cálculos em larga escala, essencial para o funcionamento otimizado dos computadores.
+
+
+ Outra Técnica para Calcular o Complemento de Dois: Além do método tradicional de cálculo do Complemento de Dois, existe outra técnica prática que pode ser usada para encontrar o complemento de um número binário: a técnica de copiar até o primeiro 1 da direita para a esquerda e inverter os bits restantes. O que torna essa abordagem interessante é que ela funciona tanto para converter um número positivo em seu equivalente negativo quanto para transformar um número negativo de volta em positivo. Isso significa que podemos aplicá-la em ambas as direções sem precisar modificar a lógica do processo.
+
+Essa técnica é especialmente eficiente para operações rápidas, sendo amplamente utilizada em circuitos digitais e na manipulação de registros em memória. Como não exige operações adicionais além da inversão dos bits, ela se torna uma forma simples e direta de alternar entre as representações positiva e negativa de um número em Complemento de Dois.
+
+Vamos explorar passo a passo como funciona esse método.
+
+Escreva o Número em Binário: Assim como no método tradicional, o primeiro passo para calcular o Complemento de Dois é representar o número original em binário. Esse número pode ser positivo ou negativo, mas para a técnica que vamos abordar, partiremos de um número positivo.
+
+Por exemplo, vamos considerar o número 18. Sua representação em binário, usando 8 bits, seria:
+
+18₁₀ = 00010010₂
+
+Esse é o número que queremos converter para o seu valor negativo utilizando o Complemento de Dois.
+
+Copie até o Primeiro 1 da Direita para a Esquerda: Agora, vamos aplicar a técnica que consiste em copiar o número binário original até o primeiro "1" que aparece, começando da direita para a esquerda. Em outras palavras, precisamos percorrer a sequência de bits do número e, ao encontrar o primeiro "1", mantemos todos os bits à direita desse "1" exatamente como estão. O objetivo aqui é preservar a parte do número até o primeiro "1" (da direita para a esquerda) e fazer uma transformação nos bits à esquerda desse ponto.
+
+Para o número 18 , vamos percorrer os bits da direita para a esquerda:
+                                                                                                  
+     18₁₀ = 00010010₂                       
+
+O primeiro "1" aparece na segunda posição, contando da direita para a esquerda.
+ 
+          |
+          V
+    00010010
+
+Então, copiamos todos os bits até esse "1". Assim, o número até esse ponto será:
+
+ 000100[10]
+
+Agora é só inverter todos os bits à esquerda desse "1". O processo de inversão é simples: troque todos os "0s" por "1s" e todos os "1s" por "0s". Essa transformação é o que cria a versão "negativa" do número binário.
+
+ [0] [0] [0] [1] [0] [0] [1 0]
+  |   |   |   |   |   |    |
+  V   V   V   V   V   V    V
+ [1] [1] [1] [0] [1] [1] [1 0]  
+
+Assim o número original 18₁₀ que é 00010010₂, no  Complemento de Dois calculado pela técnica de "copiar até o primeiro 1" é 11101101₂, que é a representação de -18₁₀.
+
+Em suma, essa técnica de calcular o Complemento de Dois, copiando até o primeiro "1" da direita para a esquerda e invertendo o restante dos bits, oferece uma maneira eficiente de representar números no sistema binário. Ela é uma variação interessante do método tradicional, onde a inversão dos bits é feita de forma focada. A grande vantagem dessa técnica é sua simplicidade e rapidez, permitindo que a transformação de números positivos em negativos ou negativos em positivos seja feita de maneira direta, sem a necessidade de adicionar 1 ao final, como no método tradicional.
+
+Essa abordagem é útil em sistemas de hardware que precisam de um processo ágil para calcular o complemento de números binários. A eficiência e clareza no cálculo tornam essa técnica uma ferramenta prática e poderosa no contexto de computação digital.
+
+
