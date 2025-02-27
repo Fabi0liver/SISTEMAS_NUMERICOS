@@ -813,7 +813,7 @@ interno dos computadores e sua capacidade de realizar cálculos de maneira rápi
 
 
 
-                        "Overflow nas Representações de Números Binários"
+                          "Overflow nas Representações de Números Binários"
 
  Quando falamos sobre overflow em representações de números binários, estamos nos referindo a uma situação onde o 
 valor que tentamos representar excede a capacidade máxima que a representação pode armazenar. Em termos simples, 
