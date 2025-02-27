@@ -760,10 +760,25 @@ representações numéricas, principalmente em sistemas com precisão finita.
 
 
 
-                         "Conclusão sobre Representação de Números Binários"
+                          "Conclusão Sobre Representação de Números Binários"
 
-A representação de números binários é um aspecto fundamental na computação, pois permite que os computadores manipulem tanto números positivos quanto negativos de maneira eficiente. Como vimos nesse texto, existem diferentes técnicas para representar números negativos em binário, como o método de Sinal e Magnitude, o Complemento de 1 e o Complemento de 2. Cada uma dessas abordagens possuindo suas vantagens e desvantagens, mas todas têm um objetivo em comum: garantir que os cálculos envolvendo números negativos possam ser realizados corretamente dentro do sistema binário.
+ Assim concluimos que a representação de números binários é um aspecto fundamental na computação, pois permite que 
+os computadores manipulem tanto números positivos quanto negativos de maneira eficiente. Como vimos nessa 
+explicação, existem diferentes técnicas para representar numeros com sinal  positivos e negativos em binário, como 
+o método de Sinal e Magnitude, o Complemento de 1 e o Complemento de 2. Cada uma dessas abordagens possuindo suas 
+vantagens e desvantagens, mas todas têm um objetivo em comum: garantir que os cálculos envolvendo números negativos 
+possam ser realizados corretamente dentro do sistema binário.
 
-O Sinal e Magnitude é uma abordagem simples onde o bit mais à esquerda indica o sinal do número, mas tem a limitação de representar dois tipos de zero (positivo e negativo), o que pode gerar confusão. Já o Complemento de 1 resolve parcialmente esse problema ao inverter os bits, mas ainda não é totalmente eficiente, pois as operações aritméticas podem ser mais complicadas. O Complemento de 2, por outro lado, é o método mais utilizado em computadores, pois oferece uma maneira mais direta de lidar com números negativos e facilita a execução das operações aritméticas, eliminando a duplicação do zero e simplificando a lógica de cálculo.
+ O Sinal e Magnitude é uma abordagem simples onde o bit mais à esquerda indica o sinal do número, mas tem a 
+limitação de representar dois tipos de zero (positivo e negativo), o que pode gerar confusão. Já o Complemento de 1 
+resolve parcialmente esse problema ao inverter os bits, mas ainda não é totalmente eficiente, pois as operações 
+aritméticas podem ser mais complicadas. O Complemento de 2, por outro lado, é o método mais utilizado em 
+computadores, pois oferece uma maneira mais direta de lidar com números negativos e facilita a execução das 
+operações aritméticas, eliminando a duplicação do zero e simplificando a lógica de cálculo.
 
-A importância de entender essas representações é que elas formam a base para as operações matemáticas no nível mais baixo da computação. Sem essas técnicas, os computadores não seriam capazes de lidar de forma eficaz com a vasta gama de cálculos necessários para realizar tarefas cotidianas, como processar dados, controlar sistemas e até executar programas complexos. Portanto, a escolha e o entendimento dessas representações têm um impacto direto na eficiência e na precisão das operações computacionais, fazendo delas um conceito essencial para quem deseja compreender a fundo como os computadores realmente funcionam.
+ A importância de entender essas representações é que elas formam a base para as operações matemáticas no nível 
+mais baixo da computação. Sem essas técnicas, os computadores não seriam capazes de lidar de forma eficaz com a 
+vasta gama de cálculos necessários para realizar tarefas cotidianas, como processar dados, controlar sistemas e até 
+executar programas complexos. Portanto, a escolha e o entendimento dessas representações têm um impacto direto na 
+eficiência e na precisão das operações computacionais, fazendo delas um conceito essencial para quem deseja 
+compreender a fundo como os computadores realmente funcionam.
