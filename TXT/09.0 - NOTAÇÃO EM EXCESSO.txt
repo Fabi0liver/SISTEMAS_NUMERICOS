@@ -272,12 +272,26 @@ sistemas buscam otimizar a forma como os computadores manipulam e representam n�
 
 
 
-                            "Conclusão Sobre a Notação em Excesso"
+                             "Conclusão Sobre a Notação em Excesso"
 
-A notação em excesso é uma ferramenta fundamental dentro dos sistemas digitais, especialmente na representação de números com sinal em computadores. Seu principal papel é deslocar todos os números para uma faixa positiva, tornando as comparações e classificações mais diretas e eficientes. Esse método evita a necessidade de lidar diretamente com sinais negativos, o que simplifica muitos processos computacionais. Além disso, ao definir um valor fixo de excesso, ela permite que diferentes tamanhos de representações numéricas sejam tratados de maneira consistente, garantindo que os números estejam dentro de um intervalo previsível.
+ Assim se conclui, que a notação em excesso é uma ferramenta fundamental dentro dos sistemas digitais, 
+especialmente na representação de números com sinal em computadores. Seu principal papel é deslocar todos os 
+números para uma faixa positiva, tornando as comparações e classificações mais diretas e eficientes. Esse método 
+evita a necessidade de lidar diretamente com sinais negativos, o que simplifica muitos processos computacionais. 
+Além disso, ao definir um valor fixo de excesso, ela permite que diferentes tamanhos de representações numéricas 
+sejam tratados de maneira consistente, garantindo que os números estejam dentro de um intervalo previsível.
 
-A importância da notação em excesso vai além da simples representação de números. Seu uso em sistemas de ponto flutuante mostra como ela contribui para cálculos científicos e gráficos computacionais, áreas onde a precisão e a eficiência são essenciais. Enquanto outras formas de representação, como o complemento de dois, são mais eficientes para operações aritméticas, a notação em excesso se destaca na organização de valores numéricos de maneira ordenada e coerente. Dessa forma, ela não apenas facilita o trabalho dos computadores, mas também ajuda os programadores e engenheiros de hardware a projetarem sistemas mais eficientes e previsíveis.
+ A importância da notação em excesso vai além da simples representação de números. Seu uso em sistemas de ponto 
+flutuante mostra como ela contribui para cálculos científicos e gráficos computacionais, áreas onde a precisão e a 
+eficiência são essenciais. Enquanto outras formas de representação, como o complemento de dois, são mais eficientes 
+para operações aritméticas, a notação em excesso se destaca na organização de valores numéricos de maneira ordenada 
+e coerente. Dessa forma, ela não apenas facilita o trabalho dos computadores, mas também ajuda os programadores e 
+engenheiros de hardware a projetarem sistemas mais eficientes e previsíveis.
 
-Em resumo, a notação em excesso é uma solução elegante para um problema clássico da computação: como lidar com números negativos de forma simples e prática. Seu funcionamento baseado em um deslocamento fixo permite que os valores sejam interpretados com facilidade, garantindo compatibilidade e eficiência em diversas aplicações. Compreender esse conceito não apenas ajuda na construção de sistemas digitais mais robustos, mas também amplia a visão sobre como os computadores processam informações numéricas de maneira inteligente e otimizada.
+ Em resumo, a notação em excesso é uma solução elegante para um problema clássico da computação: como lidar com 
+números negativos de forma simples e prática. Seu funcionamento baseado em um deslocamento fixo permite que os 
+valores sejam interpretados com facilidade, garantindo compatibilidade e eficiência em diversas aplicações. 
+Compreender esse conceito não apenas ajuda na construção de sistemas digitais mais robustos, mas também amplia a 
+visão sobre como os computadores processam informações numéricas de maneira inteligente e otimizada.
 
 
