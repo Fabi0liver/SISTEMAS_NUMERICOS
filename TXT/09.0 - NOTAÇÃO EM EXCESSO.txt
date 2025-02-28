@@ -159,39 +159,62 @@ no trabalho com sistemas digitais e computação.
 
                         "Interpretando um Número na Notação em Excesso"
 
-Quando trabalhamos com a representação de números em sistemas digitais, às vezes precisamos interpretar um valor que já está na notação em excesso, ou seja, em um formato ajustado. O objetivo da interpretação é reverter esse processo para encontrar o número original que foi alterado pela adição de um excesso. Esse processo é simples e segue alguns passos bem definidos: começamos com o número na notação em excesso, depois convertemos ele de volta para o formato decimal, subtraímos o valor do excesso e, por fim, podemos converter o resultado de volta para binário, se necessário. Com esses passos, conseguimos entender o valor original, mesmo que ele tenha sido ajustado pela notação em excesso.
+ Quando trabalhamos com a representação de números em sistemas digitais, às vezes precisamos interpretar um valor 
+que já está na notação em excesso, ou seja, em um formato ajustado. O objetivo da interpretação é reverter esse 
+processo para encontrar o número original que foi alterado pela adição de um excesso. Esse processo é simples e 
+segue alguns passos bem definidos: começamos com o número na notação em excesso, depois convertemos ele de volta 
+para o formato decimal, subtraímos o valor do excesso e, por fim, podemos converter o resultado de volta para 
+binário, se necessário. Com esses passos, conseguimos entender o valor original, mesmo que ele tenha sido ajustado 
+pela notação em excesso.
 
-O processo de interpretação pode ser explicado pela fórmula:
+ O processo de interpretação pode ser explicado pela fórmula:
 
     "r - e = i"
 
-Vamos entender o que cada parte dessa fórmula significa:
+ Vamos entender o que cada parte dessa fórmula significa:
 
-r: Esse é o número que você tem na notação em excesso. Em outras palavras, r é o valor ajustado, que já inclui o excesso. Esse número foi somado com o valor do excesso para se deslocar para uma faixa positiva e agora precisa ser "desfeita" para que possamos entender o número original.
+  r: Esse é o número que você tem na notação em excesso. Em outras palavras, r é o valor ajustado, que já inclui o 
+    excesso. Esse número foi somado com o valor do excesso para se deslocar para uma faixa positiva e agora precisa 
+    ser "desfeita" para que possamos entender o número original.
 
-e: O e é o excesso, ou bias, que foi utilizado durante o processo de conversão. Esse valor foi somado ao número original para criar a representação em notação em excesso. Para interpretá-lo corretamente, precisamos saber qual é o valor do excesso, que é baseado no número de bits usados para a representação.
+  e: O e é o excesso, ou bias, que foi utilizado durante o processo de conversão. Esse valor foi somado ao número 
+    original para criar a representação em notação em excesso. Para interpretá-lo corretamente, precisamos saber 
+    qual é o valor do excesso, que é baseado no número de bits usados para a representação.
 
-i: O i é o número original, que é o valor que queremos recuperar. Após subtrair o excesso do número na notação em excesso, obtemos o valor que representa o número real, pronto para ser utilizado em cálculos e comparações.
+  i: O i é o número original, que é o valor que queremos recuperar. Após subtrair o excesso do número na notação em 
+    excesso, obtemos o valor que representa o número real, pronto para ser utilizado em cálculos e comparações.
 
-Em resumo, a fórmula r - e = i nos ajuda a entender o número original, subtraindo o excesso do valor ajustado.
+ Em resumo, a fórmula r - e = i nos ajuda a entender o número original, subtraindo o excesso do valor ajustado.
 
-Passos para Interpretar um Número na Notação em Excesso:
+ Passos para Interpretar um Número na Notação em Excesso:
 
-- Obtenha o número na notação em excesso: O primeiro passo é ter o número representado na notação em excesso. Suponhamos que tenhamos o número 01111100₂, que foi representado com um excesso de 127. Esse número já está ajustado e pronto para ser interpretado.
+  - Obtenha o número na notação em excesso: O primeiro passo é ter o número representado na notação em excesso. 
+   Suponhamos que tenhamos o número 01111100₂, que foi representado com um excesso de 127. Esse número já está 
+   ajustado e pronto para ser interpretado.
 
-- Converta o número de binário para decimal: O próximo passo é converter o número da notação binária para decimal. 
+  - Converta o número de binário para decimal: O próximo passo é converter o número da notação binária para 
+   decimal. 
 
- 01111100₂ = 124₁₀  
+         01111100₂ = 124₁₀  
 
-Então a representação binária 01111100, o equivalente em decimal seria 124.
+    Então a representação binária 01111100, e equivalente em decimal seria 124.
 
-- Subtraia o excesso do número: Agora, subtraímos o excesso da representação. Neste caso, estamos usando um excesso de 127. Então, fazemos o cálculo:
+  - Subtraia o excesso do número: Agora, subtraímos o excesso da representação. Neste caso, estamos usando um 
+   excesso de 127. Então, fazemos o cálculo:
 
- 124 - 127 = -3
+         124 - 127 = -3
 
-A subtração do excesso nos dá -3 que é  o valor representado por  01111100 na notação em excesso.
+ A subtração do excesso nos dá -3 que é  o valor representado por  01111100 na notação em excesso.
 
-Em resumo, a interpretação de números na notação em excesso é uma forma prática e eficiente de recuperar o valor original, ajustado pelo excesso. Ao seguir esses passos simples, conseguimos reverter a conversão e entender o número original, independentemente de ser positivo ou negativo. A subtração do excesso permite que o número seja "deslocado" de volta para sua faixa correta, possibilitando que o sistema de computação manipule o número de forma adequada.
+ Em resumo, a interpretação de números na notação em excesso é uma forma prática e eficiente de recuperar o valor 
+original, ajustado pelo excesso. Ao seguir esses passos simples, conseguimos reverter a conversão e entender o 
+número original, independentemente de ser positivo ou negativo. A subtração do excesso permite que o número seja 
+"deslocado" de volta para sua faixa correta, possibilitando que o sistema de computação manipule o número de forma 
+adequada.
 
-Esse processo facilita muito a maneira como os sistemas computacionais lidam com números negativos, tornando os cálculos mais rápidos e eficientes. Compreender como interpretar esses números é essencial para trabalhar com sistemas digitais, onde a precisão e a rapidez são fundamentais para o bom desempenho de operações complexas. Ao seguir esses passos, você pode garantir que os números representados na notação em excesso sejam corretamente entendidos e utilizados em qualquer aplicação digital.
+ Esse processo facilita muito a maneira como os sistemas computacionais lidam com números negativos, tornando os 
+cálculos mais rápidos e eficientes. Compreender como interpretar esses números é essencial para trabalhar com 
+sistemas digitais, onde a precisão e a rapidez são fundamentais para o bom desempenho de operações complexas. Ao 
+seguir esses passos, você pode garantir que os números representados na notação em excesso sejam corretamente 
+entendidos e utilizados em qualquer aplicação digital.
 
