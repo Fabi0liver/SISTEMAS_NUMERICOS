@@ -60,11 +60,20 @@ computacional.
 
                                 "Escolhendo um Intervalo e um Excesso"
 
-Para representar um número em notação em excesso, o primeiro passo é definir o intervalo de valores que queremos cobrir e escolher um excesso apropriado. O excesso é um valor fixo que será adicionado a todos os números dentro desse intervalo, deslocando-os para a faixa positiva. Esse valor geralmente é uma potência de 2, subtraída por 1, como no caso do excesso 127 para um sistema de 8 bits ou excesso 1023 para 11 bits. Esse excesso garante que tanto os números positivos quanto negativos sejam representados de forma equilibrada, tornando a comparação de valores mais fácil e direta.
+Para representar um número em notação em excesso, o primeiro passo é escolher um intervalo de valores e definir um excesso adequado. O excesso é simplesmente um valor fixo que será somado a todos os números da faixa, deslocando-os para o lado positivo. O excesso normalmente é uma potência de 2, subtraída por 1. Por exemplo, para um número de 8 bits, o excesso pode ser 127, e para 11 bits, o excesso seria 1023. 
 
-A escolha do excesso está relacionada ao número de bits disponíveis para a representação dos valores. Para um sistema com n bits, o excesso escolhido geralmente segue a fórmula: + (2^(n-1)) até - (2^(n-1) - 1), o que cria um intervalo simétrico ao redor do zero. Para ajudar a visualizar, imagine que você tenha uma régua que mede de -50 cm a +50 cm. Se você quiser que o zero da régua comece no centro e todos os números sejam positivos, basta deslocar toda a régua 50 cm para a direita. Agora, em vez de medir -20 cm, você vai registrar 30 cm na nova escala. Esse deslocamento é o que ocorre na notação em excesso: números negativos são convertidos em valores positivos.
+O intervalo de valores, então, é determinado pela fórmula:
 
-Esse deslocamento torna a representação de números negativos e positivos mais simples, sem a necessidade de usar um bit específico para indicar o sinal do número. O valor negativo é representado como um número positivo, simplesmente deslocado. Esse processo não só facilita as operações de comparação, mas também otimiza o armazenamento e processamento de números em sistemas digitais. Assim, a notação em excesso é uma ferramenta fundamental para garantir que as informações numéricas sejam tratadas de maneira eficiente e sem ambiguidade dentro dos computadores.
+           k = -(2^(n-1) - 1) até + (2^(n-1))
+
+Nessa fórmula, "n" representa o número de bits, ou seja, a quantidade de dígitos binários usados para armazenar os valores. O termo 2^(n-1) calcula o maior número positivo possível dentro do intervalo. Subtrair 1 (ou -1) ajusta esse valor para que o intervalo de números vá de um valor negativo até um valor positivo, criando uma simetria em torno de zero. O valor + 2^(n-1), por outro lado, representa o maior número positivo dentro desse intervalo. 
+
+Para exemplificar, em um número binário de 8 bits, temos:
+
+             k = -(2^(8-1) - 1) até + (2^(8-1))
+              ou seja, de -127 até +128
+
+Isso significa que, em vez de representar números negativos diretamente, nós deslocamos todos os números para uma faixa positiva, permitindo uma representação mais eficiente. Agora, em vez de armazenar valores negativos, usamos o excesso para fazer essa transformação. Para entender isso de forma mais simples, imagine uma régua que mede de -50 cm a +50 cm. Se você quiser que a menor medida comece de 0 cm, basta mover toda a régua 50 cm para a direita. Agora, em vez de dizer que algo está a -20 cm, você dirá que está a 30 cm na nova escala. Esse deslocamento é exatamente o que acontece na notação em excesso: um número negativo é deslocado para o positivo, mantendo a ordem e simplificando a forma como os números são manipulados dentro do sistema computacional.
 
 
 
