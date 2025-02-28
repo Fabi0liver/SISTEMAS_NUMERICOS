@@ -1,17 +1,37 @@
                                         NOTAÇÃO EM EXCESSO
 
 
-A notação em excesso é um método utilizado na computação para representar números de forma estruturada, permitindo distinguir valores positivos e negativos sem a necessidade de um bit de sinal. Essa abordagem se baseia em um deslocamento fixo, conhecido como “excesso”, que define um novo ponto de referência para a interpretação dos números. Em vez de trabalhar diretamente com os valores reais, o sistema armazena cada número deslocado em relação a essa base, facilitando operações e comparações. Esse conceito é amplamente aplicado em sistemas digitais, especialmente na representação de expoentes em números de ponto flutuante.
+ A notação em excesso é um método utilizado na computação para representar números de forma estruturada, permitindo 
+distinguir valores positivos e negativos sem a necessidade de um bit de sinal. Essa abordagem se baseia em um 
+deslocamento fixo, conhecido como “excesso”, que define um novo ponto de referência para a interpretação dos 
+números. Em vez de trabalhar diretamente com os valores reais, o sistema armazena cada número deslocado em relação 
+a essa base, facilitando operações e comparações. Esse conceito é amplamente aplicado em sistemas digitais, 
+especialmente na representação de expoentes em números de ponto flutuante.
 
-Para entender melhor essa ideia, imagine que você esteja organizando uma fila de pessoas, mas, em vez de começar a contagem do zero, você decide que o número 10 será o novo ponto de partida. Assim, alguém que normalmente seria o número 12 na fila agora é visto como 2 (pois está duas posições à frente do novo ponto inicial). Esse deslocamento não altera a ordem dos elementos, apenas muda a referência usada para interpretar os valores. Da mesma forma, a notação em excesso redefine os números de maneira uniforme, tornando comparações e cálculos mais eficientes dentro dos sistemas computacionais.
+ Para entender melhor essa ideia, imagine que você esteja organizando uma fila de pessoas, mas, em vez de começar a 
+contagem do zero, você decide que o número 10 será o novo ponto de partida. Assim, alguém que normalmente seria o 
+número 12 na fila agora é visto como 2 (pois está duas posições à frente do novo ponto inicial). Esse deslocamento 
+não altera a ordem dos elementos, apenas muda a referência usada para interpretar os valores. Da mesma forma, a 
+notação em excesso redefine os números de maneira uniforme, tornando comparações e cálculos mais eficientes dentro 
+dos sistemas computacionais.
 
-Uma das principais vantagens desse método é a manutenção da ordem numérica natural nos bits armazenados, o que simplifica o funcionamento dos circuitos digitais. Como os valores são deslocados de forma previsível, não há necessidade de etapas extras para determinar se um número é maior ou menor que outro. Isso é particularmente útil em aplicações que exigem alta performance, como processadores e cálculos matemáticos avançados. No caso da representação de números de ponto flutuante, a notação em excesso permite que os expoentes sejam armazenados de maneira consistente, garantindo precisão nos cálculos e facilitando a manipulação dos dados.
+ Uma das principais vantagens desse método é a manutenção da ordem numérica natural nos bits armazenados, o que 
+simplifica o funcionamento dos circuitos digitais. Como os valores são deslocados de forma previsível, não há 
+necessidade de etapas extras para determinar se um número é maior ou menor que outro. Isso é particularmente útil 
+em aplicações que exigem alta performance, como processadores e cálculos matemáticos avançados. No caso da 
+representação de números de ponto flutuante, a notação em excesso permite que os expoentes sejam armazenados de 
+maneira consistente, garantindo precisão nos cálculos e facilitando a manipulação dos dados.
 
-Um equívoco comum é confundir a notação em excesso com o complemento de dois, outro sistema de representação numérica. No complemento de dois, os números negativos são representados por meio da inversão de bits e soma de 1, o que altera a estrutura do número. Já na notação em excesso, o que muda é apenas o ponto de referência, sem inversão de bits. Esse detalhe pode parecer sutil, mas faz toda a diferença no modo como os computadores processam informações. Ao compreender esse conceito, é possível entender melhor como os sistemas digitais lidam com números e otimizar operações que dependem dessas representações.
+ Um equívoco comum é confundir a notação em excesso com o complemento de dois, outro sistema de representação 
+numérica. No complemento de dois, os números negativos são representados por meio da inversão de bits e soma de 1, 
+o que altera a estrutura do número. Já na notação em excesso, o que muda é apenas o ponto de referência, sem 
+inversão de bits. Esse detalhe pode parecer sutil, mas faz toda a diferença no modo como os computadores processam 
+informações. Ao compreender esse conceito, é possível entender melhor como os sistemas digitais lidam com números e 
+otimizar operações que dependem dessas representações.
 
 
 
-                                "Notação em Excesso na Computação"
+                                 "Notação em Excesso na Computação"
 
 Na computação, a notação em excesso é amplamente utilizada porque facilita o processamento numérico dentro dos circuitos digitais. Como os computadores operam diretamente com sequências de bits, a representação dos números precisa ser eficiente e compatível com as operações lógicas internas. A principal aplicação desse método ocorre na representação de expoentes em números de ponto flutuante, onde um deslocamento fixo permite armazenar tanto valores positivos quanto negativos sem a necessidade de um bit de sinal separado. Isso simplifica os cálculos, garantindo que as comparações entre números e as operações matemáticas sejam feitas de forma direta e sem conversões adicionais.
 
