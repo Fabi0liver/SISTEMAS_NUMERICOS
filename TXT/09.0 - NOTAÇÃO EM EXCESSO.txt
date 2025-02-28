@@ -62,8 +62,8 @@ computacional.
 
  Para representar um número em notação em excesso, o primeiro passo é escolher um intervalo de valores e definir um 
 excesso adequado. O excesso é simplesmente um valor fixo que será somado a todos os números da faixa, deslocando-os 
-para o lado positivo. O excesso normalmente é uma potência de 2, subtraída por 1. Por exemplo, para um número de 8 
-bits, o excesso pode ser 127, e para 11 bits, o excesso seria 1023. 
+para o lado positivo. O excesso no sistema binário normalmente é uma potência de 2, subtraída por 1. Por exemplo, 
+para um número de 8 bits, o excesso pode ser 127, e para 11 bits, o excesso seria 1023. 
 
  O intervalo de valores, então, é determinado pela fórmula:
 
