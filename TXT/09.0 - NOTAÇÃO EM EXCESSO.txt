@@ -33,8 +33,25 @@ otimizar operações que dependem dessas representações.
 
                                  "Notação em Excesso na Computação"
 
-Na computação, a notação em excesso é amplamente utilizada porque facilita o processamento numérico dentro dos circuitos digitais. Como os computadores operam diretamente com sequências de bits, a representação dos números precisa ser eficiente e compatível com as operações lógicas internas. A principal aplicação desse método ocorre na representação de expoentes em números de ponto flutuante, onde um deslocamento fixo permite armazenar tanto valores positivos quanto negativos sem a necessidade de um bit de sinal separado. Isso simplifica os cálculos, garantindo que as comparações entre números e as operações matemáticas sejam feitas de forma direta e sem conversões adicionais.
+ Na computação, a notação em excesso é amplamente utilizada porque facilita o processamento numérico dentro dos 
+circuitos digitais. Como os computadores operam diretamente com sequências de bits, a representação dos números 
+precisa ser eficiente e compatível com as operações lógicas internas. A principal aplicação desse método ocorre na 
+representação de expoentes em números de ponto flutuante, onde um deslocamento fixo permite armazenar tanto valores 
+positivos quanto negativos sem a necessidade de um bit de sinal separado. Isso simplifica os cálculos, garantindo 
+que as comparações entre números e as operações matemáticas sejam feitas de forma direta e sem conversões 
+adicionais.
 
-Uma boa forma de visualizar essa aplicação é imaginar um termômetro digital que, em vez de registrar temperaturas absolutas, armazena todas as medições a partir de um ponto de referência específico. Assim, se esse ponto for definido como 20°C, uma leitura de 25°C seria registrada como +5, enquanto uma de 15°C apareceria como -5. Esse deslocamento padronizado permite que os sistemas computacionais interpretem os valores corretamente sem precisar de ajustes manuais, garantindo que todas as operações sigam uma lógica uniforme e previsível. Da mesma forma, os computadores utilizam a notação em excesso para organizar os números de maneira eficiente, otimizando a forma como armazenam e processam dados.
+ Uma boa forma de visualizar essa aplicação é imaginar um termômetro digital que, em vez de registrar temperaturas 
+absolutas, armazena todas as medições a partir de um ponto de referência específico. Assim, se esse ponto for 
+definido como 20°C, uma leitura de 25°C seria registrada como +5, enquanto uma de 15°C apareceria como -5. Esse 
+deslocamento padronizado permite que os sistemas computacionais interpretem os valores corretamente sem precisar de 
+ajustes manuais, garantindo que todas as operações sigam uma lógica uniforme e previsível. Da mesma forma, os 
+computadores utilizam a notação em excesso para organizar os números de maneira eficiente, otimizando a forma como 
+armazenam e processam dados.
 
-Além da organização interna dos números, a notação em excesso desempenha um papel importante na interoperabilidade entre diferentes arquiteturas de hardware. Como esse método mantém a ordenação numérica natural, ele possibilita que diferentes componentes, como processadores e unidades de ponto flutuante, interpretem os dados da mesma maneira sem a necessidade de conversões constantes. Isso torna o processamento mais rápido e reduz a complexidade das operações matemáticas, garantindo que os cálculos sejam realizados com precisão e consistência dentro do sistema computacional.
+ Além da organização interna dos números, a notação em excesso desempenha um papel importante na interoperabilidade 
+entre diferentes arquiteturas de hardware. Como esse método mantém a ordenação numérica natural, ele possibilita 
+que diferentes componentes, como processadores e unidades de ponto flutuante, interpretem os dados da mesma maneira 
+sem a necessidade de conversões constantes. Isso torna o processamento mais rápido e reduz a complexidade das 
+operações matemáticas, garantindo que os cálculos sejam realizados com precisão e consistência dentro do sistema 
+computacional.
