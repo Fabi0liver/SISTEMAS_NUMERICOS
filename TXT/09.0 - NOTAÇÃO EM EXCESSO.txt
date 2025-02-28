@@ -92,7 +92,13 @@ simplificando a forma como os números são manipulados dentro do sistema comput
 
                           "Convertendo um Número para a Notação em Excesso"
 
-Quando trabalhamos com números em sistemas digitais, é importante saber como converter valores para uma forma que os computadores possam manipular facilmente. Um dos métodos para fazer isso é através da conversão de números para a notação em excesso. Esse processo é simples e envolve alguns passos principais: adicionar um valor fixo a um número, que é chamado de excesso, e depois converter o resultado para binário. A ideia é garantir que os números, independentemente de serem positivos ou negativos, sejam representados de forma que facilite as comparações e cálculos no computador. A conversão segue uma fórmula simples, mas entender bem os componentes dessa fórmula é fundamental para realizar a conversão corretamente.
+ Quando trabalhamos com números em sistemas digitais, é importante saber como converter valores para uma forma que 
+os computadores possam manipular facilmente. Um dos métodos para fazer isso é através da conversão de números para 
+a notação em excesso. Esse processo é simples e envolve alguns passos principais: adicionar um valor fixo a um 
+número, que é chamado de excesso, e depois converter o resultado para binário. A ideia é garantir que os números, 
+independentemente de serem positivos ou negativos, sejam representados de forma que facilite as comparações e 
+cálculos no computador. A conversão segue uma fórmula simples, mas entender bem os componentes dessa fórmula é 
+fundamental para realizar a conversão corretamente.
 
  A fórmula para a conversão é:  
 
@@ -100,33 +106,54 @@ Quando trabalhamos com números em sistemas digitais, é importante saber como c
 
  Agora vamos entender o que cada componente dessa fórmula significa:
 
-r: Esta é a representação final do número na notação em excesso. Após o processo de adição do excesso, este é o número que será representado no sistema digital. Em outras palavras, r é o valor final, já ajustado e pronto para ser manipulado pelo computador.
+  r: Esta é a representação final do número na notação em excesso. Após o processo de adição do excesso, este é o 
+    número que será representado no sistema digital. Em outras palavras, r é o valor final, já ajustado e pronto 
+    para ser manipulado pelo computador.
 
-i: É o número inteiro original que você deseja representar na notação em excesso. Esse é o número que você começará com, seja ele positivo ou negativo, e que será ajustado pela fórmula. Pense nele como a "matéria-prima" que você vai transformar.
+  i: É o número inteiro original que você deseja representar na notação em excesso. Esse é o número que você ]
+    começará com, seja ele positivo ou negativo, e que será ajustado pela fórmula. Pense nele como a "matéria-
+    prima" que você vai transformar.
 
-e: O e é o valor do excesso, também conhecido como bias. Esse excesso é um valor fixo que vai ser somado ao número inteiro i para "deslocá-lo" para uma faixa positiva. Esse excesso é escolhido com base no número de bits que você está usando e é fundamental para garantir que o sistema digital possa representar números negativos sem complicação. O e pode ser visto como um "deslocamento" que ajusta os números, permitindo que o sistema trate números negativos como se fossem positivos, facilitando as operações.
+  e: O e é o valor do excesso, também conhecido como bias. Esse excesso é um valor fixo que vai ser somado ao 
+    número inteiro i para "deslocá-lo" para uma faixa positiva. Esse excesso é escolhido com base no número de bits 
+    que você está usando e é fundamental para garantir que o sistema digital possa representar números negativos  
+    sem complicação. O e pode ser visto como um "deslocamento" que ajusta os números, permitindo que o sistema 
+    trate números negativos como se fossem positivos, facilitando as operações.
 
-Em resumo, está fórmula ajusta o número inteiro i ao adicionar um valor fixo e, resultando em r, que é a representação final que pode ser convertida para binário e usada pelo sistema digital.
+ Em resumo, está fórmula ajusta o número inteiro i ao adicionar um valor fixo e, resultando em r, que é a 
+representação final que pode ser convertida para binário e usada pelo sistema digital.
 
-Os Passos para Converter um Número para a Notação em Excesso são:
+ Os Passos para Converter um Número para a Notação em Excesso são:
 
-- Escreva o número em decimal: Primeiro, começamos com o número em sua forma decimal normal. Por exemplo, se temos o número -3, começamos com ele como está, no formato decimal.
+  - Escreva o número em decimal: Primeiro, começamos com o número em sua forma decimal normal. Por exemplo, se 
+   temos o número -3, começamos com ele como está, no formato decimal.
 
-- Adicione o valor do excesso: Agora, somamos o excesso ao número. Se estivermos trabalhando com um excesso de 127 (para 8 bits, por exemplo), adicionamos 127 ao número. No caso de -3, o cálculo seria:
+  - Adicione o valor do excesso: Agora, somamos o excesso ao número. Se estivermos trabalhando com um excesso de 
+   127 (para 8 bits, por exemplo), adicionamos 127 ao número. No caso de -3, o cálculo seria:
 
-         -3 + 127 = 124
+          -3 + 127 = 124
 
-- Converta o resultado para binário: O último passo é converter o resultado da soma para binário. No caso de 124, a conversão para binário é:
+  - Converta o resultado para binário: O último passo é converter o resultado da soma para binário. No caso de 124, 
+   a conversão para binário é:
 
-         124₁₀ = 01111100₂ 
+          124₁₀ = 01111100₂ 
 
-Então 01111100 é representação final do número 124 na notação em excesso de 127.
+    Então 01111100 é representação final do número 124 na notação em excesso de 127.
 
-Agora, se tivermos um número positivo como 3, o processo é o mesmo. Basta adicionar o excesso ao número e, depois, converter o resultado. Mesmo que o número seja negativo, ao somar o excesso, ele será deslocado para a faixa positiva.
+ Agora, se tivermos um número positivo como 3, o processo é o mesmo. Basta adicionar o excesso ao número e, 
+depois, converter o resultado. Mesmo que o número seja negativo, ao somar o excesso, ele será deslocado para a 
+faixa positiva.
 
-Em resumo, a conversão de números para a notação em excesso é uma forma prática e eficiente de representar números em sistemas digitais. Ao adicionar o excesso ao número original, conseguimos deslocar os valores negativos para o lado positivo, permitindo que sejam tratados de forma mais simples. Esse processo facilita as comparações e cálculos, otimizando o desempenho em sistemas computacionais, especialmente em operações que envolvem números inteiros com sinal.
+ Em resumo, a conversão de números para a notação em excesso é uma forma prática e eficiente de representar números 
+em sistemas digitais. Ao adicionar o excesso ao número original, conseguimos deslocar os valores negativos para o 
+lado positivo, permitindo que sejam tratados de forma mais simples. Esse processo facilita as comparações e 
+cálculos, otimizando o desempenho em sistemas computacionais, especialmente em operações que envolvem números 
+inteiros com sinal.
 
-Com a fórmula simples e os passos bem definidos, podemos representar qualquer número de forma eficiente, sem perder a precisão ou a ordem natural dos números. A notação em excesso é uma ferramenta poderosa que ajuda a manter os cálculos rápidos e sem erros, e entender como realizar essa conversão corretamente é uma habilidade fundamental no trabalho com sistemas digitais e computação.
+ Com a fórmula simples e os passos bem definidos, podemos representar qualquer número de forma eficiente, sem 
+perder a precisão ou a ordem natural dos números. A notação em excesso é uma ferramenta poderosa que ajuda a manter 
+os cálculos rápidos e sem erros, e entender como realizar essa conversão corretamente é uma habilidade fundamental 
+no trabalho com sistemas digitais e computação.
 
 
 
