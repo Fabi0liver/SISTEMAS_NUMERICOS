@@ -31,7 +31,7 @@ otimizar operações que dependem dessas representações.
 
 
 
-                                   "Notação em Excesso na Computação"
+                                  "Notação em Excesso na Computação"
 
  Na computação, a notação em excesso é amplamente utilizada porque facilita o processamento numérico dentro dos 
 circuitos digitais. Como os computadores operam diretamente com sequências de bits, a representação dos números 
@@ -244,7 +244,7 @@ excesso contribui de forma significativa para a eficácia e a rapidez de muitos 
 
 
 
-                    "Diferenças entre Notação em excesso e Complemento de Dois"
+                     "Diferenças entre Notação em excesso e Complemento de Dois"
 
  Embora a notação em excesso e o complemento de dois sejam ambos usados para representar números com sinal em 
 sistemas digitais, suas abordagens e resultados são bem diferentes. A notação em excesso, como vimos, funciona 
