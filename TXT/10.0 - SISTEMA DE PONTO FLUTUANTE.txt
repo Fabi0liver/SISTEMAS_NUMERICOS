@@ -1,15 +1,37 @@
                                       SISTEMA DE PONTO FLUTUANTE
 
 
-Imagine que você está tentando explicar para um amigo como um computador consegue lidar com números gigantescos, como a distância entre planetas, ou números minúsculos, como o tamanho de um vírus. O sistema de ponto flutuante é justamente uma solução que os computadores usam para representar esses números, garantindo que os cálculos matemáticos sejam feitos de forma eficiente. Ele funciona como uma espécie de “notação científica digital”, permitindo que um mesmo espaço na memória do computador possa armazenar tanto números extremamente grandes quanto números muito pequenos sem desperdiçar recursos.
+ Imagine que você está tentando explicar para um amigo como um computador consegue lidar com números gigantescos, 
+como a distância entre planetas, ou números minúsculos, como o tamanho de um vírus. O sistema de ponto flutuante é 
+justamente uma solução que os computadores usam para representar esses números, garantindo que os cálculos 
+matemáticos sejam feitos de forma eficiente. Ele funciona como uma espécie de “notação científica digital”, 
+permitindo que um mesmo espaço na memória do computador possa armazenar tanto números extremamente grandes quanto 
+números muito pequenos sem desperdiçar recursos.
 
-O ponto flutuante é essencial para diversas áreas da computação. Se você já usou uma calculadora científica, fez gráficos em um jogo de videogame ou trabalhou com simulações físicas, provavelmente estava lidando com números em ponto flutuante sem perceber. Na prática, ele permite que programas de engenharia, inteligência artificial, gráficos 3D e até mesmo interferências sejam feitos em cálculos complexos sem necessidade de grandes detalhes de memória.
+ O ponto flutuante é essencial para diversas áreas da computação. Se você já usou uma calculadora científica, fez 
+gráficos em um jogo de videogame ou trabalhou com simulações físicas, provavelmente estava lidando com números em 
+ponto flutuante sem perceber. Na prática, ele permite que programas de engenharia, inteligência artificial, 
+gráficos 3D e até mesmo interferências sejam feitos em cálculos complexos sem necessidade de grandes detalhes de 
+memória.
 
-Mas por que ele é chamado de "ponto flutuante"? O nome vem do fato de que, diferentemente dos números inteiros, onde a vírgula decimal (ou ponto) tem uma posição fixa, no ponto flutuante essa posição pode se mover (ou “flutuar”)dependendo do tamanho do número que está sendo representado. Isso é parecido com a notação científica que usamos no dia a dia, onde escrevemos números grandes ou pequenos em uma forma compacta, como 3,14 para representar 314 x 10^-2. Nos computadores, esse conceito é adaptado para funcionar na base binária, que é a linguagem que eles entendem.
+ Mas por que ele é chamado de "ponto flutuante"? O nome vem do fato de que, diferentemente dos números inteiros, 
+onde a vírgula decimal (ou ponto) tem uma posição fixa, no ponto flutuante essa posição pode se mover (ou 
+“flutuar”)dependendo do tamanho do número que está sendo representado. Isso é parecido com a notação científica que 
+usamos no dia a dia, onde escrevemos números grandes ou pequenos em uma forma compacta, como 3,14 para representar 
+314 x 10^-2. Nos computadores, esse conceito é adaptado para funcionar na base binária, que é a linguagem que eles 
+entendem.
 
-Mesmo sendo uma ferramenta poderosa, o ponto flutuante tem suas limitações. Como os computadores trabalham com um número finito de bits para armazenar cada valor, nem todos os números podem ser representados com exatidão total, o que pode levar a pequenos erros de arredondamento. Para a maioria das aplicações do dia a dia, esses erros são insignificantes, mas em cálculos científicos ou financeiros, eles podem se acumular e causar problemas se não forem tratados corretamente.
+ Mesmo sendo uma ferramenta poderosa, o ponto flutuante tem suas limitações. Como os computadores trabalham com um 
+número finito de bits para armazenar cada valor, nem todos os números podem ser representados com exatidão total, o 
+que pode levar a pequenos erros de arredondamento. Para a maioria das aplicações do dia a dia, esses erros são 
+insignificantes, mas em cálculos científicos ou financeiros, eles podem se acumular e causar problemas se não forem 
+tratados corretamente.
 
-Em resumo, o sistema de ponto flutuante é um dos pilares da computação moderna, permitindo que os computadores realizem operações matemáticas avançadas de forma rápida e eficiente. Ele está presente em praticamente todas as áreas da tecnologia, desde jogos e gráficos até pesquisas científicas e inteligência artificial. Compreender como ele funciona, mesmo que de forma geral, ajuda a entender melhor os limites e capacidades dos computadores quando lidam com números.
+ Em resumo, o sistema de ponto flutuante é um dos pilares da computação moderna, permitindo que os computadores 
+realizem operações matemáticas avançadas de forma rápida e eficiente. Ele está presente em praticamente todas as 
+áreas da tecnologia, desde jogos e gráficos até pesquisas científicas e inteligência artificial. Compreender como 
+ele funciona, mesmo que de forma geral, ajuda a entender melhor os limites e capacidades dos computadores quando 
+lidam com números.
 
 
 
