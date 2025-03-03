@@ -134,6 +134,12 @@ diferenças entre a notação científica e o sistema de ponto flutuante?
                            expoente -5 indica que a vírgula deve ser deslocada 5 casas para a esquerda, restaurando 
                            o número original (0,0000567).
 
+    Esses exemplos demonstram como a notação científica facilita a representação de números muito grandes ou muito   
+   pequenos de maneira compacta e prática. A mantissa captura os dígitos mais significativos, enquanto o expoente 
+   nos dá uma ideia clara de quão grande ou pequeno é o número em relação à base. Com isso, conseguimos simplificar 
+   a escrita e os cálculos, tornando a leitura e a comparação de números mais intuitivas, especialmente em áreas 
+   como ciência e engenharia.
+
    Em suma, a notação científica é uma ferramenta matemática poderosa que facilita a escrita e manipulação de 
   números extremamente grandes ou pequenos. Seu principal objetivo é tornar os cálculos mais práticos e a leitura 
   dos números mais compreensível, especialmente em áreas como ciências exatas e engenharia. No entanto, é 
@@ -183,7 +189,7 @@ Exemplo 1: O número binário 1101 pode ser representado em Sistema de Ponto Flu
 
     1101 = 1,101 × 2³
 
-O número 1101 é um valor grande, e vamos representá-lo no sistema de ponto flutuante. A forma original seria 1101 = 1.101 × 2³, ou seja, a vírgula é movida três casas à direita para representar o número completo.
+Explicação: O número 1101 é um valor grande, e vamos representá-lo no sistema de ponto flutuante. A forma original seria 1101 = 1.101 × 2³, ou seja, a vírgula é movida três casas à direita para representar o número completo.
 
 Analisando a representação 1,101 × 2³, o número 1,101 é a mantissa, que contém os 3 primeiros dígitos significativos de 1101. O expoente 2³ (ou 8) indica que a vírgula deve ser deslocada três posições à direita para restaurar o número original. Como o expoente 3 está dentro do intervalo permitido (2³ a 2⁻³), a representação está válida e a vírgula se move corretamente para dar 1101.
 
@@ -192,7 +198,7 @@ Exemplo 2: O número binário 0,001010 pode ser representado em Sistema de Ponto
 
      0,001010 = 1,010 × 2⁻³
 
-Agora, vamos ver o número 0,001010, que é um valor muito pequeno. A primeira coisa que fazemos é representar esse número como 1,010 × 2⁻³, ou seja, a vírgula se move três casas à esquerda para representar o valor completo. A mantissa 1,010 contém os 3 primeiros dígitos significativos de 0,001010.
+Explicação: Agora, vamos ver o número 0,001010, que é um valor muito pequeno. A primeira coisa que fazemos é representar esse número como 1,010 × 2⁻³, ou seja, a vírgula se move três casas à esquerda para representar o valor completo. A mantissa 1,010 contém os 3 primeiros dígitos significativos de 0,001010.
 
 O expoente 2⁻³ (ou 1/8) nos diz que a vírgula deve ser movida três casas para a esquerda. Isso restaura o valor original, que é 0,001010. Aqui, o expoente -3 está dentro do intervalo permitido, ou seja, o valor 2⁻³ é válido, pois está entre o expoente mínimo 2⁻³ e o expoente máximo 2³.
 
