@@ -70,7 +70,6 @@ diferenças entre a notação científica e o sistema de ponto flutuante?
   valor real. Essa forma de representação não muda o significado do número, apenas o escreve de uma maneira que 
   facilita a leitura e os cálculos matemáticos. 
 
-
   - Formato da Notação Científica: A notação científica tem um formato padrão que facilita a representação de 
    números grandes e pequenos de maneira compacta e eficiente. Agora, vamos explorar como esse formato funciona e 
    entender como cada parte dessa expressão contribui para simplificar o valor do número.
@@ -148,64 +147,114 @@ diferenças entre a notação científica e o sistema de ponto flutuante?
   conhecido como ponto flutuante. 
 
 
-Sistema de Ponto Flutuante: Representação Computacional
+ * Sistema de Ponto Flutuante: Representação Computacional
 
-Quando aprendemos com computadores e precisamos representar números muito grandes ou muito pequenos, a notação científica não é a solução ideal para o processamento. Isso ocorre porque os computadores têm uma capacidade limitada de armazenamento, ou que exigem um formato mais eficiente e flexível. Para lidar com essa limitação, o sistema de ponto flutuante foi desenvolvido. Ele permite que números muito grandes e muito pequenos sejam representados de forma compacta e eficaz, utilizando uma estrutura específica para facilitar os cálculos e otimização do uso da memória.
+   Quando aprendemos com computadores e precisamos representar números muito grandes ou muito pequenos, a notação 
+  científica não é a solução ideal para o processamento. Isso ocorre porque os computadores têm uma capacidade 
+  limitada de armazenamento, ou que exigem um formato mais eficiente e flexível. Para lidar com essa limitação, o 
+  sistema de ponto flutuante foi desenvolvido. Ele permite que números muito grandes e muito pequenos sejam 
+  representados de forma compacta e eficaz, utilizando uma estrutura específica para facilitar os cálculos e 
+  otimização do uso da memória.
 
-O sistema de ponto flutuante é amplamente utilizado em diversas áreas da computação, especialmente em operações matemáticas de precisão, como cálculos científicos e simulações numéricas. Esse sistema é capaz de lidar com uma diversidade de escalas de números e permite que o computador faça os cálculos sem perder precisão ou causar erros significativos. A estrutura do ponto flutuante é projetada para representar um número como uma mantissa multiplicada por uma potência de base, com a vantagem de se ajustar de acordo com a magnitude do número a ser representada.
+   O sistema de ponto flutuante é amplamente utilizado em diversas áreas da computação, especialmente em operações 
+  matemáticas de precisão, como cálculos científicos e simulações numéricas. Esse sistema é capaz de lidar com uma 
+  diversidade de escalas de números e permite que o computador faça os cálculos sem perder precisão ou causar erros 
+  significativos. A estrutura do ponto flutuante é projetada para representar um número como uma mantissa 
+  multiplicada por uma potência de base, com a vantagem de se ajustar de acordo com a magnitude do número a ser 
+  representada.
 
-Formato do Sistema de Ponto Flutuante: O sistema de ponto flutuante segue uma estrutura que facilita a representação de números de forma compacta e eficiente. Agora, vamos explorar como esse formato funciona e entender os componentes principais dessa estrutura.
+  - Formato do Sistema de Ponto Flutuante: O sistema de ponto flutuante segue uma estrutura que facilita a 
+   representação de números de forma compacta e eficiente. Agora, vamos explorar como esse formato funciona e 
+   entender os componentes principais dessa estrutura.
 
-A representação do sistema de ponto flutuante segue um formato geral, que pode ser expresso como:
+    A representação do sistema de ponto flutuante segue um formato geral, que pode ser expresso como:
 
-               S.P.F = (B, N, EXP(mín.), EXP(máx.))
+                 S.P.F = (B, N, EXP(mín.), EXP(máx.))
 
-Onde:
+    Onde:
 
-B: Representa a Base numérica, assim como na notação científica, a base numérica no sistema de ponto flutuante define o sistema em que os números são representados. A base pode ser 2 (binário), 8 (octal), 10 (decimal) ou 16 (hexadecimal). No contexto dos computadores, a base mais comum é 2, pois os computadores operam com sistemas binários. Isso significa que, no ponto flutuante, cada "dígito" do número terá uma potência de 2, permitindo uma representação mais eficiente para o sistema binário de computadores.
+     B: Representa a Base numérica, assim como na notação científica, a base numérica no sistema de ponto flutuante 
+       define o sistema em que os números são representados. A base pode ser 2 (binário), 8 (octal), 10 (decimal) 
+       ou 16 (hexadecimal). No contexto dos computadores, a base mais comum é 2, pois os computadores operam com 
+       sistemas binários. Isso significa que, no ponto flutuante, cada "dígito" do número terá uma potência de 2, 
+       permitindo uma representação mais eficiente para o sistema binário de computadores.
 
-N: Representa o número de dígitos significativos em uma mantissa, que define quantos números podem ser armazenados na parte significativa da representação. Isso significa que a mantissa terá um número limitado de dígitos, e é isso que determina a precisão do número armazenado. Quanto maior N, maior será a precisão da representação, permitindo um número maior de dígitos significativos para representar o valor. Porém, isso também ocupa mais espaço de memória. Em outras palavras, N controla a precisão de que o sistema tem ao armazenar números.
+     N: Representa o número de dígitos significativos em uma mantissa, que define quantos números podem ser 
+       armazenados na parte significativa da representação. Isso significa que a mantissa terá um número limitado 
+       de dígitos, e é isso que determina a precisão do número armazenado. Quanto maior N, maior será a precisão da 
+       representação, permitindo um número maior de dígitos significativos para representar o valor. Porém, isso 
+       também ocupa mais espaço de memória. Em outras palavras, N controla a precisão de que o sistema tem ao 
+       armazenar números.
 
-EXP(min): Representa o Expoente mínimo, que define o valor mais baixo que o expoente pode assumir. Ele indica o menor número que pode ser representado no sistema de ponto flutuante. Se o número for muito pequeno e ultrapassar esse valor, o sistema de ponto flutuante pode não ser capaz de representá-lo de forma precisa, causando erros de arredondamento ou perda de dados.
+     EXP(mín.): Representa o Expoente mínimo, que define o valor mais baixo que o expoente pode assumir. Ele indica 
+               o menor número que pode ser representado no sistema de ponto flutuante. Se o número for muito 
+               pequeno e ultrapassar esse valor, o sistema de ponto flutuante pode não ser capaz de representá-lo 
+               de forma precisa, causando erros de arredondamento ou perda de dados.
 
-EXP(max): Representa o Expoente máximo, por sua vez, define o valor maior para que o expoente possa ser configurado. Isso representa o número mais alto que pode ser representado pelo sistema de ponto flutuante. Se o número for maior que esse valor, ele será fechado ou "estourará" a capacidade de representação do sistema.
+     EXP(máx.): Representa o Expoente máximo, por sua vez, define o valor maior para que o expoente possa ser 
+               configurado. Isso representa o número mais alto que pode ser representado pelo sistema de ponto 
+               flutuante. Se o número for maior que esse valor, ele será fechado ou "estourará" a capacidade de 
+               representação do sistema.
 
-O sistema de ponto flutuante permite representar números grandes ou pequenos de forma eficiente, ajustando a base, precisão e limites de expoente. Isso facilita cálculos complexos e economiza memória, sendo fundamental para muitas aplicações computacionais.
-
-
-Exemplo de Sistema de Ponto Flutuante: 
-
-Vamos ver  exemplos de números no sistema de ponto flutuante S.P.F = (2, 3, 2³, 2⁻³), que tem as seguintes regras:
-
-A base B é 2 (sistema binário).
-
-A mantissa N pode ter até 3 dígitos.
-
-O expoente pode variar entre 2³ e 2⁻³.
-
-Agora, vamos verificar os exemplos com base nessas regras:
-
-Exemplo 1: O número binário 1101 pode ser representado em Sistema de Ponto Flutuante como:
-
-    1101 = 1,101 × 2³
-
-Explicação: O número 1101 é um valor grande, e vamos representá-lo no sistema de ponto flutuante. A forma original seria 1101 = 1.101 × 2³, ou seja, a vírgula é movida três casas à direita para representar o número completo.
-
-Analisando a representação 1,101 × 2³, o número 1,101 é a mantissa, que contém os 3 primeiros dígitos significativos de 1101. O expoente 2³ (ou 8) indica que a vírgula deve ser deslocada três posições à direita para restaurar o número original. Como o expoente 3 está dentro do intervalo permitido (2³ a 2⁻³), a representação está válida e a vírgula se move corretamente para dar 1101.
-
-
-Exemplo 2: O número binário 0,001010 pode ser representado em Sistema de Ponto Flutuante como:
-
-     0,001010 = 1,010 × 2⁻³
-
-Explicação: Agora, vamos ver o número 0,001010, que é um valor muito pequeno. A primeira coisa que fazemos é representar esse número como 1,010 × 2⁻³, ou seja, a vírgula se move três casas à esquerda para representar o valor completo. A mantissa 1,010 contém os 3 primeiros dígitos significativos de 0,001010.
-
-O expoente 2⁻³ (ou 1/8) nos diz que a vírgula deve ser movida três casas para a esquerda. Isso restaura o valor original, que é 0,001010. Aqui, o expoente -3 está dentro do intervalo permitido, ou seja, o valor 2⁻³ é válido, pois está entre o expoente mínimo 2⁻³ e o expoente máximo 2³.
-
-Esses exemplos ilustram como o sistema de ponto flutuante ajuda a representar números grandes e pequenos de forma compacta. Mesmo com números que têm muitas casas à esquerda ou à direita da vírgula, podemos ajustá-los para dentro do intervalo permitido pelo sistema de ponto flutuante. O uso da base 2, a limitação de 3 dígitos significativos na mantissa, e a definição do expoente dentro dos limites permitem que possamos trabalhar com números de forma eficiente, sem perder precisão.
+    O sistema de ponto flutuante permite representar números grandes ou pequenos de forma eficiente, ajustando a 
+   base, precisão e limites de expoente. Isso facilita cálculos complexos e economiza memória, sendo fundamental 
+   para muitas aplicações computacionais.
 
 
-Em suma, o sistema de ponto flutuante é uma forma eficiente e prática de representar números muito grandes ou pequenos no ambiente computacional, permitindo que os computadores façam cálculos precisos sem comprometer o desempenho. Ele resolve o problema de representar números com precisão e flexibilidade, ajustando a base, a precisão (mantissa) e o intervalo de expoentes. Embora a notação científica nos ajude a visualizar números grandes e pequenos em papel, o sistema de ponto flutuante garante que esses valores possam ser usados de maneira eficiente nos cálculos do mundo digital, sendo crucial para áreas como processamento de dados científicos, gráficos computacionais e simulações complexas.
+  - Exemplo de Sistema de Ponto Flutuante: 
+
+    Vamos ver  exemplos de números no sistema de ponto flutuante S.P.F = (2, 3, 2³, 2⁻³), que tem as seguintes 
+   regras:
+
+     A base B é 2 (sistema binário).
+
+     A mantissa N pode ter até 3 dígitos.
+
+     O expoente pode variar entre 2³ e 2⁻³.
+
+    Agora, vamos verificar os exemplos com base nessas regras:
+
+     Exemplo 1: O número binário 1101 pode ser representado em Sistema de Ponto Flutuante como:
+
+                1101 = 1,101 × 2³
+
+                Explicação: O número 1101 é um valor grande, e vamos representá-lo no sistema de ponto flutuante. A 
+                           forma original seria 1101 = 1.101 × 2³, ou seja, a vírgula é movida três casas à direita 
+                           para representar o número completo.
+
+                            Analisando a representação 1,101 × 2³, o número 1,101 é a mantissa, que contém os 3 
+                           primeiros dígitos significativos de 1101. O expoente 2³ (ou 8) indica que a vírgula deve 
+                           ser deslocada três posições à direita para restaurar o número original. Como o expoente 
+                           3 está dentro do intervalo permitido (2³ a 2⁻³), a representação está válida e a vírgula 
+                           se move corretamente para dar 1101.
+
+     Exemplo 2: O número binário 0,001010 pode ser representado em Sistema de Ponto Flutuante como:
+
+                0,001010 = 1,010 × 2⁻³
+
+                Explicação: Agora, vamos ver o número 0,001010, que é um valor muito pequeno. A primeira coisa que 
+                           fazemos é representar esse número como 1,010 × 2⁻³, ou seja, a vírgula se move três 
+                           casas à esquerda para representar o valor completo. A mantissa 1,010 contém os 3 
+                           primeiros dígitos significativos de 0,001010.
+
+                            O expoente 2⁻³ (ou 1/8) nos diz que a vírgula deve ser movida três casas para a 
+                           esquerda. Isso restaura o valor original, que é 0,001010. Aqui, o expoente -3 está 
+                           dentro do intervalo permitido, ou seja, o valor 2⁻³ é válido, pois está entre o expoente 
+                           mínimo 2⁻³ e o expoente máximo 2³.
+
+    Esses exemplos ilustram como o sistema de ponto flutuante ajuda a representar números grandes e pequenos de 
+   forma compacta. Mesmo com números que têm muitas casas à esquerda ou à direita da vírgula, podemos ajustá-los 
+   para dentro do intervalo permitido pelo sistema de ponto flutuante. O uso da base 2, a limitação de 3 dígitos 
+   significativos na mantissa, e a definição do expoente dentro dos limites permitem que possamos trabalhar com  
+   números de forma eficiente, sem perder precisão.
+
+   Em suma, o sistema de ponto flutuante é uma forma eficiente e prática de representar números muito grandes ou 
+  pequenos no ambiente computacional, permitindo que os computadores façam cálculos precisos sem comprometer o 
+  desempenho. Ele resolve o problema de representar números com precisão e flexibilidade, ajustando a base, a 
+  precisão (mantissa) e o intervalo de expoentes. Embora a notação científica nos ajude a visualizar números 
+  grandes e pequenos em papel, o sistema de ponto flutuante garante que esses valores possam ser usados de maneira 
+  eficiente nos cálculos do mundo digital, sendo crucial para áreas como processamento de dados científicos, 
+  gráficos computacionais e simulações complexas.
 
 
 
