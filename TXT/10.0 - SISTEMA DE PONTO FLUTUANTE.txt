@@ -43,4 +43,30 @@ A notação científica e o sistema de ponto flutuante são duas maneiras de rep
 
 Se você já viu um número escrito como 6,022 × 10 ^ 23, já teve contato com a ideia de representar números de maneira mais compacta. Mas como isso é traduzido para o mundo dos computadores? Quais são as semelhanças e diferenças entre a notação científica e o sistema de ponto flutuante? 
 
-Vamos explorar esses conceitos com mais detalhes e entender como cada um deles funciona na prática.
+Vamos explorar esses conceitos com mais detalhes e entender como cada um deles funciona na prática:
+
+Notação Científica: Representação Matemática 
+
+Quando lidamos com números muito grandes, como a distância entre planetas, ou números muito pequenos, como o tamanho de uma bactéria, escrever esses valores de forma completa pode ser trabalhoso e pouco prático. Imagine que você precisa anotar a massa de um átomo de hidrogênio: 0,00000000000000000000000167 gramas. Escrever esse número sempre que precisar pode ser cansativo e até confuso! Para facilitar, a matemática desenvolveu um sistema chamado notação científica, que nos permite representar esses números de maneira compacta e organizada, tornando os cálculos mais simples e a leitura mais clara.
+
+A notação científica é amplamente utilizada em diversas áreas do conhecimento, como física, química, astronomia e engenharia, justamente porque simplifica a escrita de números muito grandes ou muito pequenos sem alterar seu valor real. Essa forma de representação não muda o significado do número, apenas o escreve de uma maneira que facilita a leitura e os cálculos matemáticos. 
+
+
+Formato da Notação Científica: A notação científica tem um formato padrão que facilita a representação de números grandes e pequenos de maneira compacta e eficiente. Agora, vamos explorar como esse formato funciona e entender como cada parte dessa expressão contribui para simplificar o valor do número.
+
+A notação científica segue um formato padrão, que pode ser representado da seguinte forma:
+                        
+         Val = ±M × Bᵉˣᵖ
+
+Onde:
+
+Val: Representa o Valor (número) original que queremos expressar de maneira mais compacta e compreensível. Esse valor pode ser muito grande, como a massa da Terra em quilogramas, ou muito pequeno, como o tamanho de um átomo em metros. O uso da notação científica não altera esse número, apenas o reescreve de uma forma que facilita a leitura, os cálculos e a comparação entre valores de grandezas muito diferentes.
+
+M: Representa a Mantissa ou coeficiente, que é a parte mais importante da notação científica, pois concentra os dígitos significativos do número. Para garantir uma representação padronizada, a mantissa sempre será um número maior ou igual a 1 e menor que 10 (em decimal). Isso significa que o primeiro dígito à esquerda da vírgula nunca será zero. Além disso, a mantissa pode ser positiva ou negativa, dependendo do sinal do número original. Em essência, a mantissa preserva a informação essencial do número sem os zeros extras que podem dificultar a leitura.
+
+B: Representa a Base numérica, que indica o sistema numérico em que o número está sendo representado. No nosso dia a dia, utilizamos o sistema decimal, onde a base é 10, o que significa que cada posição de um número representa uma potência de 10. No entanto, a notação científica também pode ser aplicada em outras bases, como a base 2 (binária), muito utilizada em computação. No contexto da notação científica no sistema decimal, a base sempre será 10, pois é ela que define o deslocamento da vírgula ao multiplicarmos pela potência indicada pelo expoente.
+
+exp: Representa o Expoente ou ordem de grandeza, O expoente determina quantas casas decimais a vírgula da mantissa deve ser deslocada para obter o valor original. Se o expoente for positivo, a vírgula se move para a direita, tornando o número maior; se for negativo, a vírgula se desloca para a esquerda, tornando o número menor. Esse expoente é fundamental porque ele indica a ordem de grandeza do número, ou seja, o quão grande ou pequeno ele é em relação às potências de 10. Em outras palavras, o expoente nos dá uma ideia rápida da escala do número sem precisar contar manualmente quantos zeros existem.
+
+
+
