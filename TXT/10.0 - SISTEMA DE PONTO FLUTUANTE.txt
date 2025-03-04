@@ -296,153 +296,285 @@ muitas operações que usamos tanto em nossas vidas cotidianas quanto em áreas 
 
 
 
-                          "Como o Sistema de Ponto Flutuante Funciona"
+                           "Como o Sistema de Ponto Flutuante Funciona"
 
-Agora que já entendemos como os computadores representam números reais por meio da notação científica e do sistema de ponto flutuante, podemos dar um passo além e explorar mais a fundo como esse sistema funciona internamente. O ponto flutuante é a forma como os computadores armazenam números muito grandes e muito pequenos de maneira eficiente, garantindo um equilíbrio entre precisão e economia de espaço. Para isso, ele divide um número em duas partes principais: a mantissa, que guarda os dígitos mais importantes, e o expoente, que define onde a vírgula deve estar. Essa estrutura permite representar valores variados sem precisar de uma quantidade gigantesca de memória para cada cálculo.
+ Agora que já entendemos como os computadores representam números reais por meio da notação científica e do sistema 
+de ponto flutuante, podemos dar um passo além e explorar mais a fundo como esse sistema funciona internamente. O 
+ponto flutuante é a forma como os computadores armazenam números muito grandes e muito pequenos de maneira 
+eficiente, garantindo um equilíbrio entre precisão e economia de espaço. Para isso, ele divide um número em duas 
+partes principais: a mantissa, que guarda os dígitos mais importantes, e o expoente, que define onde a vírgula deve 
+estar. Essa estrutura permite representar valores variados sem precisar de uma quantidade gigantesca de memória 
+para cada cálculo.
 
-Mas como exatamente o computador transforma um número decimal comum em um número de ponto flutuante? Esse processo segue um conjunto de etapas que garantem que o número seja armazenado de forma padronizada e possa ser interpretado corretamente pelo hardware. Desde a conversão da base até o ajuste do expoente dentro dos limites permitidos, cada fase desse processo garante que o número seja representado com o máximo de precisão possível dentro do espaço disponível. Vamos agora detalhar esses passos e entender melhor como o sistema de ponto flutuante funciona na prática.
+ Mas como exatamente o computador transforma um número decimal comum em um número de ponto flutuante? Esse processo 
+segue um conjunto de etapas que garantem que o número seja armazenado de forma padronizada e possa ser interpretado 
+corretamente pelo hardware. Desde a conversão da base até o ajuste do expoente dentro dos limites permitidos, cada 
+fase desse processo garante que o número seja representado com o máximo de precisão possível dentro do espaço 
+disponível. Vamos agora detalhar esses passos e entender melhor como o sistema de ponto flutuante funciona na prática.
 
-  Passos do Funcionamento do Sistema de Ponto Flutuante:
+ Passos do Funcionamento do Sistema de Ponto Flutuante:
 
- Converter o número para a base do sistema: O primeiro passo essencial ao trabalhar com o sistema de ponto flutuante é garantir que o número esteja na base correta para ser processado pelo computador. Como os computadores usam o sistema binário (base 2), qualquer número que queremos representar precisa ser convertido para essa base.
+ * Converter o número para a base do sistema: O primeiro passo essencial ao trabalhar com o sistema de ponto 
+  flutuante é garantir que o número esteja na base correta para ser processado pelo computador. Como os 
+  computadores usam o sistema binário (base 2), qualquer número que queremos representar precisa ser convertido 
+  para essa base.
 
-Pense nisso como traduzir uma frase de um idioma para outro. Se você tem um número no sistema decimal (base 10, como usamos no dia a dia) e precisa "falar" com o computador, é como se estivesse pedindo uma tradução para o "idioma binário", onde tudo é representado com apenas dois símbolos: 0 e 1.
+   Pense nisso como traduzir uma frase de um idioma para outro. Se você tem um número no sistema decimal (base 10, 
+  como usamos no dia a dia) e precisa "falar" com o computador, é como se estivesse pedindo uma tradução para o 
+  "idioma binário", onde tudo é representado com apenas dois símbolos: 0 e 1.
 
-Vamos começar com a parte inteira do número. Suponha que temos o número 13,625 e queremos convertê-lo para binário.
+   Vamos começar com a parte inteira do número. Suponha que temos o número 13,625 e queremos convertê-lo para 
+  binário.
 
- - Dividimos o número inteiro por 2 e guardamos o resto de cada divisão. O processo vai se repetindo até chegarmos a um quociente de 0.
+   - Dividimos o número inteiro por 2 e guardamos o resto de cada divisão. O processo vai se repetindo até   
+    chegarmos a um quociente de 0.
 
-   Exemplo de 13:
+     Exemplo de 13:
 
-   13 ÷ 2 = 6, resto 1
-    6 ÷ 2 = 3, resto 0
-    3 ÷ 2 = 1, resto 1
-    1 ÷ 2 = 0, resto 1
+                      13 ÷ 2 = 6, resto 1
+                       6 ÷ 2 = 3, resto 0
+                       3 ÷ 2 = 1, resto 1
+                       1 ÷ 2 = 0, resto 1
 
-   A ordem dos restos, de baixo para cima, forma a parte inteira do número em binário. Portanto, a parte inteira de 13 em binário é 1101.
-
-
- - Agora, vamos converter a parte real em decimal (0,625 no nosso exemplo) para binário. Para isso, multiplicamos a parte decimal por 2 e pegamos a parte inteira de cada resultado. O processo é repetido até que o resultado seja exatamente 1 ou até que o número de casas reais seja suficiente.
-
-   Exemplo de 0,625:
-
-   0,625 × 2 = 1,25 → pega o 1
-    0,25 × 2 =  0,5 → pega o 0
-     0,5 × 2 =  1,0 → pega o 1
-
-  A parte decimal de 0,625 em binário é 0,101.
-
- Agora que temos ambas as partes, basta juntá-las. A parte inteira 1101 e a parte real 0,101 formam o número binário 1101,101.
-
-A conversão do número decimal para binário é o primeiro passo fundamental para que possamos trabalhar com o sistema de ponto flutuante. Esse processo de transformação é necessário porque os computadores, de maneira similar ao modo como nós falamos em diferentes idiomas, precisam entender o número em sua própria "linguagem" no caso, a linguagem binária
-
-
- Normalizar a Mantissa: Agora, o próximo passo é normalizar a mantissa, ou seja, reescrever o número de maneira que ele tenha apenas um dígito diferente de zero antes da vírgula. Esse processo é importante para padronizar como os números são representados no sistema de ponto flutuante, tornando a representação mais eficiente e mais fácil de manipular.
-
-Quando falamos em normalizar, imagine que estamos organizando os dígitos de um número para que fiquem mais claros e “concisos”. Isso significa deslocar a vírgula (ou ponto) até que apenas o primeiro dígito significativo apareça antes dela. No caso dos números binários, estamos tratando a vírgula que separa os 1s e 0s para que a mantissa seja expressa da maneira mais compacta possível.
-
- Exemplo: Se tivermos o número binário 1101,101, a vírgula está entre o segundo e o terceiro dígito, mas precisamos movê-la para a posição certa. Quando deslocamos a vírgula 3 casas para a esquerda, temos:
-
-         1101,101 = 1,101101 × 2
-
-         Aqui, o número foi normalizado para que a mantissa (1,101101) tenha apenas um dígito significativo antes da vírgula, 
-
-A normalização é um passo fundamental para garantir que o número seja representado da maneira mais eficiente possível no sistema de ponto flutuante. Ao garantir que apenas um dígito significativo apareça antes da vírgula, conseguimos representar o número de maneira compacta, e isso facilita o armazenamento e os cálculos com números de diferentes magnitudes. É como se estivéssemos "organizando" a informação para que ela fique mais fácil de processar e mais precisa dentro do limite de espaço disponível.
+     A ordem dos restos, de baixo para cima, forma a parte inteira do número em binário. Portanto, a parte inteira 
+    de 13 em binário é 1101.
 
 
-Determinar o Expoente: O expoente é uma parte crucial no sistema de ponto flutuante, pois ele nos ajuda a entender quanto a vírgula (ou ponto) foi deslocada para que possamos representar corretamente um número de forma compacta. Basicamente, o expoente define a escala em que o número está sendo representado.
+   - Agora, vamos converter a parte real em decimal (0,625 no nosso exemplo) para binário. Para isso, multiplicamos 
+    a parte decimal por 2 e pegamos a parte inteira de cada resultado. O processo é repetido até que o resultado 
+    seja exatamente 1 ou até que o número de casas reais seja suficiente.
 
-A ideia por trás do expoente é que ele indica o número de casas que precisamos mover a vírgula para que o número fique na forma normalizada, onde há apenas um dígito diferente de zero à esquerda da vírgula.
+     Exemplo de 0,625:
 
-- Se deslocarmos a vírgula para a esquerda, isso significa que estamos lidando com um número maior que 1, e o expoente será positivo.
+                    0,625 × 2 = 1,25 → pega o 1
+                     0,25 × 2 =  0,5 → pega o 0
+                      0,5 × 2 =  1,0 → pega o 1
 
-- Se deslocarmos a vírgula para a direita, estamos lidando com um número menor que 1, e o expoente será negativo.
+     A parte decimal de 0,625 em binário é 0,101.
 
- Exemplo: Vamos olhar para o número 1101,101. Para normalizar a mantissa, precisamos deslocar a vírgula 3 casas para a esquerda, fazendo com que ela se transforme em 1,101101. Como deslocamos para a esquerda, o expoente será +3. Então, o número em ponto flutuante será:
+     Agora que temos ambas as partes, basta juntá-las. A parte inteira 1101 e a parte real 0,101 formam o número 
+    binário 1101,101.
+
+   A conversão do número decimal para binário é o primeiro passo fundamental para que possamos trabalhar com o 
+  sistema de ponto flutuante. Esse processo de transformação é necessário porque os computadores, de maneira 
+  similar ao modo como nós falamos em diferentes idiomas, precisam entender o número em sua própria "linguagem" no 
+  caso, a linguagem binária
+
+
+ * Normalizar a Mantissa: O próximo passo é normalizar a mantissa, ou seja, reescrever o número de maneira que ele 
+  tenha apenas um dígito diferente de zero antes da vírgula. Esse processo é importante para padronizar como os 
+  números são representados no sistema de ponto flutuante, tornando a representação mais eficiente e mais fácil de 
+  manipular.
+
+   Quando falamos em normalizar, imagine que estamos organizando os dígitos de um número para que fiquem mais 
+  claros e “concisos”. Isso significa deslocar a vírgula (ou ponto) até que apenas o primeiro dígito significativo 
+  apareça antes dela. No caso dos números binários, estamos tratando a vírgula que separa os 1s e 0s para que a 
+  mantissa seja expressa da maneira mais compacta possível.
+
+   Exemplo: Se tivermos o número binário 1101,101, a vírgula está entre o segundo e o terceiro dígito, mas 
+           precisamos movê-la para a posição certa. Quando deslocamos a vírgula 3 casas para a esquerda, temos:
+
+                 1101,101 = 1,101101 × 2
+
+            Aqui, o número foi normalizado para que a mantissa (1,101101) tenha apenas um dígito significativo 
+           antes da vírgula. 
+
+   A normalização é um passo fundamental para garantir que o número seja representado da maneira mais eficiente 
+  possível no sistema de ponto flutuante. Ao garantir que apenas um dígito significativo apareça antes da vírgula, 
+  conseguimos representar o número de maneira compacta, e isso facilita o armazenamento e os cálculos com números 
+  de diferentes magnitudes. É como se estivéssemos "organizando" a informação para que ela fique mais fácil de 
+  processar e mais precisa dentro do limite de espaço disponível.
+
+
+ * Determinar o Expoente: O expoente é uma parte crucial no sistema de ponto flutuante, pois ele nos ajuda a 
+  entender quanto a vírgula (ou ponto) foi deslocada para que possamos representar corretamente um número de forma 
+  compacta. Basicamente, o expoente define a escala em que o número está sendo representado.
+
+   A ideia por trás do expoente é que ele indica o número de casas que precisamos mover a vírgula para que o número 
+  fique na forma normalizada, onde há apenas um dígito diferente de zero à esquerda da vírgula.
+
+    - Se deslocarmos a vírgula para a esquerda, isso significa que estamos lidando com um número maior que 1, e o   
+     expoente será positivo.
+
+    - Se deslocarmos a vírgula para a direita, estamos lidando com um número menor que 1, e o expoente será 
+    negativo.
+
+   Exemplo: Vamos olhar para o número 1101,101. Para normalizar a mantissa, precisamos deslocar a vírgula 3 casas 
+           para a esquerda, fazendo com que ela se transforme em 1,101101. Como deslocamos para a esquerda, o 
+           expoente será +3. Então, o número em ponto flutuante será:
  
-         1101,101 = 1,101101 × 2³
+                 1101,101 = 1,101101 × 2³
 
-         Aqui o expoente foi ajustado para refletir o deslocamento da vírgula. Ou seja, o expoente agora é 3 porque movemos a vírgula 3 casas para a esquerda.
+            Aqui o expoente foi ajustado para refletir o deslocamento da vírgula. Ou seja, o expoente agora é 3 
+          porque movemos a vírgula 3 casas para a esquerda.
 
- O expoente é essencial porque ele nos ajuda a representar números de forma compacta, seja para números grandes ou pequenos. Ele nos diz o "quanto" de deslocamento a vírgula sofreu para tornar o número mais fácil de trabalhar e armazenar em um computador. Compreender o conceito de expoente ajuda a entender o funcionamento do sistema de ponto flutuante e a manipulação precisa de números no mundo digital.
-
-
-Ajustar ao Intervalo Permitido: No sistema de ponto flutuante, é essencial garantir que o expoente de um número se mantenha dentro dos limites predefinidos pelo sistema. Esses limites, conhecidos como EXP(min) e EXP(max), definem o intervalo em que o expoente pode variar. Esse controle evita que os números representados se tornem muito grandes ou muito pequenos para serem armazenados de forma precisa. Imagine que o sistema de ponto flutuante é como uma "caixa de armazenamento" com espaço limitado. Se o número for muito grande ou muito pequeno para caber dentro dessa caixa, ele não poderá ser representado corretamente, resultando em erros como overflow ou underflow.
-
-Exemplo: Se o sistema de ponto flutuante permite expoentes entre -3 e +3, qualquer número que precise de um    
-        expoente maior que 3 ou menor que -3 não poderá ser representado corretamente.
-
- Por exemplo, se tivermos um número 1,101101 × 2⁴, o expoente 4 é maior do que o limite de 3. Isso resulta em um overflow, o que significa que o valor excede o intervalo permitido pelo sistema e não pode ser armazenado corretamente. O mesmo ocorre para números que tenham expoentes fora do intervalo negativo, como 1,010 × 2⁻⁴, onde o expoente -4 é menor que o limite mínimo de -3, causando um underflow. Neste caso, o número se torna tão pequeno que o sistema não consegue representá-lo e ele é arredondado para zero.
-
- Essa restrição de expoente garante que os números sejam armazenados de forma eficiente, evitando que a representação de números muito grandes ou muito pequenos cause erros ou perda de precisão. Esse ajuste ao intervalo permitido é uma parte crucial do sistema de ponto flutuante, pois assegura que os cálculos realizados com esses números permaneçam dentro de um range controlado e que o sistema funcione de maneira estável e precisa.
-
- Ajustar ao intervalo permitido é uma etapa fundamental no funcionamento do sistema de ponto flutuante, pois assegura que o expoente esteja dentro dos limites definidos, evitando erros como overflow e underflow. Esse controle de intervalo ajuda a manter a precisão e a estabilidade dos cálculos, permitindo que o sistema represente os números de forma eficaz, mesmo diante de números muito grandes ou muito pequenos. Essa característica torna o sistema de ponto flutuante um recurso poderoso, mas com limitações que devem ser cuidadosamente gerenciadas para garantir um desempenho confiável.
+   O expoente é essencial porque ele nos ajuda a representar números de forma compacta, seja para números grandes 
+  ou pequenos. Ele nos diz o "quanto" de deslocamento a vírgula sofreu para tornar o número mais fácil de trabalhar 
+  e armazenar em um computador. Compreender o conceito de expoente ajuda a entender o funcionamento do sistema de 
+  ponto flutuante e a manipulação precisa de números no mundo digital.
 
 
-Arredondamento: Os computadores, devido às suas limitações de memória e precisão, não conseguem armazenar números com precisão infinita. Isso significa que, quando um número tem muitas casas decimais ou binárias, ele precisa ser arredondado para caber no espaço disponível. Imagine que você tem uma lista de compras e o orçamento para comprar apenas uma quantidade limitada de itens. Você precisa fazer escolhas e limitar sua lista de acordo com o espaço no seu carrinho de compras, sem poder levar todos os itens que você gostaria. Da mesma forma, o arredondamento "limita" o número para que ele se encaixe no formato disponível no computador.
+ * Ajustar ao Intervalo Permitido: No sistema de ponto flutuante, é essencial garantir que o expoente de um número 
+  se mantenha dentro dos limites predefinidos pelo sistema. Esses limites, conhecidos como EXP(mín.) e EXP(máx), 
+  definem o intervalo em que o expoente pode variar. Esse controle evita que os números representados se tornem 
+  muito grandes ou muito pequenos para serem armazenados de forma precisa. Imagine que o sistema de ponto flutuante 
+  é como uma "caixa de armazenamento" com espaço limitado. Se o número for muito grande ou muito pequeno para caber 
+  dentro dessa caixa, ele não poderá ser representado corretamente, resultando em erros como overflow ou underflow.
 
-Quando o arredondamento ocorre, o número não é representado de forma exata, o que pode gerar uma pequena imprecisão. No entanto, os métodos de arredondamento são projetados para minimizar essas distorções. Existem diferentes abordagens para realizar esse arredondamento, cada uma com um critério específico para decidir qual valor deve ser escolhido.
+   Exemplo: Se o sistema de ponto flutuante permite expoentes entre -3 e +3, qualquer número que precise de um    
+           expoente maior que 3 ou menor que -3 não poderá ser representado corretamente.
 
-Principais modos de arredondamento:
+            Por exemplo, se tivermos um número 1,101101 × 2⁴, o expoente 4 é maior do que o limite de 3. Isso 
+           resulta em um overflow, o que significa que o valor excede o intervalo permitido pelo sistema e não pode 
+           ser armazenado corretamente. O mesmo ocorre para números que tenham expoentes fora do intervalo 
+           negativo, como 1,010 × 2⁻⁴, onde o expoente -4 é menor que o limite mínimo de -3, causando um underflow. 
+           Neste caso, o número se torna tão pequeno que o sistema não consegue representá-lo e ele é arredondado 
+           para zero.
 
- Arredondamento para o mais próximo (default): Este é o modo mais comum e basicamente escolhe o valor mais próximo do número real. Se o número estiver exatamente no meio entre dois valores, o sistema aplica um critério para decidir para qual lado arredondar, evitando que sempre ocorra o mesmo tipo de erro. Esse modo é como quando você está fazendo um cálculo de preços e precisa arredondar para o valor inteiro mais próximo.
+            Essa restrição de expoente garante que os números sejam armazenados de forma eficiente, evitando que a 
+           representação de números muito grandes ou muito pequenos cause erros ou perda de precisão. Esse ajuste 
+           ao intervalo permitido é uma parte crucial do sistema de ponto flutuante, pois assegura que os cálculos 
+           realizados com esses números permaneçam dentro de um range controlado e que o sistema funcione de 
+           maneira estável e precisa.
 
-Exemplo: O número 1,10011 pode ser representado com 3 bits na mantissa. Quando aplicamos o arredondamento para o mais próximo, ele se torna 1,101. Como o número original é mais próximo de 1,101 do que de 1,100, ele será arredondado para 1,101.
-
- Arredondamento para zero (Truncamento): Neste caso, o computador simplesmente corta os bits extras sem considerar o valor dos dígitos restantes. Isso pode resultar em uma leve imprecisão, porque estamos basicamente "ignorando" o que vem depois. Pense nisso como quando você tenta fazer um corte preciso em um pedaço de tecido, mas acaba cortando um pouco mais de um lado.
-
-Exemplo: Se você tiver 1,10011 e cortar após 3 bits, o resultado será 1,100. Isso pode causar uma pequena imprecisão, mas às vezes é útil quando você precisa de uma solução rápida e simples.
-
-Arredondamento para cima: Sempre que o número está perto de um valor maior, o sistema arredonda para esse valor. Isso é útil quando você quer garantir que não fique com um valor menor do que deveria. Imagine que você tem uma hora para completar uma tarefa, mas não tem certeza se vai terminar exatamente a tempo, então decide ir um pouco mais rápido, para garantir que ainda termine antes do prazo.
-
-Exemplo: Para o número 1,10011 representado com 3 bits na mantissa, ao arredondar para cima, o valor final seria 1,101
-
-Arredondamento para baixo: Aqui, o sistema arredonda para o valor mais baixo possível, o que pode ser útil em alguns cenários onde não queremos ultrapassar um limite superior. Se você está fazendo um cálculo de orçamento e quer garantir que não ultrapasse um certo valor, arredondar para baixo ajuda a manter os números dentro de um limite seguro.
-
-Exemplo: Para o número 1,10011 representado com 3 bits na mantissa, ao arredondar para baixo, o número seria 1,100, que é o valor mais baixo que pode ser representado dentro da precisão.
-
-O arredondamento é um passo essencial no processo de representação de números em ponto flutuante, pois permite que os computadores lidem com a limitação de memória e precisão. Cada método de arredondamento tem suas vantagens e é escolhido com base no objetivo da aplicação. É importante entender como o arredondamento pode impactar os cálculos para garantir que a precisão dos resultados seja mantida dentro dos limites desejados. Por isso, escolher o tipo certo de arredondamento é uma parte fundamental no design de sistemas de software e hardware que lidam com números reais de forma eficiente.
+   Ajustar ao intervalo permitido é uma etapa fundamental no funcionamento do sistema de ponto flutuante, pois 
+  assegura que o expoente esteja dentro dos limites definidos, evitando erros como overflow e underflow. Esse 
+  controle de intervalo ajuda a manter a precisão e a estabilidade dos cálculos, permitindo que o sistema 
+  represente os números de forma eficaz, mesmo diante de números muito grandes ou muito pequenos. Essa 
+  característica torna o sistema de ponto flutuante um recurso poderoso, mas com limitações que devem ser 
+  cuidadosamente gerenciadas para garantir um desempenho confiável.
 
 
-Armazenar no Formato Específico: Uma vez que o número tenha sido convertido, normalizado e o expoente ajustado, o próximo passo é armazená-lo de forma eficiente, para que o computador possa usá-lo em cálculos subsequentes. No contexto do sistema de ponto flutuante, isso envolve dividir o número em três componentes principais: o sinal, o expoente e a mantissa. Cada um desses componentes é armazenado em uma área específica da memória do computador, com um número fixo de bits atribuídos a cada um deles.
+ * Arredondamento: Os computadores, devido às suas limitações de memória e precisão, não conseguem armazenar 
+  números com precisão infinita. Isso significa que, quando um número tem muitas casas decimais ou binárias, ele 
+  precisa ser arredondado para caber no espaço disponível. Imagine que você tem uma lista de compras e o orçamento 
+  para comprar apenas uma quantidade limitada de itens. Você precisa fazer escolhas e limitar sua lista de acordo 
+  com o espaço no seu carrinho de compras, sem poder levar todos os itens que você gostaria. Da mesma forma, o 
+  arredondamento "limita" o número para que ele se encaixe no formato disponível no computador.
 
-Formato de Armazenamento:
+   Quando o arredondamento ocorre, o número não é representado de forma exata, o que pode gerar uma pequena 
+  imprecisão. No entanto, os métodos de arredondamento são projetados para minimizar essas distorções. Existem 
+  diferentes abordagens para realizar esse arredondamento, cada uma com um critério específico para decidir qual 
+  valor deve ser escolhido.
 
-Sinal (1 bit): O sinal indica se o número é positivo ou negativo. Se o número for positivo, o sinal é representado por 0. Se for negativo, o sinal é representado por 1.
+   Principais modos de arredondamento:
 
-Exemplo: Se estivermos lidando com o número -13,625, o bit de sinal será 1, indicando que o número é negativo.
+   - Arredondamento para o mais próximo (default): Este é o modo mais comum e basicamente escolhe o valor mais 
+    próximo do número real. Se o número estiver exatamente no meio entre dois valores, o sistema aplica um critério 
+    para decidir para qual lado arredondar, evitando que sempre ocorra o mesmo tipo de erro. Esse modo é como 
+    quando você está fazendo um cálculo de preços e precisa arredondar para o valor inteiro mais próximo.
 
-Expoente (n bits): O expoente é armazenado com um deslocamento, o que significa que um valor fixo é somado ao expoente real. Esse deslocamento ajuda a representar expoentes negativos sem precisar de um sinal para o expoente, simplificando os cálculos.
+      Exemplo: O número 1,10011 pode ser representado com 3 bits na mantissa. Quando aplicamos o arredondamento 
+              para o mais próximo, ele se torna 1,101. Como o número original é mais próximo de 1,101 do que de 
+              1,100, ele será arredondado para 1,101.
 
-O valor do expoente é ajustado pela soma com um deslocamento fixo (bias). Isso é feito para garantir que o expoente seja sempre positivo e para que os valores mais próximos de zero possam ser representados de forma eficiente.
+   - Arredondamento para zero (Truncamento): Neste caso, o computador simplesmente corta os bits extras sem 
+    considerar o valor dos dígitos restantes. Isso pode resultar em uma leve imprecisão, porque estamos basicamente 
+    "ignorando" o que vem depois. Pense nisso como quando você tenta fazer um corte preciso em um pedaço de tecido, 
+     mas acaba cortando um pouco mais de um lado.
 
-Exemplo: Se o expoente real for 3, ele será ajustado somando um valor fixo (digamos, 127), resultando em 130, que será armazenado no formato binário.
+      Exemplo: Se você tiver 1,10011 e cortar após 3 bits, o resultado será 1,100. Isso pode causar uma pequena 
+              imprecisão, mas às vezes é útil quando você precisa de uma solução rápida e simples.
 
-Mantissa (m bits): A mantissa é responsável por armazenar a parte fracionária do número, ou seja, tudo o que vem depois do ponto decimal na representação normalizada. O número é normalizado de modo que o primeiro dígito à esquerda do ponto decimal seja sempre 1, e esse 1 não precisa ser armazenado, economizando espaço.
+   - Arredondamento para cima: Sempre que o número está perto de um valor maior, o sistema arredonda para esse 
+    valor. Isso é útil quando você quer garantir que não fique com um valor menor do que deveria. Imagine que você 
+    tem uma hora para completar uma tarefa, mas não tem certeza se vai terminar exatamente a tempo, então decide ir 
+    um pouco mais rápido, para garantir que ainda termine antes do prazo.
 
-Exemplo: Para o número 13,625, sua representação normalizada seria 1,101101, e a mantissa armazenaria apenas a parte fracionária: 101101 seguido por zeros, até completar o número de bits especificado.
+      Exemplo: Para o número 1,10011 representado com 3 bits na mantissa, ao arredondar para cima, o valor final 
+              seria 1,101
 
-o formato de armazenamento no sistema de ponto flutuante permite representar números de forma eficiente, com a separação clara entre o sinal, expoente e mantissa. O uso do deslocamento para o expoente e a normalização da mantissa facilita o armazenamento e os cálculos.
+   - Arredondamento para baixo: Aqui, o sistema arredonda para o valor mais baixo possível, o que pode ser útil em 
+    alguns cenários onde não queremos ultrapassar um limite superior. Se você está fazendo um cálculo de orçamento 
+    e quer garantir que não ultrapasse um certo valor, arredondar para baixo ajuda a manter os números dentro de um 
+    limite seguro.
 
-Exemplo Final: Representação de 13,625 em um sistema de ponto flutuante (2, 3, 2³, 2⁻³)
+      Exemplo: Para o número 1,10011 representado com 3 bits na mantissa, ao arredondar para baixo, o número seria 
+              1,100, que é o valor mais baixo que pode ser representado dentro da precisão.
 
-Para representar o número 13,625 no formato de ponto flutuante (2, 3, 2³, 2⁻³), seguimos os passos de normalização e armazenamento dentro dos limites do sistema.
+   O arredondamento é um passo essencial no processo de representação de números em ponto flutuante, pois permite 
+  que os computadores lidem com a limitação de memória e precisão. Cada método de arredondamento tem suas vantagens 
+  e é escolhido com base no objetivo da aplicação. É importante entender como o arredondamento pode impactar os 
+  cálculos para garantir que a precisão dos resultados seja mantida dentro dos limites desejados. Por isso, 
+  escolher o tipo certo de arredondamento é uma parte fundamental no design de sistemas de software e hardware que 
+  lidam com números reais de forma eficiente.
 
-Número binário normalizado: O número 13,625 em binário é 1101,101. Após normalizar, obtemos 1,101101 × 2³.
 
-Sinal: Como o número é positivo, o bit de sinal é 0.
+ * Armazenar no Formato Específico: Uma vez que o número tenha sido convertido, normalizado e o expoente ajustado, 
+  o próximo passo é armazená-lo de forma eficiente, para que o computador possa usá-lo em cálculos subsequentes. No 
+  contexto do sistema de ponto flutuante, isso envolve dividir o número em três componentes principais: o sinal, o 
+  expoente e a mantissa. Cada um desses componentes é armazenado em uma área específica da memória do computador, 
+  com um número fixo de bits atribuídos a cada um deles.
 
-Expoente: O expoente real é +3. No sistema definido (2³), o expoente é diretamente armazenado como 011. Se expoente real fosse negativo, o primeiro bit a esquerda seria representado por 1 (por exemplo -3 seria representado por 111), pois o primeiro bit da representação é a representação do sinal do expoente.
+   Formato de Armazenamento:
 
-Mantissa: A parte fracionária de 1,101101 (ignorando o primeiro 1 à esquerda do ponto decimal e Arredondamento em 3 bit para o mais próximo) é 101.
+   - Sinal (1 bit): O sinal indica se o número é positivo ou negativo. Se o número for positivo, o sinal é 
+    representado por 0. Se for negativo, o sinal é representado por 1.
 
-A representação final de 13,625 no sistema de ponto flutuante (2, 3, 2³, 2⁻³) será:
+      Exemplo: Se estivermos lidando com o número -13,625, o bit de sinal será 1, indicando que o 
+              número é negativo.
 
- Sinal | Expoente | Mantissa
--------|----------|----------
-   0   |   0 11   |   101
+   - Expoente (n bits): O expoente é armazenado com um sinal, o que significa que esse sinal ajuda a representar 
+    expoentes negativos e positivos, simplificando os cálculos.
 
- Esse processo de armazenamento no formato específico é fundamental para garantir que os números de ponto flutuante possam ser manipulados com precisão e eficiência pelos computadores. Cada componente, o sinal, o expoente e a mantissa, tem seu papel essencial na representação do número, e a forma como eles são organizados assegura que valores reais, tanto grandes quanto pequenos, possam ser representados de maneira compacta e eficiente. Além disso, o processo de normalização e arredondamento ajuda a evitar perdas significativas de precisão, garantindo que os cálculos possam ser realizados de forma confiável em diversas aplicações, desde computação científica até gráficos 3D.
+     O valor do expoente também pode ser ajustado pela soma com um deslocamento fixo (bias). Isso é feito para 
+    garantir que o expoente seja sempre positivo e para que os valores mais próximos de zero possam ser 
+    representados de forma eficiente.
+
+      Exemplo: Se o expoente real for 3, ele será ajustado somando um valor fixo (digamos, 127), resultando em 130, 
+               que será armazenado no formato binário.
+
+   - Mantissa (m bits): A mantissa é responsável por armazenar a parte fracionária do número, ou seja, tudo o que 
+    vem depois do ponto decimal na representação normalizada. O número é normalizado de modo que o primeiro dígito  
+    à esquerda do ponto decimal seja sempre 1, e esse 1 não precisa ser armazenado, economizando espaço.
+
+      Exemplo: Para o número 13,625, sua representação normalizada seria 1,101101, e a mantissa armazenaria apenas 
+              a parte fracionária: 101101 seguido por zeros, até completar o número de bits especificado.
+
+   O formato de armazenamento no sistema de ponto flutuante permite representar números de forma eficiente, com a 
+  separação clara entre o sinal, expoente e mantissa. O uso do deslocamento para o expoente e a normalização da 
+  mantissa facilita o armazenamento e os cálculos.
+
+   Exemplo Final: Representação de 13,625 em um sistema de ponto flutuante (2, 3, 2³, 2⁻³)
+
+                  Para representar o número 13,625 no formato de ponto flutuante (2, 3, 2³, 2⁻³), seguimos os 
+                 passos de normalização e armazenamento dentro dos limites do sistema.
+
+                  - Número binário normalizado: O número 13,625 em binário é 1101,101. Após normalizar, obtemos 
+                                              1,101101 × 2³.
+
+                  - Sinal: Como o número é positivo, o bit de sinal é 0.
+
+                  - Expoente: O expoente real é +3. No sistema definido (2³), o expoente é diretamente armazenado 
+                             como 011. Se expoente real fosse negativo, o primeiro bit a esquerda seria 
+                             representado por 1 (por exemplo -3 seria representado por 111), pois o primeiro bit da 
+                             representação é a representação do sinal do expoente.
+
+                  - Mantissa: A parte fracionária de 1,101101 (ignorando o primeiro 1 à esquerda do ponto decimal e 
+                             Arredondamento em 3 bit para o mais próximo) é 101.
+
+                  A representação final de 13,625 no sistema de ponto flutuante (2, 3, 2³, 2⁻³) será:
+
+                                       Sinal | Expoente | Mantissa
+                                      -------|----------|----------
+                                         0   |    011   |   101
+
+   Esse processo de armazenamento no formato específico é fundamental para garantir que os números de ponto 
+  flutuante possam ser manipulados com precisão e eficiência pelos computadores. Cada componente, o sinal, o 
+  expoente e a mantissa, tem seu papel essencial na representação do número, e a forma como eles são organizados 
+  assegura que valores reais, tanto grandes quanto pequenos, possam ser representados de maneira compacta e 
+  eficiente. Além disso, o processo de normalização e arredondamento ajuda a evitar perdas significativas de 
+  precisão, garantindo que os cálculos possam ser realizados de forma confiável em diversas aplicações, desde 
+  computação científica até gráficos 3D.
+
+ Em suma, o sistema de ponto flutuante é uma ferramenta fundamental para armazenar números reais nos computadores. 
+Ele permite representar valores enormes e microscópicos sem desperdiçar espaço, garantindo cálculos eficientes. No 
+entanto, entender seu funcionamento é essencial para evitar erros, como arredondamentos indesejados e limitações de 
+precisão.
+
+ Compreender cada etapa desse processo nos ajuda a utilizar melhor os recursos dos computadores, seja para 
+simulações científicas, gráficos 3D ou até mesmo inteligência artificial. Dominar o sistema de ponto flutuante é um 
+passo essencial para qualquer pessoa que deseja trabalhar com computação numérica de forma precisa e otimizada.
 
 
 
