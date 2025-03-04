@@ -639,26 +639,56 @@ mais rápida e precisa.
 
 
 
-                  "O Impacto do Arredondamento e Truncamento no Ponto Flutuante"
+                "O Impacto do Arredondamento e do Truncamento no Sistema de Ponto Flutuante"
 
-Em sistemas de ponto flutuante, frequentemente nos deparamos com a necessidade de representar números com uma precisão limitada. Isso ocorre porque a memória disponível para armazenar esses números é finita, o que exige que façamos escolhas sobre como representar números com muitas casas decimais ou com representações longas. Nesse contexto, o arredondamento e o truncamento surgem como técnicas essenciais para lidar com essas limitações de precisão.
+ Em sistemas de ponto flutuante, frequentemente nos deparamos com a necessidade de representar números com uma 
+precisão limitada. Isso ocorre porque a memória disponível para armazenar esses números é finita, o que exige que 
+façamos escolhas sobre como representar números com muitas casas decimais ou com representações longas. Nesse 
+contexto, o arredondamento e o truncamento surgem como técnicas essenciais para lidar com essas limitações de 
+precisão.
 
-O arredondamento e truncamento são métodos utilizados para reduzir a quantidade de casas significativas de um número, mantendo uma aproximação que seja o mais fiel possível ao valor original. Esses processos são essenciais porque, sem eles, seria impossível armazenar e manipular números de forma eficiente. No entanto, ao realizar qualquer tipo de redução, é inevitável que algumas informações sejam perdidas, o que pode afetar a precisão dos cálculos subsequentes.
+ O arredondamento e truncamento são métodos utilizados para reduzir a quantidade de casas significativas de um 
+número, mantendo uma aproximação que seja o mais fiel possível ao valor original. Esses processos são essenciais 
+porque, sem eles, seria impossível armazenar e manipular números de forma eficiente. No entanto, ao realizar 
+qualquer tipo de redução, é inevitável que algumas informações sejam perdidas, o que pode afetar a precisão dos 
+cálculos subsequentes.
 
-Esses dois processos têm impactos diretos em como os números são manipulados, e são aplicados tanto em cálculos simples quanto em algoritmos complexos que envolvem grandes volumes de dados. Por isso, é importante entender como eles funcionam e quando utilizar cada um, pois pequenas imprecisões podem se acumular e afetar o resultado final dos cálculos.
+ Esses dois processos têm impactos diretos em como os números são manipulados, e são aplicados tanto em cálculos 
+simples quanto em algoritmos complexos que envolvem grandes volumes de dados. Por isso, é importante entender como 
+eles funcionam e quando utilizar cada um, pois pequenas imprecisões podem se acumular e afetar o resultado final 
+dos cálculos.
 
-Arredondamento: É o processo de ajustar um número para o valor mais próximo representável dentro da precisão disponível. Em sistemas de ponto flutuante, isso é feito com o objetivo de minimizar o erro introduzido durante a representação do número, garantindo que o valor arredondado seja o mais próximo possível do valor real.
+ * Arredondamento: É o processo de ajustar um número para o valor mais próximo representável dentro da precisão 
+  disponível. Em sistemas de ponto flutuante, isso é feito com o objetivo de minimizar o erro introduzido durante a 
+  representação do número, garantindo que o valor arredondado seja o mais próximo possível do valor real.
 
-Por exemplo, se tivermos o número 3,14159 e quisermos representá-lo com 3 casas decimais, o arredondamento nos dá o valor 3,142. O processo aqui ajusta o último dígito, já que a casa decimal seguinte a terceira casa (o 5) é maior ou igual a 5, então arredondamos para cima. O arredondamento é frequentemente utilizado para manter a precisão sem aumentar a quantidade de memória necessária para armazenar o número.
+   Por exemplo, se tivermos o número 3,14159 e quisermos representá-lo com 3 casas decimais, o arredondamento nos 
+  dá o valor 3,142. O processo aqui ajusta o último dígito, já que a casa decimal seguinte a terceira casa (o 5) é 
+  maior ou igual a 5, então arredondamos para cima. O arredondamento é frequentemente utilizado para manter a 
+  precisão sem aumentar a quantidade de memória necessária para armazenar o número.
 
+ * Truncamento: Por outro lado, o truncamento é o processo de simplesmente cortar as casas decimais além da 
+  precisão desejada, sem realizar qualquer ajuste nos valores restantes. Isso significa que qualquer valor após o 
+  ponto de truncamento é descartado, o que pode resultar em um erro maior em relação ao valor real, já que o número 
+  é simplesmente "cortado" sem considerar o arredondamento.
 
-Truncamento: Por outro lado, o truncamento é o processo de simplesmente cortar as casas decimais além da precisão desejada, sem realizar qualquer ajuste nos valores restantes. Isso significa que qualquer valor após o ponto de truncamento é descartado, o que pode resultar em um erro maior em relação ao valor real, já que o número é simplesmente "cortado" sem considerar o arredondamento.
+   Por exemplo, se tivermos o número 5,67891 e quisermos representar com 3 casas decimais, o truncamento resulta 
+  em 5,678, removendo tudo após o terceiro dígito sem qualquer arredondamento. O truncamento é útil em situações 
+  onde se deseja um controle mais rigoroso sobre o número de casas decimais, mas, como mencionado, pode resultar em 
+  maior imprecisão, pois o valor real pode ser maior ou menor que o truncado.
 
-Por exemplo, se tivermos o número 5,67891 e quisermos representar com 3 casas decimais, o truncamento resulta em 5,678, removendo tudo após o terceiro dígito sem qualquer arredondamento. O truncamento é útil em situações onde se deseja um controle mais rigoroso sobre o número de casas decimais, mas, como mencionado, pode resultar em maior imprecisão, pois o valor real pode ser maior ou menor que o truncado.
+ Em suma, o entendimento de arredondamento e truncamento é essencial para quem trabalha com sistemas de ponto 
+flutuante, pois essas técnicas afetam diretamente a precisão dos cálculos. Quando se lida com cálculos numéricos em 
+computadores, esses processos ajudam a equilibrar a precisão com a eficiência, garantindo que os números sejam 
+representados de maneira prática e sem ocupar espaço desnecessário. No entanto, é importante estar ciente de que 
+cada uma dessas técnicas pode introduzir erros, e a escolha entre arredondar ou truncar depende do contexto 
+específico do problema que está sendo resolvido.
 
-Em suma, o entendimento de arredondamento e truncamento é essencial para quem trabalha com sistemas de ponto flutuante, pois essas técnicas afetam diretamente a precisão dos cálculos. Quando se lida com cálculos numéricos em computadores, esses processos ajudam a equilibrar a precisão com a eficiência, garantindo que os números sejam representados de maneira prática e sem ocupar espaço desnecessário. No entanto, é importante estar ciente de que cada uma dessas técnicas pode introduzir erros, e a escolha entre arredondar ou truncar depende do contexto específico do problema que está sendo resolvido.
-
-Para garantir resultados precisos em cálculos de ponto flutuante, é crucial entender como o arredondamento e o truncamento afetam os números e quando aplicar cada técnica. Embora os erros possam ser pequenos em casos individuais, ao longo de uma série de cálculos, essas imprecisões podem se acumular e afetar significativamente o resultado final, tornando o controle de precisão uma parte fundamental do desenvolvimento de algoritmos e sistemas numéricos.
+ Para garantir resultados precisos em cálculos de ponto flutuante, é crucial entender como o arredondamento e o 
+truncamento afetam os números e quando aplicar cada técnica. Embora os erros possam ser pequenos em casos 
+individuais, ao longo de uma série de cálculos, essas imprecisões podem se acumular e afetar significativamente o 
+resultado final, tornando o controle de precisão uma parte fundamental do desenvolvimento de algoritmos e sistemas 
+numéricos.
 
 
 
