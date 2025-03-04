@@ -673,4 +673,63 @@ confiáveis.
 
 
 
+                      "Normalização em Sistemas de Ponto Flutuante"
+
+ Quando trabalhamos com números em ponto flutuante, a normalização é um processo crucial para garantir que esses 
+números sejam representados de forma eficiente e precisa. Em vez de armazenar qualquer número de forma arbitrária, 
+a normalização organiza o número para que ele ocupe o menor espaço possível, enquanto ainda mantém a maior precisão 
+possível para os cálculos. Isso é especialmente importante quando lidamos com números que variam em ordem de 
+magnitude, como números muito grandes ou muito pequenos.
+
+ Pense nisso como organizar livros em uma estante. Quando os livros estão empilhados de maneira desordenada, pode 
+ser difícil encontrar o que você precisa, e o espaço não é aproveitado da melhor forma. Agora, se organizarmos os 
+livros de forma que todos fiquem alinhados e com o título visível, economizamos espaço e facilitamos o acesso à 
+informação. A normalização nos números funciona da mesma forma, reorganizando a forma como os números são 
+armazenados para tornar as operações mais rápidas e eficientes.
+
+ Esse processo de reorganização foca na parte significativa do número, que é a mantissa, ajustando o expoente para 
+que a mantissa seja expressa da forma mais precisa possível, com o mínimo de desperdício de espaço. Vamos agora ver 
+como a normalização acontece na prática, tanto para números grandes quanto para números pequenos, para entender 
+melhor como esse processo funciona.
+
+ * Normalização em Número Grande: Vamos imaginar que temos o número decimal 12,8 e queremos representá-lo em ponto 
+  flutuante. Para isso, primeiro convertemos esse número para binário. Em binário, 12,8 é representado como 
+  1100,1100, onde a vírgula (ou ponto binário) separa a parte inteira da parte decimal.
+
+   Agora, para normalizar esse número, precisamos ajustar o ponto binário para que a mantissa (a parte que contém a 
+  informação significativa do número) comece com 1. Esse é um passo essencial na normalização, pois queremos 
+  maximizar a precisão. Assim, deslocamos o ponto binário até a posição correta:              
+                
+                              1100,1100 = 1,1001100 × 2³
+
+   O ponto foi deslocado 3 posições para a direita, então o expoente será 3. Isso nos dá a representação 
+  normalizada do número. O expoente positivo (3) indica que a mantissa precisa ser multiplicada por 2 elevado à 
+  potência de 3 para retornar ao valor original, ou seja, a mantissa "desloca-se" para a direita e o expoente 
+  compensa esse movimento, trazendo o número de volta à forma original.
+
+
+ * Normalização em Número Pequeno: Agora, vamos considerar um número bem pequeno, como 0,00625, que em binário é 
+  representado como 0,0000001100. A parte do número que vem após a vírgula (ou ponto binário) é muito pequena, por 
+  isso, a normalização vai exigir que movamos a  virgula para a direita até que a mantissa comece com 1.
+
+   Para normalizar esse número, movemos a virgula até a posição desejada:
+             
+                            0.0000001100 = 1.100 × 2⁻⁷
+
+   Neste caso, movemos o ponto 7 posições para a direita, o que nos dá o expoente -7. O expoente negativo significa 
+  que, em vez de multiplicar a mantissa por um valor maior (como no caso do número grande), vamos multiplicá-la por 
+  2 elevado à potência de -7, o que "diminui" o valor da mantissa e a traz para a forma correta. O expoente 
+  negativo é usado justamente para ajustar números muito pequenos, como neste exemplo, onde a representação precisa 
+  ser ajustada para refletir a magnitude do número.
+
+ Em suma, a normalização em sistemas de ponto flutuante garante que os números sejam representados de forma 
+eficiente, aproveitando ao máximo a precisão da mantissa e economizando espaço. Ela faz isso ajustando o expoente 
+para que a mantissa esteja sempre na forma "ideal", começando com 1. Esse processo é essencial para garantir que o 
+computador possa lidar com números muito grandes e muito pequenos sem perder precisão.
+
+ Compreender como funciona a normalização pode ser um pouco complicado no começo, mas imagine que ela está apenas 
+organizando os números para que eles sejam armazenados de maneira mais eficiente, sem perder a informação importante. Essa eficiência permite que cálculos envolvendo números grandes e pequenos sejam realizados de maneira 
+mais rápida e precisa.
+
+
 
