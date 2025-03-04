@@ -578,11 +578,26 @@ passo essencial para qualquer pessoa que deseja trabalhar com computação numé
 
 
 
-                                     "Limites do Ponto Flutuante"
+                               "Limites do Sistema de Ponto Flutuante"
 
-O sistema de ponto flutuante permite representar uma grande variedade de números, desde valores muito pequenos até valores extremamente grandes. Essa flexibilidade é essencial para cálculos científicos, gráficos computacionais e diversas aplicações em engenharia e computação. No entanto, há limites para os números que podem ser representados, dependendo do formato escolhido para armazená-los.
+ Como já vimos, o sistema de ponto flutuante permite representar uma grande variedade de números, desde valores muito pequenos até valores extremamente grandes. Essa flexibilidade é essencial para cálculos científicos, gráficos computacionais e diversas aplicações em engenharia e computação. No entanto, há limites para os números que podem ser representados, dependendo do formato escolhido para armazená-los.
 
 Entre os valores que um sistema de ponto flutuante pode representar, três se destacam: o zero , que tem uma representação especial dentro do sistema; o maior número possível , que define o limite superior da escala; e o menor número possível , que representa o valor mais próximo de zero que ainda pode ser armazenado. Compreender como esses valores são representados ajuda a entender as restrições e desafios no uso do ponto flutuante em computadores.
+
+O Zero no Sistema de Ponto Flutuante
+
+O zero tem uma representação especial no sistema de ponto flutuante porque, ao contrário de outros números, ele não pode ser normalizado da maneira convencional. Como a mantissa deve ser sempre normalizada com um único dígito diferente de zero antes da vírgula, o zero não pode ser representado dessa forma, exigindo uma codificação específica.
+
+Para armazenar o zero, tanto a mantissa quanto o expoente são zerados, e o bit de sinal determina se o número é +0 ou -0. Embora matematicamente ambos sejam equivalentes, em computação, a existência de um zero positivo e um zero negativo pode influenciar certos cálculos, especialmente em operações matemáticas que envolvem divisões e limites.
+
+Exemplo no sistema (2, 3, 2³, 2⁻³):
+
+Representação do zero positivo: Sinal = 0, Expoente = 000, Mantissa = 000
+
+Representação do zero negativo: Sinal = 1, Expoente = 000, Mantissa = 000
+
+ O zero é um caso especial no sistema de ponto flutuante, pois não segue a normalização tradicional. Embora sua representação pareça trivial, a distinção entre +0 e -0 pode ter efeitos sutis, mas importantes, na precisão dos cálculos computacionais, especialmente em áreas como análise numérica e programação científica.
+
 
 O Maior Número Representável:
 
@@ -594,7 +609,7 @@ Exemplo no sistema (2, 3, 2³, 2⁻³):
 
 Expoente máximo: 2³
 
-Maior mantissa possível: 0,111 (em binário)
+Maior mantissa possível: 111 (em binário)
 
 Maior número representável: 0,111 × 2³ = 15 (em decimal)
 
@@ -611,7 +626,7 @@ Exemplo no sistema (2, 3, 2³, 2⁻³):
 
 Expoente mínimo: 2⁻³
 
-Menor mantissa possível: 0,100 (em binário)
+Menor mantissa possível: 100 (em binário)
 
 Menor número representável: 0,100 x 2⁻³ = 0,0625 (em decimal)
 
