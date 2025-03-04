@@ -379,4 +379,29 @@ Exemplo: Se o sistema de ponto flutuante permite expoentes entre -3 e +3, qualqu
  Ajustar ao intervalo permitido é uma etapa fundamental no funcionamento do sistema de ponto flutuante, pois assegura que o expoente esteja dentro dos limites definidos, evitando erros como overflow e underflow. Esse controle de intervalo ajuda a manter a precisão e a estabilidade dos cálculos, permitindo que o sistema represente os números de forma eficaz, mesmo diante de números muito grandes ou muito pequenos. Essa característica torna o sistema de ponto flutuante um recurso poderoso, mas com limitações que devem ser cuidadosamente gerenciadas para garantir um desempenho confiável.
 
 
+Arredondamento: Os computadores, devido às suas limitações de memória e precisão, não conseguem armazenar números com precisão infinita. Isso significa que, quando um número tem muitas casas decimais ou binárias, ele precisa ser arredondado para caber no espaço disponível. Imagine que você tem uma lista de compras e o orçamento para comprar apenas uma quantidade limitada de itens. Você precisa fazer escolhas e limitar sua lista de acordo com o espaço no seu carrinho de compras, sem poder levar todos os itens que você gostaria. Da mesma forma, o arredondamento "limita" o número para que ele se encaixe no formato disponível no computador.
+
+Quando o arredondamento ocorre, o número não é representado de forma exata, o que pode gerar uma pequena imprecisão. No entanto, os métodos de arredondamento são projetados para minimizar essas distorções. Existem diferentes abordagens para realizar esse arredondamento, cada uma com um critério específico para decidir qual valor deve ser escolhido.
+
+Principais modos de arredondamento:
+
+ Arredondamento para o mais próximo (default): Este é o modo mais comum e basicamente escolhe o valor mais próximo do número real. Se o número estiver exatamente no meio entre dois valores, o sistema aplica um critério para decidir para qual lado arredondar, evitando que sempre ocorra o mesmo tipo de erro. Esse modo é como quando você está fazendo um cálculo de preços e precisa arredondar para o valor inteiro mais próximo.
+
+Exemplo: O número 1,10011 pode ser representado com 3 bits na mantissa. Quando aplicamos o arredondamento para o mais próximo, ele se torna 1,101. Como o número original é mais próximo de 1,101 do que de 1,100, ele será arredondado para 1,101.
+
+ Arredondamento para zero (Truncamento): Neste caso, o computador simplesmente corta os bits extras sem considerar o valor dos dígitos restantes. Isso pode resultar em uma leve imprecisão, porque estamos basicamente "ignorando" o que vem depois. Pense nisso como quando você tenta fazer um corte preciso em um pedaço de tecido, mas acaba cortando um pouco mais de um lado.
+
+Exemplo: Se você tiver 1,10011 e cortar após 3 bits, o resultado será 1,100. Isso pode causar uma pequena imprecisão, mas às vezes é útil quando você precisa de uma solução rápida e simples.
+
+Arredondamento para cima: Sempre que o número está perto de um valor maior, o sistema arredonda para esse valor. Isso é útil quando você quer garantir que não fique com um valor menor do que deveria. Imagine que você tem uma hora para completar uma tarefa, mas não tem certeza se vai terminar exatamente a tempo, então decide ir um pouco mais rápido, para garantir que ainda termine antes do prazo.
+
+Exemplo: Para o número 1,10011 representado com 3 bits na mantissa, ao arredondar para cima, o valor final seria 1,101
+
+Arredondamento para baixo: Aqui, o sistema arredonda para o valor mais baixo possível, o que pode ser útil em alguns cenários onde não queremos ultrapassar um limite superior. Se você está fazendo um cálculo de orçamento e quer garantir que não ultrapasse um certo valor, arredondar para baixo ajuda a manter os números dentro de um limite seguro.
+
+Exemplo: Para o número 1,10011 representado com 3 bits na mantissa, ao arredondar para baixo, o número seria 1,100, que é o valor mais baixo que pode ser representado dentro da precisão.
+
+O arredondamento é um passo essencial no processo de representação de números em ponto flutuante, pois permite que os computadores lidem com a limitação de memória e precisão. Cada método de arredondamento tem suas vantagens e é escolhido com base no objetivo da aplicação. É importante entender como o arredondamento pode impactar os cálculos para garantir que a precisão dos resultados seja mantida dentro dos limites desejados. Por isso, escolher o tipo certo de arredondamento é uma parte fundamental no design de sistemas de software e hardware que lidam com números reais de forma eficiente.
+
+
 
