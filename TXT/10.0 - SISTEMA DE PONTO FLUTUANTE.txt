@@ -728,7 +728,8 @@ para que a mantissa esteja sempre na forma "ideal", começando com 1. Esse proce
 computador possa lidar com números muito grandes e muito pequenos sem perder precisão.
 
  Compreender como funciona a normalização pode ser um pouco complicado no começo, mas imagine que ela está apenas 
-organizando os números para que eles sejam armazenados de maneira mais eficiente, sem perder a informação importante. Essa eficiência permite que cálculos envolvendo números grandes e pequenos sejam realizados de maneira 
+organizando os números para que eles sejam armazenados de maneira mais eficiente, sem perder a informação 
+importante. Essa eficiência permite que cálculos envolvendo números grandes e pequenos sejam realizados de maneira 
 mais rápida e precisa.
 
 
