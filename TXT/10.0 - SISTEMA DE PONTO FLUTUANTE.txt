@@ -580,61 +580,96 @@ passo essencial para qualquer pessoa que deseja trabalhar com computação numé
 
                                "Limites do Sistema de Ponto Flutuante"
 
- Como já vimos, o sistema de ponto flutuante permite representar uma grande variedade de números, desde valores muito pequenos até valores extremamente grandes. Essa flexibilidade é essencial para cálculos científicos, gráficos computacionais e diversas aplicações em engenharia e computação. No entanto, há limites para os números que podem ser representados, dependendo do formato escolhido para armazená-los.
+ Como já vimos, o sistema de ponto flutuante permite representar uma grande variedade de números, desde valores 
+muito pequenos até valores extremamente grandes. Essa flexibilidade é essencial para cálculos científicos, gráficos 
+computacionais e diversas aplicações em engenharia e computação. No entanto, há limites para os números que podem 
+ser representados, dependendo do formato escolhido para armazená-los.
 
-Entre os valores que um sistema de ponto flutuante pode representar, três se destacam: o zero , que tem uma representação especial dentro do sistema; o maior número possível , que define o limite superior da escala; e o menor número possível , que representa o valor mais próximo de zero que ainda pode ser armazenado. Compreender como esses valores são representados ajuda a entender as restrições e desafios no uso do ponto flutuante em computadores.
+ Entre os valores que um sistema de ponto flutuante pode representar, três se destacam: o zero , que tem uma 
+representação especial dentro do sistema; o maior número possível , que define o limite superior da escala; e o 
+menor número possível , que representa o valor mais próximo de zero que ainda pode ser armazenado. Compreender como 
+esses valores são representados ajuda a entender as restrições e desafios no uso do ponto flutuante em 
+computadores.
 
-O Zero no Sistema de Ponto Flutuante
+ * O Zero no Sistema de Ponto Flutuante
 
-O zero tem uma representação especial no sistema de ponto flutuante porque, ao contrário de outros números, ele não pode ser normalizado da maneira convencional. Como a mantissa deve ser sempre normalizada com um único dígito diferente de zero antes da vírgula, o zero não pode ser representado dessa forma, exigindo uma codificação específica.
+   O zero tem uma representação especial no sistema de ponto flutuante porque, ao contrário de outros números, ele 
+  não pode ser normalizado da maneira convencional. Como a mantissa deve ser sempre normalizada com um único dígito 
+  diferente de zero antes da vírgula, o zero não pode ser representado dessa forma, exigindo uma codificação 
+  específica.
 
-Para armazenar o zero, tanto a mantissa quanto o expoente são zerados, e o bit de sinal determina se o número é +0 ou -0. Embora matematicamente ambos sejam equivalentes, em computação, a existência de um zero positivo e um zero negativo pode influenciar certos cálculos, especialmente em operações matemáticas que envolvem divisões e limites.
+   Para armazenar o zero, tanto a mantissa quanto o expoente são zerados, e o bit de sinal determina se o número é 
+  +0 ou -0. Embora matematicamente ambos sejam equivalentes, em computação, a existência de um zero positivo e um 
+  zero negativo pode influenciar certos cálculos, especialmente em operações matemáticas que envolvem divisões e 
+  limites.
 
-Exemplo no sistema (2, 3, 2³, 2⁻³):
+   Exemplo no sistema (2, 3, 2³, 2⁻³):
 
-Representação do zero positivo: Sinal = 0, Expoente = 000, Mantissa = 000
+    - Representação do zero positivo: Sinal = 0, Expoente = 000, Mantissa = 000
 
-Representação do zero negativo: Sinal = 1, Expoente = 000, Mantissa = 000
+    - Representação do zero negativo: Sinal = 1, Expoente = 000, Mantissa = 000
 
- O zero é um caso especial no sistema de ponto flutuante, pois não segue a normalização tradicional. Embora sua representação pareça trivial, a distinção entre +0 e -0 pode ter efeitos sutis, mas importantes, na precisão dos cálculos computacionais, especialmente em áreas como análise numérica e programação científica.
-
-
-O Maior Número Representável:
-
-O maior número que pode ser representado em um sistema de ponto flutuante é aquele que utiliza o maior valor possível para o expoente e a maior mantissa permitida dentro das restrições do sistema. Se tentarmos armazenar um número maior do que esse limite, ocorrerá um erro chamado overflow , resultando em um valor infinito ou um comportamento indefinido.
-
-Para encontrar esse valor, usamos o maior expoente permitido dentro do intervalo definido e uma mantissa completamente preenchida com 1s. Esse valor é o maior que pode ser armazenado com precisão dentro do sistema. Valores além desse limite não podem ser representados diretamente e podem causar problemas em cálculos que bloqueiam grande precisão.
-
-Exemplo no sistema (2, 3, 2³, 2⁻³):
-
-Expoente máximo: 2³
-
-Maior mantissa possível: 111 (em binário)
-
-Maior número representável: 0,111 × 2³ = 15 (em decimal)
-
- O maior número representável define o limite superior do sistema de ponto flutuante. Quando um cálculo gera um número maior do que esse limite, ocorre um overflow, que pode resultar em erros numéricos graves, afetando desde simulações científicas até operações financeiras. Conhecer esse limite ajuda para evitar problemas ao trabalhar com grandes valores.
+   O zero é um caso especial no sistema de ponto flutuante, pois não segue a normalização tradicional. Embora sua 
+  representação pareça trivial, a distinção entre +0 e -0 pode ter efeitos sutis, mas importantes, na precisão dos 
+  cálculos computacionais, especialmente em áreas como análise numérica e programação científica.
 
 
-O Menor Número Representável:
+ * O Maior Número Representável:
 
-O menor número representável em um sistema de ponto flutuante é aquele que utiliza o menor expoente possível dentro do intervalo permitido e a menor mantissa válida. Isso define o valor mínimo que pode ser armazenado antes que ocorra um erro chamado underflow , onde números menores se tornam indistinguíveis de zero.
+   O maior número que pode ser representado em um sistema de ponto flutuante é aquele que utiliza o maior valor 
+  possível para o expoente e a maior mantissa permitida dentro das restrições do sistema. Se tentarmos armazenar um 
+  número maior do que esse limite, ocorrerá um erro chamado overflow , resultando em um valor infinito ou um 
+  comportamento indefinido.
 
-Os números muito pequenos são essenciais em cálculos científicos e financeiros, pois permitem representar valores próximos de zero sem perder resultados. Quando um número menor do que o limite mínimo é processado, ele pode ser fechado para zero, o que pode afetar a precisão de algumas operações.
+   Para encontrar esse valor, usamos o maior expoente permitido dentro do intervalo definido e uma mantissa 
+  completamente preenchida com 1s. Esse valor é o maior que pode ser armazenado com precisão dentro do sistema. 
+  Valores além desse limite não podem ser representados diretamente e podem causar problemas em cálculos que 
+  exigem grande precisão.
 
-Exemplo no sistema (2, 3, 2³, 2⁻³):
+   Exemplo no sistema (2, 3, 2³, 2⁻³):
 
-Expoente mínimo: 2⁻³
+    - Expoente máximo: 2³
 
-Menor mantissa possível: 100 (em binário)
+    - Maior mantissa possível: 111 (em binário)
 
-Menor número representável: 0,100 x 2⁻³ = 0,0625 (em decimal)
+    - Maior número representável: 0,111 × 2³ = 15 (em decimal)
 
-O menor número representável estabelece o limite inferior do sistema de ponto flutuante. Se um número for pequeno demais, ele pode ser truncado para zero, causando perda de precisão. Essa limitação pode ser crítica em cálculos científicos e estatísticos, onde pequenas variações podem ter grande impacto nos resultados.
+   O maior número representável define o limite superior do sistema de ponto flutuante. Quando um cálculo gera um   
+  número maior do que esse limite, ocorre um overflow, que pode resultar em erros numéricos graves, afetando desde 
+  simulações científicas até operações financeiras. Conhecer esse limite ajuda para evitar problemas ao trabalhar 
+  com grandes valores.
 
-Em suma, o sistema de ponto flutuante é projetado para lidar com uma ampla faixa de valores, mas possui limites claros que afetam sua precisão e capacidade de representar números extremamente pequenos ou grandes. O zero, o maior número possível e o menor número representável são conceitos fundamentais que ajudam a compreender como os computadores lidam com cálculos numéricos e quais são suas limitações.
 
-Compreender essas representações permite que programadores e cientistas da computação evitem erros numéricos, como overflow e underflow, garantindo que os cálculos sejam mais estáveis e precisos. Saber até onde um sistema de ponto flutuante pode ir e quais são seus limites é essencial para o desenvolvimento de algoritmos eficientes e confiáveis.
+ * O Menor Número Representável:
+
+   O menor número representável em um sistema de ponto flutuante é aquele que utiliza o menor expoente possível 
+  dentro do intervalo permitido e a menor mantissa válida. Isso define o valor mínimo que pode ser armazenado antes 
+  que ocorra um erro chamado underflow , onde números menores se tornam indistinguíveis de zero.
+
+   Os números muito pequenos são essenciais em cálculos científicos e financeiros, pois permitem representar 
+  valores próximos de zero sem perder resultados. Quando um número menor do que o limite mínimo é processado, ele 
+  pode ser arredondado  para zero, o que pode afetar a precisão de algumas operações.
+
+   - Exemplo no sistema (2, 3, 2³, 2⁻³):
+
+   - Expoente mínimo: 2⁻³
+
+   - Menor mantissa possível: 100 (em binário)
+
+   - Menor número representável: 0,100 x 2⁻³ = 0,0625 (em decimal)
+
+   O menor número representável estabelece o limite inferior do sistema de ponto flutuante. Se um número for   
+  pequeno demais, ele pode ser arredondado  para zero, causando perda de precisão. Essa limitação pode ser crítica 
+  em cálculos científicos e estatísticos, onde pequenas variações podem ter grande impacto nos resultados.
+
+ Em suma, o sistema de ponto flutuante é projetado para lidar com uma ampla faixa de valores, mas possui limites 
+claros que afetam sua precisão e capacidade de representar números extremamente pequenos ou grandes. O zero, o maior número possível e o menor número representável são conceitos fundamentais que ajudam a compreender como os 
+computadores lidam com cálculos numéricos e quais são suas limitações.
+
+ Compreender essas representações permite que programadores e cientistas da computação evitem erros numéricos, como 
+overflow e underflow, garantindo que os cálculos sejam mais estáveis e precisos. Saber até onde um sistema de ponto 
+flutuante pode ir e quais são seus limites é essencial para o desenvolvimento de algoritmos eficientes e 
+confiáveis.
 
 
 
