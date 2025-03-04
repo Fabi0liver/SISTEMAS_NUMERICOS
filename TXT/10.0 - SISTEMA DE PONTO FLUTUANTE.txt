@@ -367,4 +367,16 @@ A ideia por trás do expoente é que ele indica o número de casas que precisamo
  O expoente é essencial porque ele nos ajuda a representar números de forma compacta, seja para números grandes ou pequenos. Ele nos diz o "quanto" de deslocamento a vírgula sofreu para tornar o número mais fácil de trabalhar e armazenar em um computador. Compreender o conceito de expoente ajuda a entender o funcionamento do sistema de ponto flutuante e a manipulação precisa de números no mundo digital.
 
 
+Ajustar ao Intervalo Permitido: No sistema de ponto flutuante, é essencial garantir que o expoente de um número se mantenha dentro dos limites predefinidos pelo sistema. Esses limites, conhecidos como EXP(min) e EXP(max), definem o intervalo em que o expoente pode variar. Esse controle evita que os números representados se tornem muito grandes ou muito pequenos para serem armazenados de forma precisa. Imagine que o sistema de ponto flutuante é como uma "caixa de armazenamento" com espaço limitado. Se o número for muito grande ou muito pequeno para caber dentro dessa caixa, ele não poderá ser representado corretamente, resultando em erros como overflow ou underflow.
+
+Exemplo: Se o sistema de ponto flutuante permite expoentes entre -3 e +3, qualquer número que precise de um    
+        expoente maior que 3 ou menor que -3 não poderá ser representado corretamente.
+
+ Por exemplo, se tivermos um número 1,101101 × 2⁴, o expoente 4 é maior do que o limite de 3. Isso resulta em um overflow, o que significa que o valor excede o intervalo permitido pelo sistema e não pode ser armazenado corretamente. O mesmo ocorre para números que tenham expoentes fora do intervalo negativo, como 1,010 × 2⁻⁴, onde o expoente -4 é menor que o limite mínimo de -3, causando um underflow. Neste caso, o número se torna tão pequeno que o sistema não consegue representá-lo e ele é arredondado para zero.
+
+ Essa restrição de expoente garante que os números sejam armazenados de forma eficiente, evitando que a representação de números muito grandes ou muito pequenos cause erros ou perda de precisão. Esse ajuste ao intervalo permitido é uma parte crucial do sistema de ponto flutuante, pois assegura que os cálculos realizados com esses números permaneçam dentro de um range controlado e que o sistema funcione de maneira estável e precisa.
+
+ Ajustar ao intervalo permitido é uma etapa fundamental no funcionamento do sistema de ponto flutuante, pois assegura que o expoente esteja dentro dos limites definidos, evitando erros como overflow e underflow. Esse controle de intervalo ajuda a manter a precisão e a estabilidade dos cálculos, permitindo que o sistema represente os números de forma eficaz, mesmo diante de números muito grandes ou muito pequenos. Essa característica torna o sistema de ponto flutuante um recurso poderoso, mas com limitações que devem ser cuidadosamente gerenciadas para garantir um desempenho confiável.
+
+
 
