@@ -120,38 +120,71 @@ eles aconteçam.
 
                     "Erro de Arredondamento no Sistema de Ponto Flutuante"
 
-O erro de arredondamento é um dos problemas mais comuns no sistema de ponto flutuante e ocorre porque os computadores trabalham com uma quantidade limitada de bits para representar números. Isso significa que muitos valores fracionários não podem ser armazenados exatamente, resultando em pequenas diferenças entre o valor real e o valor armazenado. Essas diferenças podem parecer insignificantes, mas quando acumuladas em cálculos sucessivos, podem levar a resultados inesperados.
+ O erro de arredondamento é um dos problemas mais comuns no sistema de ponto flutuante e ocorre porque os 
+computadores trabalham com uma quantidade limitada de bits para representar números. Isso significa que muitos 
+valores fracionários não podem ser armazenados exatamente, resultando em pequenas diferenças entre o valor real e o 
+valor armazenado. Essas diferenças podem parecer insignificantes, mas quando acumuladas em cálculos sucessivos, 
+podem levar a resultados inesperados.
 
-Imagine tentar expressar 1/3 como um número decimal exato. Como 0,3333... se repete infinitamente, qualquer tentativa de armazená-lo com um número finito de casas decimais inevitavelmente corta parte da sequência, aproximando o valor. No ponto flutuante, isso acontece o tempo todo, especialmente com frações que não podem ser representadas de forma exata no sistema binário. Esse arredondamento pode levar a pequenas imprecisões, que muitas vezes passam despercebidas, mas podem ser problemáticas em cálculos críticos.
+ Imagine tentar expressar 1/3 como um número decimal exato. Como 0,3333... se repete infinitamente, qualquer 
+tentativa de armazená-lo com um número finito de casas decimais inevitavelmente corta parte da sequência, 
+aproximando o valor. No ponto flutuante, isso acontece o tempo todo, especialmente com frações que não podem ser 
+representadas de forma exata no sistema binário. Esse arredondamento pode levar a pequenas imprecisões, que muitas 
+vezes passam despercebidas, mas podem ser problemáticas em cálculos críticos.
 
-Esse tipo de erro é especialmente relevante em aplicações científicas, cálculos financeiros e gráficos computacionais, onde a precisão dos números influencia diretamente os resultados. Em muitas situações, pequenas variações causadas pelo arredondamento podem afetar equações complexas, influenciar o comportamento de simulações ou até mesmo gerar diferenças inesperadas em valores monetários. Por isso, entender como esses erros surgem e como minimizá-los é essencial para quem trabalha com computação numérica.
+ Esse tipo de erro é especialmente relevante em aplicações científicas, cálculos financeiros e gráficos 
+computacionais, onde a precisão dos números influencia diretamente os resultados. Em muitas situações, pequenas 
+variações causadas pelo arredondamento podem afetar equações complexas, influenciar o comportamento de simulações 
+ou até mesmo gerar diferenças inesperadas em valores monetários. Por isso, entender como esses erros surgem e como 
+minimizá-los é essencial para quem trabalha com computação numérica.
 
-Exemplos de Erro de Arredondamento
+ * Exemplos de Erro de Arredondamento:
 
-Somando números pequenos com números grandes: Quando somamos um número muito pequeno a um número muito grande no ponto flutuante, o menor pode ser ignorado devido à limitação na precisão da representação.
+   - Somando números pequenos com números grandes: Quando somamos um número muito pequeno a um número muito grande 
+    no ponto flutuante, o menor pode ser ignorado devido à limitação na precisão da representação.
 
-Exemplo: Se tivermos um número grande, como 1.000.000 e somarmos um número muito pequeno, como 0,0000003, o resultado pode simplesmente ser armazenado como 1.000.000, sem refletir a adição do pequeno valor.
+     Exemplo: Se tivermos um número grande, como 1.000.000 e somarmos um número muito pequeno, como 0,0000003, o 
+             resultado pode simplesmente ser armazenado como 1.000.000, sem refletir a adição do pequeno valor.
 
-Conversão de frações decimais para binário: Algumas frações decimais não podem ser representadas exatamente em binário, levando a pequenas imprecisões.
+   - Conversão de frações decimais para binário: Algumas frações decimais não podem ser representadas exatamente em 
+    binário, levando a pequenas imprecisões.
 
-Exemplo: O número 0,1 (decimal) tem uma representação binária infinita (0,0001100110011...), o que significa que ao armazená-lo em ponto flutuante, ele precisa ser arredondado. Isso pode causar pequenas discrepâncias ao realizar operações matemáticas.
+     Exemplo: O número 0,1 (decimal) tem uma representação binária infinita (0,0001100110011...), o que significa 
+             que ao armazená-lo em ponto flutuante, ele precisa ser arredondado. Isso pode causar pequenas 
+             discrepâncias ao realizar operações matemáticas.
 
-Cálculos financeiros com valores fracionários: Em operações financeiras, onde cálculos precisos são fundamentais, pequenos erros de arredondamento podem se acumular e causar diferenças inesperadas.
+   - Cálculos financeiros com valores fracionários: Em operações financeiras, onde cálculos precisos são 
+    fundamentais, pequenos erros de arredondamento podem se acumular e causar diferenças inesperadas.
 
-Exemplo: Se um software de contabilidade calcular repetidamente juros sobre um valor arredondado, o montante final pode ser diferente do esperado, devido ao acúmulo desses pequenos erros.
-
-
-Estratégias para Lidar com Erros de Arredondamento:
-
-Uma das principais formas de reduzir o impacto do erro de arredondamento é utilizar formatos de precisão mais altos quando necessário. Muitos sistemas permitem trabalhar com ponto flutuante de precisão dupla, que armazena mais bits e reduz a quantidade de arredondamento necessária. Isso pode ser útil em cálculos científicos ou financeiros, onde um pequeno erro pode gerar um grande impacto no resultado final.
-
-Outra estratégia comum é o uso de técnicas numéricas que minimizam a propagação do erro. Uma abordagem eficiente é reorganizar operações matemáticas para reduzir o impacto do arredondamento. Por exemplo, ao realizar somas de vários números, somar primeiro os menores valores antes dos maiores pode minimizar a perda de precisão. Esse tipo de técnica é amplamente utilizado em áreas como computação científica e modelagem matemática.
-
-Por fim, em aplicações financeiras, uma solução prática é evitar o uso de ponto flutuante sempre que possível e optar por formatos numéricos que representem valores exatos, como números inteiros escalados (por exemplo, armazenar valores em centavos ao invés de unidades monetárias). Isso garante que operações como adição e multiplicação sejam sempre precisas, eliminando problemas de arredondamento indesejados.
+     Exemplo: Se um software de contabilidade calcular repetidamente juros sobre um valor arredondado, o montante 
+             final pode ser diferente do esperado, devido ao acúmulo desses pequenos erros.
 
 
-Em suma, O erro de arredondamento é uma característica inevitável do sistema de ponto flutuante, mas compreender suas causas e impactos permite minimizar seus efeitos em cálculos computacionais. Embora muitas vezes seja imperceptível em operações simples, quando acumulado, pode gerar discrepâncias significativas em aplicações que exigem alta precisão, como ciência, engenharia e finanças.
+ * Estratégias para Lidar com Erros de Arredondamento:
 
-A boa notícia é que existem estratégias eficazes para lidar com esses erros, seja através do uso de maior precisão, reestruturação de operações matemáticas ou escolha de representações numéricas mais adequadas para cada situação. Dominar essas técnicas é essencial para qualquer profissional que trabalhe com computação numérica, garantindo resultados mais confiáveis e precisos.
+   Uma das principais formas de reduzir o impacto do erro de arredondamento é utilizar formatos de precisão mais 
+  altos quando necessário. Muitos sistemas permitem trabalhar com ponto flutuante de precisão dupla, que armazena 
+  mais bits e reduz a quantidade de arredondamento necessária. Isso pode ser útil em cálculos científicos ou 
+  financeiros, onde um pequeno erro pode gerar um grande impacto no resultado final.
+
+   Outra estratégia comum é o uso de técnicas numéricas que minimizam a propagação do erro. Uma abordagem eficiente 
+  é reorganizar operações matemáticas para reduzir o impacto do arredondamento. Por exemplo, ao realizar somas de 
+  vários números, somar primeiro os menores valores antes dos maiores pode minimizar a perda de precisão. Esse tipo 
+  de técnica é amplamente utilizado em áreas como computação científica e modelagem matemática.
+
+   Por fim, em aplicações financeiras, uma solução prática é evitar o uso de ponto flutuante sempre que possível e 
+  optar por formatos numéricos que representem valores exatos, como números inteiros escalados (por exemplo, 
+  armazenar valores em centavos ao invés de unidades monetárias). Isso garante que operações como adição e 
+  multiplicação sejam sempre precisas, eliminando problemas de arredondamento indesejados.
+
+ Em suma, O erro de arredondamento é uma característica inevitável do sistema de ponto flutuante, mas compreender 
+suas causas e impactos permite minimizar seus efeitos em cálculos computacionais. Embora muitas vezes seja 
+imperceptível em operações simples, quando acumulado, pode gerar discrepâncias significativas em aplicações que 
+exigem alta precisão, como ciência, engenharia e finanças.
+
+ A boa notícia é que existem estratégias eficazes para lidar com esses erros, seja através do uso de maior 
+precisão, reestruturação de operações matemáticas ou escolha de representações numéricas mais adequadas para cada 
+situação. Dominar essas técnicas é essencial para qualquer profissional que trabalhe com computação numérica, 
+garantindo resultados mais confiáveis e precisos.
 
 
