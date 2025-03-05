@@ -27,7 +27,93 @@ reconhecê-los para evitar surpresas desagradáveis em cálculos computacionais.
 
 
 
-                            "Epsilon do Sistema de Ponto Flutuante"
+                            "Tipos de Erro no Sistema de Ponto Flutuante"
+
+ Ao trabalhar com sistemas de ponto flutuante, é importante entender os diferentes tipos de erro que podem ocorrer 
+durante os cálculos. Esses erros são inevitáveis devido à forma como os números são representados em computadores, 
+e eles podem afetar a precisão e a confiabilidade dos resultados. A representação numérica limitada, por conta da 
+quantidade finita de bits disponíveis, gera discrepâncias entre os valores reais e os valores armazenados.
+
+ Existem três tipos principais de erro em sistemas de ponto flutuante: erro real, erro absoluto e erro relativo. 
+Cada um desses erros representa uma maneira diferente de medir a imprecisão nos cálculos, e entender as diferenças 
+entre eles é essencial para realizar cálculos mais precisos e tomar decisões informadas ao projetar algoritmos e 
+sistemas. 
+
+ Vamos agora examinar cada tipo de erro de forma detalhada:
+
+ * Erro Real: É a diferença entre o valor exato de um número e o valor aproximado armazenado no sistema de ponto 
+  flutuante. Ele nos diz o quanto o número representado se desvia do valor correto, levando em consideração a 
+  precisão limitada do sistema. O erro real pode ser expresso pela fórmula:
+
+                           Erro Real = |Valor Exato - Valor Aproximado|
+
+   - Exemplo do Erro Real: Suponha que o número real que estamos tentando representar seja π (pi), que é 
+   aproximadamente 3,14159265358979. No entanto, o sistema de ponto flutuante só consegue armazenar uma aproximação 
+   de π, como 3,14159. O erro real, nesse caso, seria a diferença entre o valor exato e o valor armazenado:
+
+                     Erro Real = |3,14159265358979 - 3,14159| = 0,00000065358979
+
+   Essa pequena diferença é o erro real. Ele é útil para saber o quão distante o valor armazenado está do valor 
+  exato.
+
+   O erro real é uma métrica direta de precisão e ajuda a entender a imprecisão absoluta em um cálculo. Embora seja 
+  difícil de evitar completamente, conhecer o erro real pode nos dar uma ideia da precisão do sistema de ponto 
+  flutuante e nos ajudar a ajustar nossos algoritmos para minimizar essa imprecisão.
+
+
+ * Erro Absoluto: É a diferença entre o valor exato e o valor calculado ou aproximado, sem considerar o tamanho do 
+  número envolvido. Ele nos diz a quantidade exata de erro, mas sem levar em conta a magnitude do número. A fórmula 
+  do erro absoluto é dada por:
+
+                         Erro Absoluto = |Valor Exato - Valor Aproximado|
+
+   - Exemplo do Erro Absoluto: Imaginemos que, ao tentar calcular a soma de dois números, como 5,6789 e 3,1415, o 
+   sistema de ponto flutuante produza o resultado 8,8204. O valor exato seria 8,8204, mas, por algum erro de 
+   arredondamento, o sistema calcula 8,8203. O erro absoluto seria:
+
+                            Erro Absoluto = |8,8204 - 8,8203| = 0,0001
+
+   Neste exemplo, o erro absoluto é 0,0001, uma medida simples de quanto o valor calculado se desvia do valor 
+  exato.
+
+   O erro absoluto é uma maneira útil de medir a precisão de um cálculo sem considerar o tamanho relativo do 
+  número. Embora seja uma métrica simples, ela não nos dá uma ideia da "importância" do erro em relação ao valor 
+  total, o que pode ser uma limitação em alguns casos.
+
+
+ * Erro Relativo: Por fim, O erro relativo leva em consideração o tamanho do número em questão, ou seja, ele 
+  calcula o erro como uma fração do valor exato. Isso ajuda a medir a imprecisão de maneira proporcional, 
+  considerando a magnitude do número. A fórmula para o erro relativo é:
+
+                         Erro Relativo = |Erro Absoluto| / |Valor Exato|
+
+   - Exemplo do Erro Relativo: Vamos agora calcular o erro relativo para o exemplo anterior, onde o valor exato da 
+    soma era 8,8204 e o valor aproximado foi 8,8203. O erro absoluto já foi calculado como 0,0001, então o erro 
+    relativo seria:
+                     
+                        Erro Relativo = |0,0001| / |8,8204| ≈ 0,00001133
+
+   Neste caso, o erro relativo é 0,00001133, o que significa que a imprecisão é muito pequena em relação ao valor 
+  total. Esse valor é útil quando precisamos saber se o erro é significativo em relação à grandeza do número que 
+  estamos tratando.
+
+   O erro relativo é particularmente útil em contextos onde a magnitude dos números pode variar, como em cálculos 
+  científicos e financeiros. Ele nos dá uma visão mais clara da importância do erro em relação ao valor total e nos 
+  ajuda a tomar decisões sobre a precisão necessária para diferentes tipos de cálculos.
+
+ Em suma, compreender os tipos de erro no sistema de ponto flutuante – real, absoluto e relativo – é essencial para 
+garantir a precisão dos cálculos em ambientes computacionais. Cada tipo de erro tem sua importância e é utilizado 
+de maneiras diferentes, dependendo do contexto e dos requisitos de precisão. Ao entender como esses erros 
+funcionam, podemos tomar decisões informadas ao projetar algoritmos e escolher os tipos de dados mais adequados.
+
+ Além disso, estratégias como o uso de precisão maior, reorganização das operações e o desenvolvimento de 
+algoritmos mais adaptativos são fundamentais para minimizar os impactos dos erros de ponto flutuante. Ao 
+implementar essas práticas, conseguimos melhorar a confiabilidade dos cálculos e garantir resultados mais precisos 
+e robustos em diversas aplicações.
+
+
+
+                             "Epsilon do Sistema de Ponto Flutuante"
 
  Quando lidamos com números no sistema de ponto flutuante, nem sempre conseguimos representá-los com exatidão. Como 
 o computador funciona com um número limitado de bits para armazenar cada número, algumas frações acabam sendo 
