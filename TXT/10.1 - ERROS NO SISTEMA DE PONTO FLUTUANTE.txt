@@ -1,12 +1,29 @@
-                               ERROS NO SISTEMA DE PONTO FLUTUANTE
+                                  ERROS NO SISTEMA DE PONTO FLUTUANTE
 
-Quando trabalhamos com números em computadores, esperamos que os cálculos sejam precisos e confiáveis. No entanto, no mundo da computação, especialmente quando lidamos com números fracionários, nem sempre é possível representar tudo com total exatidão. O sistema de ponto flutuante, que nos permite trabalhar com números muito grandes e muito pequenos, tem suas próprias limitações e, por causa delas, podem surgir pequenos erros ao realizar operações matemáticas. Esses erros, apesar de geralmente discretos, podem se acumular e causar impactos significativos dependendo da aplicação.
+ Quando trabalhamos com números em computadores, esperamos que os cálculos sejam precisos e confiáveis. No entanto, 
+no mundo da computação, especialmente quando lidamos com números fracionários, nem sempre é possível representar 
+tudo com total exatidão. O sistema de ponto flutuante, que nos permite trabalhar com números muito grandes e muito 
+pequenos, tem suas próprias limitações e, por causa delas, podem surgir pequenos erros ao realizar operações 
+matemáticas. Esses erros, apesar de geralmente discretos, podem se acumular e causar impactos significativos 
+dependendo da aplicação.
 
-Esses erros aparecem porque os computadores armazenam números em uma quantidade fixa de bits. Isso significa que, em muitos casos, números que possuem infinitas casas decimais ou que não podem ser representados exatamente acabam sendo "ajustados" para um valor próximo. Pense nisso como tentar medir um objeto com uma régua que só mostra centímetros inteiros – se o objeto tiver 2,7 cm, você pode acabar arredondando para 2,7 ou 2,8 cm. Esse arredondamento acontece com frequência no ponto flutuante e pode afetar operações matemáticas.
+ Esses erros aparecem porque os computadores armazenam números em uma quantidade fixa de bits. Isso significa que, 
+em muitos casos, números que possuem infinitas casas decimais ou que não podem ser representados exatamente acabam 
+sendo "ajustados" para um valor próximo. Pense nisso como tentar medir um objeto com uma régua que só mostra 
+centímetros inteiros – se o objeto tiver 2,7 cm, você pode acabar arredondando para 2,7 ou 2,8 cm. Esse 
+arredondamento acontece com frequência no ponto flutuante e pode afetar operações matemáticas.
 
-Os erros no ponto flutuante podem surgir em diversas áreas, desde simulações científicas e cálculos financeiros até gráficos de videogames e inteligência artificial. Em muitos casos, eles são tão pequenos que passam despercebidos, mas em situações críticas, como cálculos aeroespaciais ou projeções econômicas, um pequeno erro pode gerar consequências inesperadas. Por isso, entender que esses erros existem e como minimizá-los é uma parte fundamental do trabalho com computação numérica.
+ Os erros no ponto flutuante podem surgir em diversas áreas, desde simulações científicas e cálculos financeiros 
+até gráficos de videogames e inteligência artificial. Em muitos casos, eles são tão pequenos que passam 
+despercebidos, mas em situações críticas, como cálculos aeroespaciais ou projeções econômicas, um pequeno erro pode 
+gerar consequências inesperadas. Por isso, entender que esses erros existem e como minimizá-los é uma parte 
+fundamental do trabalho com computação numérica.
 
-Embora possa parecer um problema complicado, os erros no ponto flutuante são bem conhecidos e existem várias estratégias para lidar com eles. Desde o desenvolvimento de algoritmos que reduzem os impactos dos erros até a escolha de representações numéricas mais adequadas para cada situação, há muitas formas de contornar essas limitações. O importante é saber que esses erros fazem parte da natureza do ponto flutuante e aprender a reconhecê-los para evitar surpresas desagradáveis em cálculos computacionais.
+ Embora possa parecer um problema complicado, os erros no ponto flutuante são bem conhecidos e existem várias 
+estratégias para lidar com eles. Desde o desenvolvimento de algoritmos que reduzem os impactos dos erros até a 
+escolha de representações numéricas mais adequadas para cada situação, há muitas formas de contornar essas 
+limitações. O importante é saber que esses erros fazem parte da natureza do ponto flutuante e aprender a 
+reconhecê-los para evitar surpresas desagradáveis em cálculos computacionais.
 
 
 
