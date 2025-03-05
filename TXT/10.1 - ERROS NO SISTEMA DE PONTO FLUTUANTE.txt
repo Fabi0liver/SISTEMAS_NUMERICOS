@@ -27,6 +27,65 @@ reconhecê-los para evitar surpresas desagradáveis em cálculos computacionais.
 
 
 
+                            "Epsilon do Sistema de Ponto Flutuante"
+
+ Quando lidamos com números no sistema de ponto flutuante, nem sempre conseguimos representá-los com exatidão. Como 
+o computador funciona com um número limitado de bits para armazenar cada número, algumas frações acabam sendo 
+arredondadas para o valor mais próximo possível dentro dessa limitação. Esse pequeno desvio entre o valor real e o 
+valor que o computador consegue armazenar é o que chamamos de erro de representação. Esse erro pode parecer 
+insignificante em muitos casos, mas quando realizamos cálculos complexos, ele pode se acumular e afetar o resultado 
+final.
+
+ Para medir o impacto desses erros, usamos um conceito chamado Epsilon do ponto flutuante . O Epsilon, representado 
+por ε , ele define o menor valor que pode ser somado a um número para que ele gere um resultado diferente desse 
+número no sistema de ponto flutuante. Em outras palavras, ele mede o menor passo possível entre dois valores 
+diferentes que o computador consegue representar. Essa medida é fundamental porque nos ajuda a entender os limites 
+de precisão dos cálculos numéricos e evitar problemas que possam surgir por conta das imprecisões acumuladas.
+
+ A expressão do Epsilon depende do formato do ponto flutuante utilizado, mas em geral, ele é calculado com a 
+seguinte fórmula:
+
+                            b¹⁻ᴾ 
+                       ε = -------  
+                              2
+
+ Onde b é a base do sistema numérico (normalmente 2, para sistemas binários) e p é o número de bits usados para 
+representar a mantissa. Esse valor nos dá uma ideia clara do limite da precisão do sistema e permite ajustar 
+algoritmos para minimizar erros numéricos.
+
+ * Exemplo de Epsilon do ponto flutuante : 
+
+    Se utilizarmos um sistema de ponto flutuante com seguintes parâmetros:(2, 5, 2³, 2⁻³), onde: 
+
+     - Base (b) = 2 (Binário)
+ 
+     - Mantissa com 3 bits
+ 
+     - Expoente variando de 2³ a 2⁻³
+
+    Podemos calcular o Epsilon como: 
+
+                2¹⁻³           2⁻²         0,25
+         ε = ----------  =  ---------  = -------- = 0,125
+                 2              2           2
+
+    Isso significa que, nesse sistema, a menor diferença possível entre dois números representáveis é 0,125. Se 
+   tentarmos somar um valor menor do que isso a um número já armazenado, o sistema pode não ser capaz de reconhecer 
+   a diferença e simplesmente manter o mesmo valor. Esse fenômeno acontece porque o computador trabalha dentro dos 
+   limites impostos pelo número de bits disponíveis.
+
+ Em suma, o Epsilon do ponto flutuante é uma ferramenta essencial para entendermos até onde vai a precisão dos 
+cálculos computacionais. Ele nos ajuda a prever quando pequenos erros de arredondamento podem começar a interferir 
+nos resultados e a tomar decisões mais seguras ao projetar algoritmos e sistemas numéricos. Saber o valor do 
+Epsilon de um sistema permite que programadores e cientistas da computação ajustem suas estratégias para minimizar 
+os impactos das imprecisões inerentes ao ponto flutuante.
+
+Embora os computadores modernos consigam lidar com cálculos extremamente precisos, ainda é importante lembrar que sempre haverá um limite para essa precisão. O entendimento do Epsilon nos ajuda a trabalhar dentro dessas 
+limitações de forma inteligente, evitando surpresas desagradáveis e garantindo resultados confiáveis em diversas 
+aplicações, desde simulações científicas até cálculos financeiros.
+
+
+
                         Overflow e Underflow no Sistema de Ponto Flutuante
 
  Quando trabalhamos com números no sistema de ponto flutuante, lidamos com limites. Como os computadores armazenam 
