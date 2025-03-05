@@ -1,4 +1,4 @@
-                                  ERROS NO SISTEMA DE PONTO FLUTUANTE
+                                 ERROS NO SISTEMA DE PONTO FLUTUANTE
 
  Quando trabalhamos com números em computadores, esperamos que os cálculos sejam precisos e confiáveis. No entanto, 
 no mundo da computação, especialmente quando lidamos com números fracionários, nem sempre é possível representar 
@@ -80,9 +80,67 @@ nos resultados e a tomar decisões mais seguras ao projetar algoritmos e sistema
 Epsilon de um sistema permite que programadores e cientistas da computação ajustem suas estratégias para minimizar 
 os impactos das imprecisões inerentes ao ponto flutuante.
 
-Embora os computadores modernos consigam lidar com cálculos extremamente precisos, ainda é importante lembrar que sempre haverá um limite para essa precisão. O entendimento do Epsilon nos ajuda a trabalhar dentro dessas 
+Embora os computadores modernos consigam lidar com cálculos extremamente precisos, ainda é importante lembrar que 
+sempre haverá um limite para essa precisão. O entendimento do Epsilon nos ajuda a trabalhar dentro dessas 
 limitações de forma inteligente, evitando surpresas desagradáveis e garantindo resultados confiáveis em diversas 
 aplicações, desde simulações científicas até cálculos financeiros.
+
+
+
+                          "Erro de Representação no Sistema de Ponto Flutuante"
+
+ Quando trabalhamos com números em computadores, precisamos lembrar que eles são representados de forma limitada. 
+Isso ocorre porque, em vez de usar um número infinito de dígitos, o computador tem uma quantidade restrita de 
+memória para armazenar esses números. No caso do sistema de ponto flutuante, o número é armazenado em uma forma que 
+é uma aproximação, o que significa que a precisão é limitada. Como resultado, é comum que alguns números não possam 
+ser representados exatamente, levando ao que chamamos de erro de representação.
+
+ Esse erro acontece quando o computador não consegue armazenar um número de forma exata devido a essa limitação de 
+memória. O sistema de ponto flutuante tenta "aproximar" o número mais próximo possível, mas nem sempre isso é 
+perfeito. Essa imprecisão pode ocorrer em qualquer operação, seja em adições, subtrações ou multiplicações, e, 
+embora a diferença entre o número real e o número representado possa ser muito pequena, ela sempre existe. A causa 
+desse erro é a forma como os números são armazenados em binário, uma base que pode ser difícil de representar em 
+decimal com precisão.
+
+ Além disso, o erro de representação pode ser mais complicado do que parece à primeira vista. Embora, em muitos 
+casos, esse erro seja pequeno e até mesmo imperceptível, em cálculos mais complexos, ele pode se acumular e afetar 
+o resultado final de maneira significativa. Em tarefas como simulações científicas, cálculos financeiros ou 
+gráficos de alta precisão, essas pequenas diferenças podem se tornar problemáticas e causar falhas nos resultados 
+esperados.
+
+ * Exemplo do Erro de Representação:
+
+   Vamos ilustrar esse erro com um exemplo simples. Imagine que, ao tentar armazenar o número decimal 0,3 que em 
+  um sistema binário é 0,01001100110011001101, o computador acaba armazenando em 8 bits (por exemplo) um valor 
+  ligeiramente diferente, como 0,01001101(aproximadamente 0.3007 em decimal). O número 0,3 não pode ser 
+  representado de forma exata em binário, então o computador arredonda o valor para a melhor aproximação possível. 
+  Isso gera uma pequena diferença que pode ser insignificante em muitas situações, mas em cálculos mais complexos, 
+  essa diferença pode se acumular e afetar os resultados.
+
+
+ * Estratégias para Lidar com o Erro de Representação:
+
+   Uma das estratégias mais comuns para lidar com esse erro é o uso de precisão dupla ou tipos de dados com maior 
+  precisão, como o tipo double em vez do tipo float. Isso significa que mais bits são usados para representar o 
+  número, o que permite uma maior precisão na aproximação. Assim, o computador pode armazenar números com uma 
+  representação mais exata, minimizando os erros de arredondamento e aumentando a precisão dos cálculos.
+
+   Outra abordagem é o uso de algoritmos numéricos adaptados para reduzir os efeitos do erro de representação. 
+  Muitos algoritmos de cálculo, especialmente os usados em áreas como ciência e engenharia, foram projetados para 
+  minimizar o impacto dos erros de ponto flutuante. Essas técnicas podem incluir a reordenação de operações para 
+  reduzir a propagação dos erros ou o uso de métodos que ajustam os resultados para corrigir pequenos desvios ao 
+  longo do processo de cálculo.
+
+ Em suma, compreender o erro de representação é crucial para qualquer profissional que trabalhe com computação, 
+especialmente em áreas que exigem cálculos precisos. Embora os computadores modernos possam realizar cálculos muito 
+rápidos e complexos, sempre haverá limitações na forma como os números são representados. Saber como essas 
+limitações afetam os resultados pode ajudar a tomar decisões mais informadas sobre como projetar algoritmos e 
+escolher tipos de dados adequados.
+
+ Por fim, ao trabalhar com números em ponto flutuante, é importante ter em mente que os erros de representação são 
+inevitáveis, mas podem ser controlados com boas práticas e estratégias inteligentes. Isso nos permite criar 
+programas e sistemas que, apesar dessas limitações, continuam a oferecer resultados confiáveis e precisos para uma 
+ampla gama de aplicações.
 
 
 
@@ -105,7 +163,7 @@ cálculos, especialmente em aplicações científicas, financeiras e de engenhar
   multiplicações sucessivas ou exponenciações. Quando isso acontece, o número pode ser representado como infinito 
   ou resultar em um erro, dependendo da implementação do sistema numérico.
 
-   Vamos analisar um exemplo usando um sistema de ponto flutuante com os seguintes parâmetros: (10, 5, 2³, 2⁻³), 
+   Vamos analisar um exemplo usando um sistema de ponto flutuante com os seguintes parâmetros: (10, 5, 10³, 10⁻³), 
   onde:
 
    - A base é 10 (decimal).
@@ -134,8 +192,8 @@ cálculos, especialmente em aplicações científicas, financeiras e de engenhar
   sucessivas que diminuem ainda mais o valor. Quando o número se torna menor do que o menor valor armazenável no 
   sistema, ele é arredondado para zero, o que pode causar perda de precisão e erros em cálculos sensíveis.
 
-   Vamos analisar um exemplo no mesmo sistema de ponto flutuante (10, 5, 2³, 2⁻³). Suponha que queremos representar 
-  o número 0,0002, que pode ser escrito como:
+   Vamos analisar um exemplo no mesmo sistema de ponto flutuante (10, 5, 10³, 10⁻³). Suponha que queremos 
+  representar o número 0,0002, que pode ser escrito como:
 
                                        0,0002 = 2,0000 × 10⁻⁴
 
