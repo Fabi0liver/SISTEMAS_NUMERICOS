@@ -10,5 +10,56 @@ Embora possa parecer um problema complicado, os erros no ponto flutuante são be
 
 
 
-                       
+                       Overflow e Underflow no Sistema de Ponto Flutuante
+
+Quando trabalhamos com números no sistema de ponto flutuante, lidamos com limites. Como os computadores armazenam valores em um número fixo de bits, há um intervalo máximo e mínimo de valores que podem ser representados. Quando um número ultrapassa esse intervalo, ocorrem erros chamados overflow e underflow. Esses erros podem afetar a precisão dos cálculos e, em alguns casos, levar a resultados inesperados ou até mesmo a falhas em programas.
+
+O overflow acontece quando tentamos representar um número maior do que o maior valor possível no sistema de ponto flutuante. Já o underflow ocorre quando um número é tão pequeno que não pode mais ser armazenado com precisão e acaba sendo arredondado para zero. Ambos os erros são problemáticos porque podem comprometer a confiabilidade dos cálculos, especialmente em aplicações científicas, financeiras e de engenharia, onde a precisão é essencial.
+
+ Overflow no Sistema de Ponto Flutuante:
+
+O overflow acontece quando um número ultrapassa o limite superior que pode ser representado no sistema de ponto flutuante. Isso geralmente ocorre quando se realiza operações matemáticas com valores muito grandes, como multiplicações sucessivas ou exponenciações. Quando isso acontece, o número pode ser representado como infinito ou resultar em um erro, dependendo da implementação do sistema numérico.
+
+Vamos analisar um exemplo usando um sistema de ponto flutuante com os seguintes parâmetros: (10, 5, 2³, 2⁻³), onde:
+
+A base é 10 (decimal).
+
+A mantissa tem 5 dígitos.
+
+O expoente varia de -3 a 3.
+
+Se tentarmos representar um número muito grande, como 25000, ele precisaria ser armazenado na forma normalizada:
+
+25000 = 2,5000 × 10⁴
+
+Porém, o maior expoente permitido no sistema é 10³, ou seja, não podemos armazenar 10⁴. Como resultado, ocorre um overflow, e o valor pode ser tratado como infinito ou gerar um erro no cálculo.
+
+O overflow é um problema crítico porque pode levar a resultados absurdos, como valores infinitos, que podem comprometer a lógica dos programas. Por isso, é importante que os sistemas sejam projetados para lidar com esse tipo de erro, seja limitando valores antes que o problema ocorra ou adotando técnicas para contornar a limitação do sistema de ponto flutuante.
+
+
+Underflow no Sistema de Ponto Flutuante:
+
+O underflow ocorre quando um número é tão pequeno que não pode mais ser representado com precisão. Isso acontece principalmente quando trabalhamos com números muito próximos de zero e realizamos divisões ou subtrações sucessivas que diminuem ainda mais o valor. Quando o número se torna menor do que o menor valor armazenável no sistema, ele é arredondado para zero, o que pode causar perda de precisão e erros em cálculos sensíveis.
+
+Vamos analisar um exemplo no mesmo sistema de ponto flutuante (10, 5, 2³, 2⁻³). Suponha que queremos representar o número 0,0002, que pode ser escrito como:
+
+0,0002 = 2,0000 × 10⁻⁴
+
+No entanto, o menor expoente permitido no sistema é 10⁻³, e como precisamos de 10⁻⁴, não conseguimos armazenar esse valor corretamente. Assim, ele pode ser arredondado para zero, causando um underflow.
+
+O underflow pode parecer menos problemático do que o overflow, mas também pode impactar programas que dependem de cálculos precisos, especialmente em simulações e computação científica. Números muito pequenos desaparecendo para zero podem levar a erros sutis, que às vezes só são percebidos depois de muito tempo de uso do software.
+
+
+Estratégias para Lidar com Overflow e Underflow
+
+Para evitar problemas com overflow, uma abordagem comum é utilizar sistemas de detecção e tratamento de erros, como verificações antes de operações matemáticas para garantir que os números permaneçam dentro dos limites do sistema de ponto flutuante. Em algumas situações, técnicas de escalonamento podem ser usadas para manter os números dentro de um intervalo seguro, dividindo ou multiplicando por constantes apropriadas.
+
+Já para o underflow, uma estratégia eficaz é o uso da chamada precisão estendida, onde números muito pequenos podem ser armazenados em formatos especiais para evitar que sejam arredondados para zero. Algumas linguagens de programação também possuem configurações que permitem trabalhar com representações "subnormais", garantindo que valores extremamente pequenos ainda sejam manipuláveis sem desaparecer completamente.
+
+Outra abordagem importante para ambos os erros é a escolha de um sistema de ponto flutuante adequado para a aplicação. Se os cálculos exigem grande precisão e lidam com números muito grandes ou muito pequenos, pode ser necessário utilizar um formato com mais bits para a mantissa e o expoente, garantindo uma faixa maior de representação e reduzindo a chance de overflow e underflow.
+
+
+Em suma, o overflow e o underflow são desafios inerentes ao uso do sistema de ponto flutuante e podem afetar a precisão dos cálculos em diversas áreas da computação. Enquanto o overflow leva a números que se tornam infinitos ou geram erros, o underflow faz com que valores pequenos sejam convertidos em zero, resultando em perdas de precisão que podem ser difíceis de identificar.
+
+Entender esses erros e adotar estratégias para mitigá-los é fundamental para garantir a confiabilidade dos cálculos. Seja escolhendo representações numéricas mais adequadas, utilizando técnicas de escalonamento ou lidando com números subnormais, há diversas formas de minimizar os impactos do overflow e do underflow. O mais importante é sempre estar atento aos limites do sistema de ponto flutuante e projetar soluções que evitem problemas antes que eles aconteçam.
 
