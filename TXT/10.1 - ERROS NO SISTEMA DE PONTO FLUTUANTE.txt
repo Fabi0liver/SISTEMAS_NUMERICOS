@@ -1,4 +1,4 @@
-                                 ERROS NO SISTEMA DE PONTO FLUTUANTE
+                                ERROS NO SISTEMA DE PONTO FLUTUANTE
 
  Quando trabalhamos com números em computadores, esperamos que os cálculos sejam precisos e confiáveis. No entanto, 
 no mundo da computação, especialmente quando lidamos com números fracionários, nem sempre é possível representar 
@@ -231,7 +231,7 @@ ampla gama de aplicações.
 
 
 
-                        Overflow e Underflow no Sistema de Ponto Flutuante
+                         Overflow e Underflow no Sistema de Ponto Flutuante
 
  Quando trabalhamos com números no sistema de ponto flutuante, lidamos com limites. Como os computadores armazenam 
 valores em um número fixo de bits, há um intervalo máximo e mínimo de valores que podem ser representados. Quando 
@@ -322,7 +322,7 @@ eles aconteçam.
 
 
 
-                    "Erro de Arredondamento no Sistema de Ponto Flutuante"
+                      "Erro de Arredondamento no Sistema de Ponto Flutuante"
 
  O erro de arredondamento é um dos problemas mais comuns no sistema de ponto flutuante e ocorre porque os 
 computadores trabalham com uma quantidade limitada de bits para representar números. Isso significa que muitos 
@@ -393,7 +393,7 @@ garantindo resultados mais confiáveis e precisos.
 
 
 
-                       "Erros Aritméticos no Sistema de Ponto Flutuante"
+                         "Erros Aritméticos no Sistema de Ponto Flutuante"
 
  Os erros aritméticos no sistema de ponto flutuante são imprecisões que surgem ao realizar operações matemáticas, 
 como soma, subtração, multiplicação e divisão. Esses erros ocorrem porque os computadores trabalham com um número 
@@ -467,7 +467,7 @@ possível.
 
 
 
-                  "Erro na Precedência de Operações no Sistema de Ponto Flutuante"
+                     "Erro na Precedência de Operações no Sistema de Ponto Flutuante"
 
  Quando realizamos cálculos matemáticos em um computador, esperamos que os resultados sigam regras lógicas, como a 
 precedência das operações. Isso significa que multiplicações e divisões devem ser resolvidas antes de somas e 
@@ -548,5 +548,24 @@ aplicações que dependem de cálculos numéricos precisos.
 
 
 
+                        "Conclusão sobre os Erros no Sistema de Ponto Flutuante"
 
+ Os erros no sistema de ponto flutuante são um reflexo das limitações que os computadores enfrentam ao tentar 
+representar números com precisão finita. Alguns desses erros surgem devido ao arredondamento, outros aparecem 
+quando realizamos operações entre números muito grandes e muito pequenos, e há ainda aqueles que ocorrem quando 
+certas operações matemáticas amplificam pequenas imprecisões, tornando os resultados inesperadamente imprecisos. 
+Esses problemas afetam diversas áreas da computação, desde cálculos financeiros até simulações científicas, 
+exigindo que desenvolvedores e cientistas da computação estejam atentos às suas consequências.
 
+ É importante lembrar que os erros discutidos aqui são apenas alguns exemplos do que pode acontecer no sistema de 
+ponto flutuante. Há outras questões, como a perda de precisão acumulativa e dificuldades na comparação de valores, 
+que também podem impactar seriamente programas e algoritmos que dependem de cálculos numéricos. Por isso, entender 
+esses erros não significa apenas saber que eles existem, mas também aprender a identificá-los e aplicar estratégias 
+para minimizar seus impactos, garantindo que os cálculos sejam o mais confiáveis possível.
+
+ No fim das contas, o sistema de ponto flutuante é uma ferramenta essencial para a computação moderna, permitindo 
+realizar operações matemáticas complexas de maneira eficiente. No entanto, como qualquer ferramenta, ele tem suas 
+limitações, e cabe a nós utilizá-lo com sabedoria. Ao compreender melhor seus erros e adotar boas práticas para 
+lidar com eles, conseguimos aproveitar seus benefícios sem sermos surpreendidos por resultados inesperados. Assim, 
+a precisão e a confiabilidade dos cálculos podem ser preservadas, garantindo que sistemas e aplicações funcionem de 
+forma estável e previsível.
