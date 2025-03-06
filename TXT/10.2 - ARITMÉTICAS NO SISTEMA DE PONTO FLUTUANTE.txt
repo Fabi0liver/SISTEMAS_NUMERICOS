@@ -1,13 +1,60 @@
                              ARITMÉTICAS NO SISTEMA DE PONTO FLUTUANTE
 
-As operações aritméticas são a base de qualquer sistema computacional, permitindo que os computadores realizem desde cálculos simples até simulações científicas complexas. No entanto, quando esses cálculos envolvem números fracionários ou valores muito grandes e pequenos, a execução das operações se torna mais desafiadora. O motivo principal é que, ao contrário dos números inteiros, que seguem regras de soma, subtração, multiplicação e divisão bastante diretas, os números representados em ponto flutuante exigem ajustes específicos para garantir que os cálculos sejam feitos corretamente.
+ As operações aritméticas são a base de qualquer sistema computacional, permitindo que os computadores realizem 
+desde cálculos simples até simulações científicas complexas. No entanto, quando esses cálculos envolvem números 
+fracionários ou valores muito grandes e pequenos, a execução das operações se torna mais desafiadora. O motivo 
+principal é que, ao contrário dos números inteiros, que seguem regras de soma, subtração, multiplicação e divisão 
+bastante diretas, os números representados em ponto flutuante exigem ajustes específicos para garantir que os 
+cálculos sejam feitos corretamente.
 
-Uma das principais dificuldades ao realizar operações aritméticas no sistema de ponto flutuante é a necessidade de gerenciar precisão e escalas diferentes. Como esses números podem variar enormemente em grandeza, operações como a adição e a subtração precisam considerar a diferença de expoentes antes de calcular os resultados. Já a multiplicação e a divisão seguem regras um pouco diferentes, lidando com a normalização da mantissa e o ajuste do expoente. Esses passos adicionais são necessários para evitar perda de precisão ou erros numéricos que podem comprometer os resultados.
+ Uma das principais dificuldades ao realizar operações aritméticas no sistema de ponto flutuante é a necessidade de 
+gerenciar precisão e escalas diferentes. Como esses números podem variar enormemente em grandeza, operações como a 
+adição e a subtração precisam considerar a diferença de expoentes antes de calcular os resultados. Já a 
+multiplicação e a divisão seguem regras um pouco diferentes, lidando com a normalização da mantissa e o ajuste do 
+expoente. Esses passos adicionais são necessários para evitar perda de precisão ou erros numéricos que podem 
+comprometer os resultados.
 
-Além da complexidade estrutural, outro grande desafio das operações de ponto flutuante é o arredondamento. Como a quantidade de bits para armazenar cada número é limitada, algumas informações podem ser perdidas no processo, levando a pequenas imprecisões. Embora esses erros muitas vezes sejam insignificantes em cálculos simples, em aplicações que exigem alta precisão, como gráficos computacionais, modelagem científica e inteligência artificial, eles podem se tornar um problema significativo.
+ Além da complexidade estrutural, outro grande desafio das operações de ponto flutuante é o arredondamento. Como a 
+quantidade de bits para armazenar cada número é limitada, algumas informações podem ser perdidas no processo, 
+levando a pequenas imprecisões. Embora esses erros muitas vezes sejam insignificantes em cálculos simples, em 
+aplicações que exigem alta precisão, como gráficos computacionais, modelagem científica e inteligência artificial, 
+eles podem se tornar um problema significativo.
 
-Neste texto, exploraremos em detalhes como as quatro operações fundamentais (adição, subtração, multiplicação e divisão) são realizadas no sistema de ponto flutuante. Vamos entender os passos necessários para cada uma, os desafios envolvidos e como os computadores lidam com essas dificuldades para garantir cálculos eficientes e precisos.
+ Neste texto, exploraremos em detalhes como as quatro operações fundamentais (adição, subtração, multiplicação e 
+divisão) são realizadas no sistema de ponto flutuante. Vamos entender os passos necessários para cada uma, os 
+desafios envolvidos e como os computadores lidam com essas dificuldades para garantir cálculos eficientes e 
+precisos.
 
 
 
-                        
+                           "O que é o Sistema de Ponto Flutuante?"
+
+O sistema de ponto flutuante é um método utilizado pelos computadores para representar números reais que podem ser extremamente grandes ou incrivelmente pequenos, permitindo cálculos com grande variação de escala. Diferente dos números inteiros, que possuem uma representação fixa e limitada, os números de ponto flutuante permitem que a vírgula decimal “flutue” conforme necessário. Essa flexibilidade é essencial para diversas aplicações científicas, financeiras e de engenharia, onde a precisão e a capacidade de representar números muito pequenos ou muito grandes são fundamentais.
+
+A fórmula geral para representar um número no sistema de ponto flutuante segue o modelo:
+                                 
+                                    F = ±M × Bᵉˣᵖ
+
+onde:
+
+- "F " é o número representado no sistema de ponto flutuante.
+
+- "M" (mantissa) contém os dígitos significativos do número, podendo ser positivo ou negativo. Ela pode ser vista como a "parte principal" do número, que guarda sua precisão.
+
+- "B" (base) é a base numérica usada para a representação. Nos computadores modernos, a base mais comum é 2 (binária), pois os sistemas digitais operam com bits.
+
+- "exp" (expoente) determina a escala do número, ou seja, o deslocamento da vírgula, ampliando ou reduzindo a magnitude do valor.
+
+Para garantir uma representação eficiente e evitar redundâncias, a mantissa segue a forma normalizada:
+
+                         F = ± (0, d1 d2 d3 d4 ... dn) x Bᵉˣᵖ
+
+Onde o primeiro dígito significativo "d1" ≠ 0  Isso significa que o número é armazenado na forma mais compacta possível, eliminando zeros desnecessários à esquerda e maximizando a precisão com os bits disponíveis.
+
+ Além disso, um sistema de ponto flutuante pode ser descrito como (B, N, EXP(mín.), EXP(máx.)) onde: 
+
+- "N" Representa o número máximo de dígitos que podem ser armazenados na mantissa, determinando a precisão da representação.
+
+- "EXP(mín.), EXP(máx.)" definem os limites inferior e superior do expoente, estabelecendo a menor e a maior escala possível para o número. Isso delimita a faixa de valores que podem ser representados no sistema, evitando exageros computacionais como infinitos ou números irreais.
+
+Esse modelo é amplamente utilizado em hardware moderno e padronizado pelo IEEE 754, uma norma que define como os números de ponto flutuante devem ser armazenados e manipulados nos computadores. Graças a essa padronização, programas em diferentes dispositivos e arquiteturas podem executar cálculos com consistência, garantindo resultados previsíveis e confiáveis.
