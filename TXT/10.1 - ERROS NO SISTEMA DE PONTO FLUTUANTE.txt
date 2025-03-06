@@ -48,13 +48,14 @@ sistemas.
                            Erro Real = |Valor Exato - Valor Aproximado|
 
    - Exemplo do Erro Real: Suponha que o número real que estamos tentando representar seja π (pi), que é 
-   aproximadamente 3,14159265358979. No entanto, o sistema de ponto flutuante só consegue armazenar uma aproximação 
-   de π, como 3,14159. O erro real, nesse caso, seria a diferença entre o valor exato e o valor armazenado:
+    aproximadamente 3,14159265358979. No entanto, o sistema de ponto flutuante só consegue armazenar uma 
+    aproximação de π, como 3,14159. O erro real, nesse caso, seria a diferença entre o valor exato e o valor 
+    armazenado:
 
                      Erro Real = |3,14159265358979 - 3,14159| = 0,00000065358979
 
-   Essa pequena diferença é o erro real. Ele é útil para saber o quão distante o valor armazenado está do valor 
-  exato.
+     Essa pequena diferença é o erro real. Ele é útil para saber o quão distante o valor armazenado está do valor 
+    exato.
 
    O erro real é uma métrica direta de precisão e ajuda a entender a imprecisão absoluta em um cálculo. Embora seja 
   difícil de evitar completamente, conhecer o erro real pode nos dar uma ideia da precisão do sistema de ponto 
@@ -68,13 +69,13 @@ sistemas.
                          Erro Absoluto = |Valor Exato - Valor Aproximado|
 
    - Exemplo do Erro Absoluto: Imaginemos que, ao tentar calcular a soma de dois números, como 5,6789 e 3,1415, o 
-   sistema de ponto flutuante produza o resultado 8,8204. O valor exato seria 8,8204, mas, por algum erro de 
-   arredondamento, o sistema calcula 8,8203. O erro absoluto seria:
+    sistema de ponto flutuante produza o resultado 8,8204. O valor exato seria 8,8204, mas, por algum erro de 
+    arredondamento, o sistema calcula 8,8203. O erro absoluto seria:
 
                             Erro Absoluto = |8,8204 - 8,8203| = 0,0001
 
-   Neste exemplo, o erro absoluto é 0,0001, uma medida simples de quanto o valor calculado se desvia do valor 
-  exato.
+     Neste exemplo, o erro absoluto é 0,0001, uma medida simples de quanto o valor calculado se desvia do valor 
+    exato.
 
    O erro absoluto é uma maneira útil de medir a precisão de um cálculo sem considerar o tamanho relativo do 
   número. Embora seja uma métrica simples, ela não nos dá uma ideia da "importância" do erro em relação ao valor 
@@ -93,9 +94,9 @@ sistemas.
                      
                         Erro Relativo = |0,0001| / |8,8204| ≈ 0,00001133
 
-   Neste caso, o erro relativo é 0,00001133, o que significa que a imprecisão é muito pequena em relação ao valor 
-  total. Esse valor é útil quando precisamos saber se o erro é significativo em relação à grandeza do número que 
-  estamos tratando.
+     Neste caso, o erro relativo é 0,00001133, o que significa que a imprecisão é muito pequena em relação ao valor 
+    total. Esse valor é útil quando precisamos saber se o erro é significativo em relação à grandeza do número que 
+    estamos tratando.
 
    O erro relativo é particularmente útil em contextos onde a magnitude dos números pode variar, como em cálculos 
   científicos e financeiros. Ele nos dá uma visão mais clara da importância do erro em relação ao valor total e nos 
@@ -389,5 +390,46 @@ exigem alta precisão, como ciência, engenharia e finanças.
 precisão, reestruturação de operações matemáticas ou escolha de representações numéricas mais adequadas para cada 
 situação. Dominar essas técnicas é essencial para qualquer profissional que trabalhe com computação numérica, 
 garantindo resultados mais confiáveis e precisos.
+
+
+
+              "Erro na Precedência de Operações no Sistema de Ponto Flutuante"
+
+Quando realizamos cálculos matemáticos em um computador, esperamos que os resultados sigam regras lógicas, como a precedência das operações. Isso significa que multiplicações e divisões devem ser resolvidas antes de somas e subtrações, e que os parênteses devem garantir a ordem correta dos cálculos. No entanto, no sistema de ponto flutuante, devido às limitações na representação dos números e pequenos erros de arredondamento, a ordem em que as operações são realizadas pode afetar o resultado final.
+
+Esse problema acontece porque o ponto flutuante não armazena os números com precisão absoluta. Pequenas variações podem ocorrer dependendo de como os cálculos são organizados e da sequência em que são executados. Como resultado, expressões matemáticas que deveriam ser equivalentes podem gerar respostas ligeiramente diferentes, o que pode ser um grande problema em aplicações que exigem alta precisão, como cálculos científicos e financeiros.
+
+Esse erro pode ser difícil de perceber à primeira vista, pois a diferença entre os resultados pode ser pequena. Mas, em cálculos que acumulam muitas operações, como em simulações físicas ou inteligência artificial, esses pequenos desvios podem se amplificar e levar a discrepâncias significativas. Por isso, é fundamental entender como a precedência das operações pode influenciar o resultado em ponto flutuante e como minimizar esse problema.
+
+
+Exemplos de Erros de Precedência no Ponto Flutuante
+
+- (A + B) + C ≠ A + (B + C)
+
+Em matemática, a ordem em que somamos três números reais não muda o resultado, mas no ponto flutuante, isso pode acontecer. Se A, B e C forem muito pequenos ou muito grandes em relação uns aos outros, a ordem da soma pode influenciar o valor final devido ao arredondamento em cada etapa.
+
+
+- (A × B) × C ≠ A × (B × C)
+
+Multiplicações também podem apresentar esse comportamento. O motivo é que cada multiplicação intermediária pode sofrer um pequeno erro de arredondamento, e dependendo da sequência em que elas são feitas, os erros podem se acumular de maneira diferente.
+
+
+- Divisões sucessivas (A ÷ B) ÷ C ≠ A ÷ (B ÷ C)
+
+Em operações de divisão, a ordem pode mudar drasticamente o resultado, especialmente se um dos valores estiver muito próximo de zero. Como os computadores têm uma precisão limitada, uma divisão intermediária que deveria ser um valor muito pequeno pode acabar se tornando zero, alterando completamente o cálculo final.
+
+
+Estratégias para Lidar com o Erro de Precedência
+
+Uma das formas mais eficazes de reduzir os impactos desse erro é organizar os cálculos de maneira cuidadosa. Sempre que possível, é recomendável reestruturar as expressões matemáticas para minimizar o impacto do arredondamento, dando prioridade a operações que envolvem números de magnitudes semelhantes antes de misturá-los com números muito pequenos ou muito grandes.
+
+Outra estratégia útil é o uso de variáveis temporárias para armazenar resultados intermediários. Em vez de fazer um cálculo diretamente dentro de uma única expressão, podemos dividir os passos em cálculos separados, garantindo que cada operação seja feita de maneira mais controlada. Isso pode evitar que pequenos erros se propaguem ao longo de uma sequência de operações.
+
+Além disso, em cálculos muito sensíveis, é possível utilizar bibliotecas de precisão estendida, que permitem trabalhar com mais bits de precisão do que os números de ponto flutuante padrão. Embora isso possa exigir mais processamento, é uma solução eficaz para aplicações que precisam de máxima precisão, como modelagem financeira, simulações científicas e criptografia.
+
+
+Em suma,os erros de precedência no ponto flutuante mostram como a ordem das operações pode influenciar o resultado final de um cálculo. Pequenos desvios numéricos podem surgir devido às limitações na representação dos números e aos arredondamentos que ocorrem ao longo dos cálculos. Embora esses erros possam parecer insignificantes em operações isoladas, eles podem se acumular e causar impactos notáveis em sistemas que exigem alta precisão.
+
+Felizmente, conhecendo esses problemas, podemos adotar estratégias para minimizá-los, como organizar os cálculos de maneira mais estável, armazenar resultados intermediários e utilizar métodos de maior precisão quando necessário. Com essa abordagem, conseguimos garantir resultados mais confiáveis e evitar surpresas desagradáveis em aplicações que dependem de cálculos numéricos precisos.
 
 
