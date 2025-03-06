@@ -430,5 +430,80 @@ do sistema de ponto flutuante.
 
 
 
+                               "Divisão no Sistema de Ponto Flutuante"
+
+ A divisão é uma operação matemática essencial, presente em diversas áreas da computação, desde algoritmos simples 
+até simulações científicas complexas. No sistema de ponto flutuante, a divisão de números segue um processo estruturado, de modo a garantir que o resultado seja o mais preciso possível, levando em conta as limitações do sistema.
+
+Ao contrário da multiplicação, que envolve a soma dos expoentes, a divisão no sistema de ponto flutuante exige a subtração dos expoentes. Esse processo deve ser feito com cuidado, para evitar erros como overflow, underflow e perda de precisão devido ao arredondamento. A divisão também exige atenção especial no controle de precisão, já que a operação pode gerar resultados que precisem ser arredondados ou ajustados.
+
+Como a Divisão é Feita no Sistema de Ponto Flutuante?
+
+A divisão no sistema de ponto flutuante segue etapas bem definidas, garantindo que o processo ocorra corretamente dentro dos limites do sistema. Vamos ilustrar o processo com o seguinte exemplo:
+
+Exemplo: Dividindo os números 8,756 × 10⁴ e 2,345 × 10² em um sistema decimal de ponto flutuante representado como (10, 5, 10⁸, 10⁻⁸), onde:
+
+Agora, vamos detalhar as etapas para realizar essa operação.
+
+ Comparar os Expoentes: O primeiro passo na divisão de números em ponto flutuante é comparar os expoentes. No nosso exemplo:
+
+8,756 × 10⁴ tem expoente 4.        0,0008756 / 0,02345
+
+2,345 × 10² tem expoente 2.
+
+Neste caso, não há necessidade de ajustar os expoentes antes de prosseguir com a operação, pois a divisão já será feita corretamente, desde que subtrai-los após a divisão das mantissas.
 
 
+ Normalizar (Quando Necessário): Em seguida, é necessário garantir que as mantissas estejam normalizadas, ou seja, que o valor de cada mantissa esteja entre 1 e 10. Para isso, deslocamos a vírgula decimal das mantissas:
+
+Para 8,756 × 10⁴, deslocamos a vírgula para a esquerda, obtendo 0,8756 × 10⁵.
+
+Para 2,345 × 10², deslocamos a vírgula para a esquerda, obtendo 0,2345 × 10³.
+
+Agora, ambas as mantissas estão normalizadas.
+
+
+ Efetuar a Operação com as Mantissas: Com as mantissas normalizadas, podemos proceder com a divisão delas:
+
+0,8756 ÷ 0,2345 = 3,7339019189 (Aproximadamente)
+
+Esse resultado já representa a divisão das mantissas, e agora precisamos trabalhar com os expoentes.
+
+
+ Subtrair os Expoentes: Após realizar a operação com as mantissas, é hora de subtrair os expoentes. O expoente final será a diferença entre os expoentes dos dois números:
+
+Expoente final = 5 (do 0,8756 × 10⁵) - 3 (do 0,2345 × 10³) = 5 - 3 = 2.
+
+Portanto, o expoente do resultado será 10². 
+
+
+ Normalizar o Resultado: Após dividir as mantissas e subtrair os expoentes, precisamos garantir que o resultado final esteja na forma normalizada. A mantissa resultante foi 3,7339019189. Para normalizar esse número, devemos movê-lo para a faixa entre 1 e 10. Isso é feito deslocando a vírgula decimal para a esquerda, obtendo 0,37339019189.
+
+Agora, a mantissa está normalizada corretamente, e o expoente precisa ser ajustado para refletir essa mudança.
+
+O número normalizado será:
+
+ 0,37339019189 × 10³
+
+
+ Arredondamento e Ajuste Final: O resultado obtido é 0,37339019189 × 10³, mas como o sistema permite apenas 5 dígitos significativos para a mantissa, precisamos arredondar o número para manter a precisão permitida. A mantissa 37339019189 é arredondada para 37339.
+
+Portanto, o número final até aqui é:
+
+ 0,37339 × 10³
+
+
+ Verificação de Overflow/Underflow ou Outros Erros: Agora, devemos verificar se o expoente do resultado está dentro dos limites permitidos pelo sistema. O sistema de ponto flutuante no exemplo tem limites de expoente entre 10⁻⁸ e 10⁸. O expoente 3 está bem dentro dessa faixa, portanto, não ocorre overflow nem underflow.
+
+Se o expoente tivesse ultrapassado o limite superior de 10⁸ ou caído abaixo de 10⁻⁸, o resultado teria sido inválido, com um possível erro de overflow ou underflow.
+
+
+ Apresentação do Valor: Finalmente, após todas as etapas, o valor final da divisão no sistema de ponto flutuante é apresentado na forma correta e dentro dos limites de precisão do sistema:
+
+0,37339 × 10³
+
+Este é o resultado final da divisão. O número é válido, normalizado e dentro dos limites de expoente e precisão do sistema de ponto flutuante.
+
+Em suma, a divisão no sistema de ponto flutuante segue um processo bem estruturado para garantir a precisão do resultado, mesmo quando os números têm expoentes diferentes. Cada etapa desempenha um papel crucial: desde a normalização das mantissas, a subtração dos expoentes, até a verificação de erros como overflow e underflow. Esses cuidados asseguram que os cálculos sejam realizados corretamente, respeitando os limites do sistema de ponto flutuante e evitando perdas de dados significativas.
+
+Além disso, o processo de arredondamento e ajuste final garante que o resultado da divisão seja compatível com a precisão do sistema, mantendo a integridade dos cálculos. A verificação constante de erros durante o processo ajuda a evitar a geração de valores inválidos, resultando em números precisos e dentro dos limites do sistema de ponto flutuante.
