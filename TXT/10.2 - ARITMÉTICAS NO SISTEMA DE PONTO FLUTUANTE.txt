@@ -73,3 +73,90 @@ possível, eliminando zeros desnecessários à esquerda e maximizando a precisã
 números de ponto flutuante devem ser armazenados e manipulados nos computadores. Graças a essa padronização, 
 programas em diferentes dispositivos e arquiteturas podem executar cálculos com consistência, garantindo resultados 
 previsíveis e confiáveis.
+
+
+
+                                Adição no Sistema de Ponto Flutuante
+
+A adição é uma das operações mais fundamentais da matemática e está presente em praticamente todas as áreas da computação, desde simples cálculos financeiros até complexas simulações científicas. No entanto, quando lidamos com números representados em ponto flutuante, a adição se torna um processo mais elaborado do que no sistema de números inteiros. Isso ocorre porque os números podem ter diferentes escalas (expoentes distintos), exigindo ajustes antes que a soma seja realizada corretamente.
+
+Nos computadores, a adição de números de ponto flutuante segue um conjunto bem definido de etapas para garantir que o resultado seja o mais preciso possível dentro das limitações do hardware. O processo envolve comparar os expoentes dos números, ajustá-los para ficarem na mesma escala, somar as mantissas e normalizar o resultado para garantir que ele esteja na forma correta. No entanto, mesmo seguindo esse fluxo, há desafios como a perda de precisão devido ao arredondamento e problemas como overflow e underflow, que podem tornar o resultado inválido.
+
+Como a Adição é Feita no Sistema de Ponto Flutuante?
+
+A adição no sistema de ponto flutuante pode ser dividida em etapas bem definidas, garantindo que a operação seja feita corretamente sem perda excessiva de precisão. Vamos seguir um exemplo prático para ilustrar cada etapa.
+
+Exemplo: Vamos somar os números 5,678 × 10³ e 2,345 × 10² em um sistema decimal de ponto flutuante representado como (10, 5, 10⁸, 10⁻⁸), onde:
+
+B = 10 (base decimal),
+
+N = 5 (mantissa com até 5 dígitos),
+
+EXP(mín.) = 10⁻⁸ e EXP(máx.) = 10⁸ (limites de expoente).
+
+Agora, vamos detalhar os passos para realizar essa operação.
+
+ Comparar os Expoentes: O primeiro passo da adição no sistema de ponto flutuante é comparar os expoentes dos números. No nosso exemplo:
+
+- 5,678 × 10³ tem expoente 3.
+
+- 2,345 × 10² tem expoente 2.
+
+Os expoentes são diferentes (3 e 2), o que significa que os números estão em escalas diferentes. A adição só pode ser feita quando os expoentes forem iguais, por isso, precisamos tomar medidas para ajustar os números para a mesma escala.
+
+
+ Normalizar (Quando Necessário): O próximo passo é normalizar os números, ou seja, garantir que a mantissa tenha um valor entre 1 e 10. Para isso, precisamos deslocar a vírgula decimal das mantissas.
+
+- Para 5,678 × 10³, deslocamos a vírgula uma casa para a esquerda, obtendo 0,5678 × 10⁴.
+
+- Para 2,345 × 10², deslocamos a vírgula uma casa para a esquerda, obtendo 0,2345 × 10³.
+
+ 
+ Igualar e Alinhar os Expoentes: Agora que os números estão normalizados, precisamos igualar os expoentes para poder somar as mantissas. O menor expoente aqui é 3. Para igualá-lo ao expoente 4, precisamos deslocar a vírgula decimal do número 0,2345 × 10³ uma casa para a direita, tornando-o 0,02345 × 10⁴.
+
+Agora, ambos os números têm o mesmo expoente de 10⁴:
+
+0,5678 × 10⁴
+
+0,02345 × 10⁴
+
+Esse alinhamento é essencial para garantir que estamos somando as mantissas de forma consistente, já que ambas 
+estão na mesma escala.
+
+Efetuar a Operação com as Mantissas: Agora que os expoentes são iguais, podemos somar as mantissas diretamente:
+
+   0,5678 × 10⁴ + 0,02345 × 10⁴
+
+   
+O resultado intermediário da soma das mantissas é: 
+
+        0,59125 × 10⁴
+
+Vale ressaltar que essa soma é realizada como se fosse uma soma de números inteiros, pois os expoentes já foram ajustados na etapa anterior.
+
+
+ Normalizar o Resultado:Após somar as mantissas, precisamos garantir que o resultado esteja na forma normalizada, ou seja, o primeiro dígito da mantissa deve ser diferente de zero.
+
+Neste caso, 0,59125 × 10⁴ já está normalizado, pois o primeiro dígito da mantissa (5) é diferente de zero. Se o resultado fosse algo como 0,059125 × 10⁵, precisaríamos deslocar a vírgula para obter 0,59125 × 10⁴. A normalização assegura que o número esteja na forma correta de ponto flutuante.
+
+
+ Arredondamento e Ajuste Final: Neste caso, o resultado da soma das mantissas é 59125, que já possui 5 dígitos, o que é perfeitamente adequado para a precisão permitida pelo sistema (N = 5). Portanto, não há necessidade de arredondamento, pois o número já se ajusta corretamente ao limite de 5 dígitos significativos.
+
+
+ Verificação de Overflow/Underflow ou Outros Erros:Por fim, devemos verificar se o expoente do resultado está dentro dos limites permitidos pelo sistema. O sistema permite expoentes entre 10⁻⁸ e 10⁸. No nosso caso, o expoente 10⁴ está dentro da faixa permitida, então 0,59125 × 10⁴ é um resultado válido.
+
+Se o expoente estivesse acima do máximo permitido (10⁸), ocorreríamos em um overflow, e o valor não poderia ser armazenado corretamente. Se o expoente estivesse abaixo do mínimo permitido (10⁻⁸), ocorreríamos em um underflow, e o valor seria arredondado para zero no sistema.
+
+Apresentação do Valor:Agora que todos os passos foram seguidos corretamente, o valor final é apresentado na forma normalizada e dentro das restrições do sistema:
+
+0,59125 × 10⁴
+
+Este é o resultado final da soma no sistema de ponto flutuante. Ele é um número válido, normalizado e dentro dos limites de precisão e expoente do sistema.
+
+Em suma, a adição no sistema de ponto flutuante é um processo cuidadosamente estruturado para garantir que números em escalas diferentes possam ser somados de forma precisa e consistente. Cada etapa, desde a normalização inicial das mantissas até o alinhamento dos expoentes, desempenha um papel fundamental na manutenção da precisão. Esses ajustes permitem que números que originalmente possuem expoentes diferentes possam ser manipulados adequadamente sem perder a integridade dos valores envolvidos. Esse cuidado é essencial, pois mesmo uma pequena discrepância entre as escalas dos números pode resultar em grandes erros no resultado final.
+
+Além disso, após a soma das mantissas, a normalização do resultado e o arredondamento são necessários para garantir que o número final esteja dentro da representação válida do sistema de ponto flutuante, sem exceder a precisão ou os limites de expoente. Verificar erros como overflow e underflow também é crucial, pois eles podem comprometer o cálculo ao ultrapassar os limites de precisão do sistema. Por fim, a apresentação do valor final após essas etapas assegura que o resultado seja preciso e esteja dentro das limitações do sistema, garantindo que a operação seja feita de forma correta e confiável, sem perda significativa de dados.
+
+
+
+
