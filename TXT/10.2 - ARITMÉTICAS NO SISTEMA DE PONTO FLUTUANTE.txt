@@ -199,4 +199,121 @@ operação seja feita de forma correta e confiável, sem perda significativa de 
 
 
 
+                               "Subtração no Sistema de Ponto Flutuante"
+
+ A subtração é uma operação matemática essencial em vários contextos computacionais, desde cálculos simples até 
+análises mais complexas em áreas como física e finanças. No entanto, quando trabalhamos com números representados 
+em ponto flutuante, a subtração se torna mais desafiadora do que em sistemas de inteiros. Isso ocorre porque os 
+números podem ter expoentes diferentes, e a diferença de escalas entre as mantissas precisa ser ajustada antes que 
+a operação seja realizada corretamente.
+
+ Nos computadores, a subtração de números em ponto flutuante segue um conjunto de etapas que são cuidadosamente 
+projetadas para garantir a precisão do resultado, respeitando as limitações de hardware e a precisão do sistema. O 
+processo envolve comparar os expoentes dos números, ajustar as mantissas de acordo com a escala, realizar a 
+subtração propriamente dita, normalizar o resultado e verificar a ocorrência de erros como overflow e underflow, 
+além de garantir que o valor final seja apresentado corretamente.
+
+ * Como a Subtração é Feita no Sistema de Ponto Flutuante?
+
+   A subtração no sistema de ponto flutuante pode ser dividida em etapas bem definidas, que garantem que o cálculo 
+  seja realizado corretamente e com a precisão necessária. Vamos usar um exemplo prático para ilustrar cada uma 
+  dessas etapas.
+
+   Exemplo: Vamos subtrair os números 7,890 × 10³ e 3,456 × 10² em um sistema decimal de ponto flutuante 
+  representado como (10, 5, 10⁸, 10⁻⁸), onde:
+
+    B = 10 (base decimal),
+
+    N = 5 (mantissa com até 5 dígitos),
+
+    EXP(mín.) = 10⁻⁸ e EXP(máx.) = 10⁸ (limites de expoente).
+
+   Agora, vamos seguir as etapas para realizar a subtração.
+
+   - Comparar os Expoentes: O primeiro passo é comparar os expoentes dos números. No nosso exemplo:
+
+      7,890 × 10³ tem expoente 3.
+
+      3,456 × 10² tem expoente 2.
+
+     Como os expoentes são diferentes, precisamos ajustar os números para que ambos tenham o mesmo expoente, 
+    permitindo que a subtração seja feita corretamente.
+
+
+   - Normalizar (Quando Necessário): O próximo passo é garantir que as mantissas estejam normalizadas, ou seja, que 
+    o valor da mantissa esteja entre 1 e 10. Para isso, deslocamos a vírgula decimal das mantissas, se necessário.
+
+      Para 7,890 × 10³, deslocamos a vírgula uma casa para a esquerda, obtendo 0,789 × 10⁴.
+
+      Para 3,456 × 10², deslocamos a vírgula uma casa para a esquerda, obtendo 0,3456 × 10³.
+
+
+   - Igualar e Alinhar os Expoentes: Agora que ambos os números estão normalizados, devemos igualar os expoentes 
+    para que possamos realizar a subtração. O menor expoente é 3, portanto, precisamos ajustar o expoente do número 
+    0,3456 × 10³ para 0,03456 × 10⁴.
+
+     Agora, ambos os números têm o expoente 10⁴:
+
+      0,7890 × 10⁴
+
+      0,03456 × 10⁴
+
+     Esse alinhamento é crucial, pois a operação de subtração só pode ser feita quando ambos os números estão na 
+    mesma escala.
+
+
+   - Efetuar a Operação com as Mantissas: Com os expoentes iguais, agora podemos subtrair as mantissas diretamente:
+
+      0,7890 × 10⁴ - 0,03456 × 10⁴
+
+     O resultado intermediário da subtração das mantissas é:
+
+      0,75444 × 10⁴
+
+     Essa subtração é realizada como se fosse uma subtração de números inteiros, já que as mantissas estão na mesma 
+    escala.
+
+
+   - Normalizar o Resultado: Após realizar a subtração, precisamos garantir que o resultado esteja na forma 
+    normalizada. Neste caso, 0,75444 × 10⁴ já está normalizado, pois o primeiro dígito da mantissa é diferente de 
+    zero. Se o resultado fosse algo como 0,075444 × 10⁵, precisaríamos deslocar a vírgula para obter 0,75444 × 10⁴, 
+    garantindo que a mantissa esteja na forma correta de ponto flutuante.
+
+
+   - Arredondamento e Ajuste Final: O resultado da subtração das mantissas é 0,75444 × 10⁴, e, como o número já tem 
+    5 dígitos, que é o limite permitido para a precisão do sistema, não há necessidade de arredondamento. O número 
+    se ajusta perfeitamente à precisão do sistema.
+
+
+   - Verificação de Overflow/Underflow ou Outros Erros: A próxima etapa é verificar se o expoente do resultado está 
+    dentro dos limites do sistema. O sistema permite expoentes entre 10⁻⁸ e 10⁸. No nosso caso, o expoente 10⁴ está 
+    dentro da faixa permitida, então o resultado 0,75444 × 10⁴ é válido.
+
+     Se o expoente estivesse acima de 10⁸, ocorreria um overflow, e o valor não poderia ser armazenado 
+    corretamente. Se o expoente estivesse abaixo de 10⁻⁸, ocorreríamos em um underflow, e o valor seria arredondado 
+    para zero.
+
+
+   - Apresentação do Valor: Após todas as etapas serem concluídas, o valor final é apresentado na forma normalizada 
+    e dentro dos limites do sistema:
+
+      0,75444 × 10⁴
+
+     Este é o resultado final da subtração no sistema de ponto flutuante. Ele é um número válido, normalizado e 
+    dentro das limitações do sistema, garantindo que a operação tenha sido realizada corretamente e sem perda 
+    significativa de precisão.
+
+ Em suma, A subtração no sistema de ponto flutuante é um processo meticuloso e estruturado que garante que números 
+em escalas diferentes possam ser manipulados corretamente. A comparação e o ajuste dos expoentes, a normalização 
+das mantissas e o alinhamento de suas escalas são etapas fundamentais para garantir a precisão da operação. Cada um 
+desses ajustes assegura que a subtração seja realizada de forma consistente, evitando erros devido a diferenças de 
+escalas e garantindo que os resultados fiquem dentro dos limites da precisão do sistema.
+
+ Além disso, após a subtração das mantissas, a normalização do resultado e a verificação de erros como overflow e 
+underflow são essenciais para garantir que o valor final seja válido e preciso. O arredondamento, quando 
+necessário, é cuidadosamente aplicado para manter a precisão do número. No final, a apresentação do valor garante 
+que o resultado seja adequado à representação do sistema de ponto flutuante, sem perda significativa de dados, 
+oferecendo um resultado confiável e correto para a operação.
+
+
 
