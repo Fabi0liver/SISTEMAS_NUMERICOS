@@ -27,34 +27,49 @@ precisos.
 
 
 
-                           "O que é o Sistema de Ponto Flutuante?"
+                              "O que é o Sistema de Ponto Flutuante?"
 
-O sistema de ponto flutuante é um método utilizado pelos computadores para representar números reais que podem ser extremamente grandes ou incrivelmente pequenos, permitindo cálculos com grande variação de escala. Diferente dos números inteiros, que possuem uma representação fixa e limitada, os números de ponto flutuante permitem que a vírgula decimal “flutue” conforme necessário. Essa flexibilidade é essencial para diversas aplicações científicas, financeiras e de engenharia, onde a precisão e a capacidade de representar números muito pequenos ou muito grandes são fundamentais.
+ O sistema de ponto flutuante é um método utilizado pelos computadores para representar números reais que podem ser 
+extremamente grandes ou incrivelmente pequenos, permitindo cálculos com grande variação de escala. Diferente dos 
+números inteiros, que possuem uma representação fixa e limitada, os números de ponto flutuante permitem que a 
+vírgula decimal “flutue” conforme necessário. Essa flexibilidade é essencial para diversas aplicações científicas, 
+financeiras e de engenharia, onde a precisão e a capacidade de representar números muito pequenos ou muito grandes 
+são fundamentais.
 
-A fórmula geral para representar um número no sistema de ponto flutuante segue o modelo:
+ A fórmula geral para representar um número no sistema de ponto flutuante segue o modelo:
                                  
                                     F = ±M × Bᵉˣᵖ
 
-onde:
+ onde:
 
-- "F " é o número representado no sistema de ponto flutuante.
+  - "F " é o número representado no sistema de ponto flutuante.
 
-- "M" (mantissa) contém os dígitos significativos do número, podendo ser positivo ou negativo. Ela pode ser vista como a "parte principal" do número, que guarda sua precisão.
+  - "M" (mantissa) contém os dígitos significativos do número, podendo ser positivo ou negativo. Ela pode ser vista 
+    como a "parte principal" do número, que guarda sua precisão.
 
-- "B" (base) é a base numérica usada para a representação. Nos computadores modernos, a base mais comum é 2 (binária), pois os sistemas digitais operam com bits.
+  - "B" (base) é a base numérica usada para a representação. Nos computadores modernos, a base mais comum é 2   
+    (binária), pois os sistemas digitais operam com bits.
 
-- "exp" (expoente) determina a escala do número, ou seja, o deslocamento da vírgula, ampliando ou reduzindo a magnitude do valor.
+  - "exp" (expoente) determina a escala do número, ou seja, o deslocamento da vírgula, ampliando ou reduzindo a 
+    magnitude do valor.
 
-Para garantir uma representação eficiente e evitar redundâncias, a mantissa segue a forma normalizada:
+ Para garantir uma representação eficiente e evitar redundâncias, a mantissa segue a forma normalizada:
 
                          F = ± (0, d1 d2 d3 d4 ... dn) x Bᵉˣᵖ
 
-Onde o primeiro dígito significativo "d1" ≠ 0  Isso significa que o número é armazenado na forma mais compacta possível, eliminando zeros desnecessários à esquerda e maximizando a precisão com os bits disponíveis.
+ Onde o primeiro dígito significativo "d1" ≠ 0  Isso significa que o número é armazenado na forma mais compacta 
+possível, eliminando zeros desnecessários à esquerda e maximizando a precisão com os bits disponíveis.
 
  Além disso, um sistema de ponto flutuante pode ser descrito como (B, N, EXP(mín.), EXP(máx.)) onde: 
 
-- "N" Representa o número máximo de dígitos que podem ser armazenados na mantissa, determinando a precisão da representação.
+ - "N" Representa o número máximo de dígitos que podem ser armazenados na mantissa, determinando a precisão da 
+   representação.
 
-- "EXP(mín.), EXP(máx.)" definem os limites inferior e superior do expoente, estabelecendo a menor e a maior escala possível para o número. Isso delimita a faixa de valores que podem ser representados no sistema, evitando exageros computacionais como infinitos ou números irreais.
+ - "EXP(mín.), EXP(máx.)" definem os limites inferior e superior do expoente, estabelecendo a menor e a maior 
+   escala possível para o número. Isso delimita a faixa de valores que podem ser representados no sistema, evitando 
+   exageros computacionais como infinitos ou números irreais.
 
-Esse modelo é amplamente utilizado em hardware moderno e padronizado pelo IEEE 754, uma norma que define como os números de ponto flutuante devem ser armazenados e manipulados nos computadores. Graças a essa padronização, programas em diferentes dispositivos e arquiteturas podem executar cálculos com consistência, garantindo resultados previsíveis e confiáveis.
+ Esse modelo é amplamente utilizado em hardware moderno e padronizado pelo IEEE 754, uma norma que define como os 
+números de ponto flutuante devem ser armazenados e manipulados nos computadores. Graças a essa padronização, 
+programas em diferentes dispositivos e arquiteturas podem executar cálculos com consistência, garantindo resultados 
+previsíveis e confiáveis.
