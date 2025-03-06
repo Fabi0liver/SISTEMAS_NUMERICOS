@@ -1,0 +1,13 @@
+                             ARITMÉTICAS NO SISTEMA DE PONTO FLUTUANTE
+
+As operações aritméticas são a base de qualquer sistema computacional, permitindo que os computadores realizem desde cálculos simples até simulações científicas complexas. No entanto, quando esses cálculos envolvem números fracionários ou valores muito grandes e pequenos, a execução das operações se torna mais desafiadora. O motivo principal é que, ao contrário dos números inteiros, que seguem regras de soma, subtração, multiplicação e divisão bastante diretas, os números representados em ponto flutuante exigem ajustes específicos para garantir que os cálculos sejam feitos corretamente.
+
+Uma das principais dificuldades ao realizar operações aritméticas no sistema de ponto flutuante é a necessidade de gerenciar precisão e escalas diferentes. Como esses números podem variar enormemente em grandeza, operações como a adição e a subtração precisam considerar a diferença de expoentes antes de calcular os resultados. Já a multiplicação e a divisão seguem regras um pouco diferentes, lidando com a normalização da mantissa e o ajuste do expoente. Esses passos adicionais são necessários para evitar perda de precisão ou erros numéricos que podem comprometer os resultados.
+
+Além da complexidade estrutural, outro grande desafio das operações de ponto flutuante é o arredondamento. Como a quantidade de bits para armazenar cada número é limitada, algumas informações podem ser perdidas no processo, levando a pequenas imprecisões. Embora esses erros muitas vezes sejam insignificantes em cálculos simples, em aplicações que exigem alta precisão, como gráficos computacionais, modelagem científica e inteligência artificial, eles podem se tornar um problema significativo.
+
+Neste texto, exploraremos em detalhes como as quatro operações fundamentais (adição, subtração, multiplicação e divisão) são realizadas no sistema de ponto flutuante. Vamos entender os passos necessários para cada uma, os desafios envolvidos e como os computadores lidam com essas dificuldades para garantir cálculos eficientes e precisos.
+
+
+
+                        
