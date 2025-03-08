@@ -235,82 +235,125 @@ realizar operações de ponto flutuante.
 
                                  "Como o Padrão IEEE 754 Funciona"
 
-Após explorarmos a estrutura e os formatos do padrão IEEE 754, é importante entender como ele funciona internamente para representar números de ponto flutuante. O padrão divide cada número em duas partes principais: a mantissa e o expoente. A mantissa contém os números significativos, enquanto o expoente define a posição da vírgula decimal, ou seja, a magnitude do número. Essa divisão facilita o armazenamento eficiente de números grandes ou muito pequenos, permitindo que as operações matemáticas sejam realizadas de forma precisa e rápida.
+ Após explorarmos a estrutura e os formatos do padrão IEEE 754, é importante entender como ele funciona 
+internamente para representar números de ponto flutuante. O padrão divide cada número em duas partes principais: a 
+mantissa e o expoente. A mantissa contém os números significativos, enquanto o expoente define a posição da vírgula 
+decimal, ou seja, a magnitude do número. Essa divisão facilita o armazenamento eficiente de números grandes ou 
+muito pequenos, permitindo que as operações matemáticas sejam realizadas de forma precisa e rápida.
 
-Para compreender completamente como o IEEE 754 opera, é essencial entender como um número decimal é convertido para esse formato binário e como a conversão inversa ocorre. Esse processo envolve alguns passos específicos para a determinação do sinal, o cálculo do expoente com um valor chamado viés e a construção da mantissa a partir da representação binária do número. Vamos agora detalhar essas conversões e entender como elas funcionam dentro do padrão IEEE 754.
+ Para compreender completamente como o IEEE 754 opera, é essencial entender como um número decimal é convertido 
+para esse formato binário e como a conversão inversa ocorre. Esse processo envolve alguns passos específicos para a 
+determinação do sinal, o cálculo do expoente com um valor chamado viés e a construção da mantissa a partir da 
+representação binária do número. 
 
+ Vamos agora detalhar essas conversões e entender como elas funcionam dentro do padrão IEEE 754.
 
- Conversão de um número decimal para o padrão IEEE 754:
+ * Conversão de um número decimal para o padrão IEEE 754:
 
-A conversão de um número decimal para o formato IEEE 754 pode parecer uma tarefa técnica e desafiadora à primeira vista, mas ao dividir o processo em etapas simples, fica mais fácil entender. Essa conversão é importante para que os computadores possam armazenar e manipular números de ponto flutuante de maneira eficiente e precisa. O IEEE 754 define uma estrutura padrão para a representação desses números, com uma divisão clara entre o sinal, o expoente e a mantissa. Vamos explorar o processo de conversão de um número decimal para o padrão IEEE 754, focando no formato simples de 32 bits, que é o mais comum em sistemas computacionais. Ao seguir os passos, podemos entender como um número decimal se transforma em sua representação binária, e como isso facilita a realização de cálculos em hardware.
+   A conversão de um número decimal para o formato IEEE 754 pode parecer uma tarefa técnica e desafiadora à 
+  primeira vista, mas ao dividir o processo em etapas simples, fica mais fácil entender. Essa conversão é 
+  importante para que os computadores possam armazenar e manipular números de ponto flutuante de maneira eficiente 
+  e precisa. O IEEE 754 define uma estrutura padrão para a representação desses números, com uma divisão clara 
+  entre o sinal, o expoente e a mantissa. Vamos explorar o processo de conversão de um número decimal para o padrão 
+  IEEE 754, focando no formato simples de 32 bits, que é o mais comum em sistemas computacionais. Ao seguir os 
+  passos, podemos entender como um número decimal se transforma em sua representação binária, e como isso facilita 
+  a realização de cálculos em hardware.
 
- Passos para a conversão de decimal para IEEE 754:
+   Passos para a conversão de decimal para IEEE 754:
 
-1. Identificar o sinal do número: O primeiro passo na conversão de um número decimal para o padrão IEEE 754 é identificar o sinal do número. Isso é importante, pois o formato de ponto flutuante define um bit exclusivo para representar o sinal: 0 para números positivos e 1 para números negativos. Esse bit de sinal estará presente no início da representação binária.
+    1. Identificar o sinal do número: O primeiro passo na conversão de um número decimal para o padrão IEEE 754 é 
+      identificar o sinal do número. Isso é importante, pois o formato de ponto flutuante define um bit exclusivo 
+      para representar o sinal: 0 para números positivos e 1 para números negativos. Esse bit de sinal estará 
+      presente no início da representação binária.
 
-Exemplo: Para o número +13,25, como o número é positivo, o bit de sinal será 0.
+        Exemplo: Para o número +13,25, como o número é positivo, o bit de sinal será 0.
 
-O bit de sinal é simples, mas crucial para indicar se o número é positivo ou negativo.
-
-
-2. Converter a parte inteira para binário: Agora, é hora de converter a parte inteira do número decimal para binário. Para isso, basta dividir o número inteiro por 2 repetidamente, anotando os restos da divisão. Esse processo vai gerar a representação binária da parte inteira.
-
-Exemplo: Para a parte inteira de 13.25, temos o número 13. A conversão para binário é:
-
-13 ÷ 2 = 6, resto 1
-6 ÷ 2 = 3, resto 0
-3 ÷ 2 = 1, resto 1
-1 ÷ 2 = 0, resto 1
-
-Assim, o número 13 em binário é 1101.
-
- A parte inteira de 13 é convertida para 1101 em binário, o que já nos dá a primeira parte da nossa representação binária.
-
-
-3. Converter a parte fracionária para binário: Agora, precisamos converter a parte fracionária do número decimal para binário. Para isso, multiplicamos a parte fracionária por 2 e anotamos a parte inteira de cada multiplicação. Continuamos esse processo até que a parte fracionária se torne zero ou até atingirmos a precisão desejada.
-
-Exemplo: Para a parte 0,25, multiplicamos por 2:
-
-0,25 × 2 = 0,50 → Parte inteira é 0, anote 0
-0,50 × 2 = 1,00 → Parte inteira é 1, anote 1
-
-A parte fracionária em binário é 0,01.
-
- A parte fracionária de 0,25 é convertida para 0,01 , completando a conversão do número decimal para binário.
+       O bit de sinal é simples, mas crucial para indicar se o número é positivo ou negativo.
 
 
-4. Normalizar o número binário: A normalização do número binário é o passo onde o ponto binário (vírgula) é movido para a posição logo após o primeiro 1 à esquerda. Isso é feito para garantir que o número binário esteja na forma padrão de ponto flutuante.
+    2. Converter a parte inteira para binário: Agora, é hora de converter a parte inteira do número decimal para 
+      binário. Para isso, basta dividir o número inteiro por 2 repetidamente, anotando os restos da divisão. Esse 
+      processo vai gerar a representação binária da parte inteira.
 
-Exemplo: O número binário completo de 13,25 é 1101,01. Para normalizar, movemos o ponto para logo após o primeiro 1, obtendo 1,10101 × 2³. Ou seja, o número é normalizado para a forma 1,10101, e o expoente é 3, pois movemos o ponto 3 lugares para a direita.
+        Exemplo: Para a parte inteira de 13,25, temos o número 13. A conversão para binário é:
 
- A normalização coloca o número na forma científica binária, facilitando o cálculo do expoente e a construção da mantissa.
+                   13 ÷ 2 = 6, resto 1
+                    6 ÷ 2 = 3, resto 0
+                    3 ÷ 2 = 1, resto 1
+                    1 ÷ 2 = 0, resto 1
 
+                 Assim, o número 13 em binário é 1101.
 
-5. Calcular o expoente e aplicar o viés: O próximo passo é calcular o expoente, que indica a magnitude do número. O expoente precisa ser ajustado para compensar a posição do ponto binário, e esse ajuste é feito com um valor chamado viés. O viés depende do formato de precisão utilizado, e no formato simples (32 bits), o viés é 127. O expoente será a quantidade de casas que movemos o ponto, somada ao viés.
-
-Exemplo: Como movemos o ponto 3 lugares para a direita, o expoente será 3. Para o formato simples, somamos o viés de 127:
-3 + 127 = 130, que em binário é 10000010.
-
- O expoente é calculado e ajustado com o viés, e agora temos o valor binário correto para o expoente.
-
-
-6. Montar a mantissa: A mantissa é formada pelos números à direita do ponto binário normalizado, mas sem contar o 1 à esquerda do ponto (pois ele é implícito). A mantissa deve ser completada com zeros até atingir o número de bits necessários para o formato em questão (23 bits no formato simples).
-
-Exemplo: A mantissa de 1,10101 será 10101000000000000000000, completando com zeros até atingir 23 bits.
-
- A mantissa é construída a partir dos bits significativos à direita do ponto binário, com zeros adicionados para completar o espaço necessário.
+       A parte inteira de 13 é convertida para 1101 em binário, o que já nos dá a primeira parte da nossa 
+      representação binária.
 
 
-7. Montar a representação final: Agora que temos todos os componentes (sinal, expoente e mantissa), podemos montar a representação final do número no formato IEEE 754. No caso do número 13,25 em formato simples (32 bits), a representação final será:
+    3. Converter a parte fracionária para binário: Agora, precisamos converter a parte fracionária do número 
+      decimal para binário. Para isso, multiplicamos a parte fracionária por 2 e anotamos a parte inteira de cada 
+      multiplicação. Continuamos esse processo até que a parte fracionária se torne zero ou até atingirmos a 
+      precisão desejada.
 
-Sinal: 0 (positivo)
+        Exemplo: Para a parte 0,25, multiplicamos por 2:
 
-Expoente: 10000010
+                  0,25 × 2 = 0,50 → Parte inteira é 0, anote 0
+                  0,50 × 2 = 1,00 → Parte inteira é 1, anote 1
 
-Mantissa: 10101000000000000000000
+                 A parte fracionária em binário é 0,01.
 
-Portanto, a representação final de 13,25 no formato simples IEEE 754 será:
+       A parte fracionária de 0,25 é convertida para 0,01 , completando a conversão do número decimal para binário.
 
- 0 10000010 10101000000000000000000
 
- A conversão de um número decimal para o formato IEEE 754 envolve um processo sequencial de identificar o sinal, converter as partes inteira e fracionária para binário, normalizar o número, calcular o expoente com o viés e construir a mantissa. Embora cada passo pareça um pouco técnico, com exemplos práticos, o processo se torna mais claro. Essa conversão é fundamental para que os computadores possam manipular números de ponto flutuante de forma eficiente, utilizando um formato padronizado e preciso.
+    4. Normalizar o número binário: A normalização do número binário é o passo onde o ponto binário (vírgula) é 
+      movido para a posição logo após o primeiro 1 à esquerda. Isso é feito para garantir que o número binário 
+      esteja na forma padrão de ponto flutuante.
+
+        Exemplo: O número binário completo de 13,25 é 1101,01. Para normalizar, movemos o ponto para logo após o 
+                primeiro 1, obtendo 1,10101 × 2³. Ou seja, o número é normalizado para a forma 1,10101, e o 
+                expoente é 3, pois movemos o ponto 3 lugares para a direita.
+
+       A normalização coloca o número na forma científica binária, facilitando o cálculo do expoente e a construção    
+      da mantissa.
+
+
+    5. Calcular o expoente e aplicar o viés: O próximo passo é calcular o expoente, que indica a magnitude do 
+      número. O expoente precisa ser ajustado para compensar a posição do ponto binário, e esse ajuste é feito com 
+      um valor chamado viés. O viés depende do formato de precisão utilizado, e no formato simples (32 bits), o 
+      viés é 127. O expoente será a quantidade de casas que movemos o ponto, somada ao viés.
+
+        Exemplo: Como movemos o ponto 3 lugares para a direita, o expoente será 3. Para o formato simples, somamos 
+                o viés de 127:
+
+                  3 + 127 = 130, que em binário é 10000010.
+
+       O expoente é calculado e ajustado com o viés, e agora temos o valor binário correto para o expoente.
+
+
+    6. Montar a mantissa: A mantissa é formada pelos números à direita do ponto binário normalizado, mas sem contar 
+      o 1 à esquerda do ponto (pois ele é implícito). A mantissa deve ser completada com zeros até atingir o número 
+      de bits necessários para o formato em questão (23 bits no formato simples).
+
+        Exemplo: A mantissa de 1,10101 será 10101000000000000000000, completando com zeros até atingir 23 bits.
+
+       A mantissa é construída a partir dos bits significativos à direita do ponto binário, com zeros adicionados 
+      para completar o espaço necessário.
+
+
+    7. Montar a representação final: Agora que temos todos os componentes (sinal, expoente e mantissa), podemos 
+      montar a representação final do número no formato IEEE 754. No caso do número 13,25 em formato simples 
+      (32 bits), a representação final será:
+
+         Sinal: 0 (positivo)
+
+         Expoente: 10000010
+
+         Mantissa: 10101000000000000000000
+
+       Portanto, a representação final de 13,25 no formato simples IEEE 754 será:
+
+                          0 10000010 10101000000000000000000
+
+   A conversão de um número decimal para o formato IEEE 754 envolve um processo sequencial de identificar o sinal, 
+  converter as partes inteira e fracionária para binário, normalizar o número, calcular o expoente com o viés e 
+  construir a mantissa. Embora cada passo pareça um pouco técnico, com exemplos práticos, o processo se torna mais 
+  claro. Essa conversão é fundamental para que os computadores possam manipular números de ponto flutuante de forma 
+  eficiente, utilizando um formato padronizado e preciso.
