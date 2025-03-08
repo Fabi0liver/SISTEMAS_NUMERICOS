@@ -152,11 +152,11 @@ suas características e como eles podem ser aplicados em diferentes contextos.
 
    Aqui está a tabela com as características desses formatos:
 
-       Formato                       | Tamanho (bits)  | Expoente (bits) | Mantissa (bits) | Bias
-      -------------------------------|-----------------|-----------------|-----------------|------
-       Simples (float precision)     | 32              | 8               | 23              | 127
-       Duplo (double precision)      | 64              | 11              | 52              | 1023
-       Estendido (x86-80 bits)       | 80              | 15              | 64              | 16383
+     Formato                       | Tamanho (bits)  | sinal (1bit) | Expoente (bits) | Mantissa (bits) | Bias
+    -------------------------------|-----------------|--------------|-----------------|-----------------|------
+     Simples (float precision)     | 32              | 1(-) ou 0(+) | 8               | 23              | 127
+     Duplo (double precision)      | 64              | 1(-) ou 0(+) | 11              | 52              | 1023
+     Estendido (x86-80 bits)       | 80              | 1(-) ou 0(+) | 15              | 64              | 16383
 
 
    - Formato Simples (ou float precision):  Esse formato utiliza 32 bits no total. Destes, 8 bits são usados para 
@@ -191,11 +191,11 @@ suas características e como eles podem ser aplicados em diferentes contextos.
 
    Aqui está a tabela com as características desses formatos:
 
-       Formato                        | Tamanho (bits)  | Expoente (bits) | Mantissa (bits) | Bias
-      --------------------------------|-----------------|-----------------|-----------------|------
-       Quádruplo (quadruple precision)| 128             | 15              | 112             | 16383
-       Meio Precisão (half precision) | 16              | 5               | 10              | 15
-       Bfloat16                       | 16              | 8               | 7               | 127
+     Formato                        | Tamanho (bits)  | sinal (1bit) | Expoente (bits) | Mantissa (bits) | Bias
+    --------------------------------|-----------------|--------------|-----------------|-----------------|------
+     Quádruplo (quadruple precision)| 128             | 1(-) ou 0(+) | 15              | 112             | 16383
+     Meio Precisão (half precision) | 16              | 1(-) ou 0(+) | 5               | 10              | 15
+     Bfloat16                       | 16              | 1(-) ou 0(+) | 8               | 7               | 127
 
    
    - Formato Quádruplo(ou quadruple precision): Esse formato utiliza 128 bits no total, com 15 bits para o expoente 
