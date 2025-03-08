@@ -1,15 +1,38 @@
                                           PADRÃO IEEE 754
 
 
-O IEEE 754 é um padrão fundamental na computação, responsável por definir como os números de ponto flutuante (aqueles com casas decimais) são armazenados e manipulados pelos computadores. Para entender sua importância, imagine que você precisa medir algo muito grande, como a distância entre a Terra e a Lua, ou algo muito pequeno, como o tamanho de um átomo. Escrever esses valores exatamente seria complicado e ocuparia muito espaço na memória do computador. O IEEE 754 resolve esse problema ao criar uma forma eficiente de representar números extremamente grandes ou pequenos sem perder precisão excessiva.
+ O IEEE 754 é um padrão fundamental na computação, responsável por definir como os números de ponto flutuante 
+(aqueles com casas decimais) são armazenados e manipulados pelos computadores. Para entender sua importância, 
+imagine que você precisa medir algo muito grande, como a distância entre a Terra e a Lua, ou algo muito pequeno, 
+como o tamanho de um átomo. Escrever esses valores exatamente seria complicado e ocuparia muito espaço na memória 
+do computador. O IEEE 754 resolve esse problema ao criar uma forma eficiente de representar números extremamente 
+grandes ou pequenos sem perder precisão excessiva.
 
-Ele funciona de maneira semelhante à notação científica que aprendemos na escola. Em vez de armazenar um número inteiro longo, como 3.600.000, usamos uma forma mais compacta: 3,6 × 10⁶. No IEEE 754, um número de ponto flutuante também é dividido em três partes principais: sinal (positivo ou negativo), mantissa (parte significativa do número) e expoente (que define a escala do número). Essa estrutura permite representar valores de forma flexível e eficiente, garantindo que cálculos matemáticos possam ser feitos de maneira padronizada em diferentes dispositivos e sistemas.
+ Ele funciona de maneira semelhante à notação científica que aprendemos na escola. Em vez de armazenar um número 
+inteiro longo, como 3.600.000, usamos uma forma mais compacta: 3,6 × 10⁶. No IEEE 754, um número de ponto flutuante 
+também é dividido em três partes principais: sinal (positivo ou negativo), mantissa (parte significativa do número) 
+e expoente (que define a escala do número). Essa estrutura permite representar valores de forma flexível e 
+eficiente, garantindo que cálculos matemáticos possam ser feitos de maneira padronizada em diferentes dispositivos 
+e sistemas.
 
-O padrão foi criado pelo Institute of Electrical and Electronics Engineers (IEEE) para garantir que todos os computadores sigam a mesma forma de representar números de ponto flutuante. Antes do IEEE 754, cada fabricante de computadores poderia usar um método próprio, o que gerava incompatibilidades e erros ao trocar dados entre sistemas diferentes. Com a padronização, os cálculos se tornaram mais previsíveis e confiáveis, independentemente do software ou hardware utilizado.
+ O padrão foi criado pelo Institute of Electrical and Electronics Engineers (IEEE) para garantir que todos os 
+computadores sigam a mesma forma de representar números de ponto flutuante. Antes do padrão IEEE 754, cada 
+fabricante de computadores poderia usar um método próprio, o que gerava incompatibilidades e erros ao trocar dados 
+entre sistemas diferentes. Com a padronização, os cálculos se tornaram mais previsíveis e confiáveis, 
+independentemente do software ou hardware utilizado.
 
-Existem diferentes formatos definidos pelo IEEE 754, sendo os mais comuns o de 32 bits (simples precisão) e o de 64 bits (dupla precisão). O formato de 32 bits é mais leve e rápido, adequado para aplicações onde o desempenho é mais importante do que a precisão. Já o formato de 64 bits permite cálculos com mais detalhes, sendo muito usado em aplicações científicas, financeiras e de engenharia. Além desses, há variações como os formatos half-precision (16 bits), utilizados em gráficos e inteligência artificial, e o quadruple-precision (128 bits), para cálculos extremamente precisos.
+ Existem diferentes formatos definidos pelo IEEE 754, sendo os mais comuns o de 32 bits (simples precisão) e o de 
+64 bits (dupla precisão). O formato de 32 bits é mais leve e rápido, adequado para aplicações onde o desempenho é 
+mais importante do que a precisão. Já o formato de 64 bits permite cálculos com mais detalhes, sendo muito usado em 
+aplicações científicas, financeiras e de engenharia. Além desses, há variações como os formatos half-precision (16 
+bits), utilizados em gráficos e inteligência artificial, e o quadruple-precision (128 bits), para cálculos 
+extremamente precisos.
 
-O IEEE 754 não trata apenas da forma como os números são armazenados, mas também define regras para operações matemáticas, arredondamentos e até como lidar com casos especiais, como o número zero, infinitos e valores que não são números (NaN, ou "Not a Number"). Isso evita inconsistências e erros inesperados nos cálculos. Em resumo, esse padrão é um dos pilares da computação moderna, permitindo que dispositivos ao redor do mundo realizem operações matemáticas com precisão e eficiência.
+ O IEEE 754 não trata apenas da forma como os números são armazenados, mas também define regras para operações 
+matemáticas, arredondamentos e até como lidar com casos especiais, como o número zero, infinitos e valores que não 
+são números (NaN, ou "Not a Number"). Isso evita inconsistências e erros inesperados nos cálculos. Em resumo, esse 
+padrão é um dos pilares da computação moderna, permitindo que dispositivos ao redor do mundo realizem operações 
+matemáticas com precisão e eficiência.
 
 
 
