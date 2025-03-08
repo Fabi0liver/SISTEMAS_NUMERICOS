@@ -38,18 +38,39 @@ matemáticas com precisão e eficiência.
 
                            "Principais Objetivos do Padrão IEEE 754"
 
-O IEEE 754 foi criado para resolver um problema essencial na computação: como representar números que podem ser imensamente grandes ou incrivelmente pequenos de maneira eficiente e padronizada? Antes desse padrão, cada fabricante de hardware poderia ter sua própria forma de armazenar números de ponto flutuante, o que causava erros e inconsistências entre sistemas. Com o IEEE 754, todas as máquinas passaram a "falar a mesma língua" quando se trata de cálculos matemáticos, garantindo precisão e previsibilidade.
+ O Padrão IEEE 754 foi criado para resolver um problema essencial na computação: como representar números que podem 
+ser imensamente grandes ou incrivelmente pequenos de maneira eficiente e padronizada? Antes desse padrão, cada 
+fabricante de hardware poderia ter sua própria forma de armazenar números de ponto flutuante, o que causava erros e 
+inconsistências entre sistemas. Com o IEEE 754, todas as máquinas passaram a "falar a mesma língua" quando se trata 
+de cálculos matemáticos, garantindo precisão e previsibilidade.
 
  Agora vamos ver alguns dos principais objetivos do Padrão IEEE 754:
 
- Representar números muito grandes e muito pequenos de maneira eficiente: Assim como a notação científica permite escrever números gigantes ou minúsculos de forma compacta, o IEEE 754 usa uma estrutura inteligente para armazenar valores, aproveitando ao máximo os bits disponíveis sem desperdiçar espaço na memória.
+ * Representar números muito grandes e muito pequenos de maneira eficiente: Assim como a notação científica permite 
+  escrever números gigantes ou minúsculos de forma compacta, o IEEE 754 usa uma estrutura inteligente para 
+  armazenar valores, aproveitando ao máximo os bits disponíveis sem desperdiçar espaço na memória.
 
- Garantir precisão e padronização dos cálculos matemáticos: Imagine que você está resolvendo um cálculo complexo e, ao trocar de computador, os resultados saem diferentes. Isso era um problema antes do IEEE 754. Com esse padrão, operações matemáticas seguem as mesmas regras em qualquer processador ou sistema operacional, evitando erros inesperados.
+ * Garantir precisão e padronização dos cálculos matemáticos: Imagine que você está resolvendo um cálculo complexo 
+  e, ao trocar de computador, os resultados saem diferentes. Isso era um problema antes do IEEE 754. Com esse 
+  padrão, operações matemáticas seguem as mesmas regras em qualquer processador ou sistema operacional, evitando 
+  erros inesperados.
 
- Definir operações matemáticas para evitar erros computacionais: Nem sempre somar ou multiplicar números em um computador gera resultados perfeitos. Pequenos erros de arredondamento podem se acumular e causar problemas graves em cálculos financeiros, científicos ou de engenharia. O IEEE 754 estabelece regras de arredondamento e precisão para minimizar esses erros.
+ * Definir operações matemáticas para evitar erros computacionais: Nem sempre somar ou multiplicar números em um 
+  computador gera resultados perfeitos. Pequenos erros de arredondamento podem se acumular e causar problemas 
+  graves em cálculos financeiros, científicos ou de engenharia. O IEEE 754 estabelece regras de arredondamento e 
+  precisão para minimizar esses erros.
 
- Suportar valores especiais como infinito e NaN (Not a Number): O que acontece se você tentar dividir um número por zero? Ou calcular a raiz quadrada de um valor negativo? Em vez de travar o sistema ou gerar erros imprevisíveis, o IEEE 754 define valores especiais, como Infinito positivo/negativo e NaN (Not a Number), para lidar com essas situações de forma controlada.
+ * Suportar valores especiais como infinito e NaN (Not a Number): O que acontece se você tentar dividir um número 
+  por zero? Ou calcular a raiz quadrada de um valor negativo? Em vez de travar o sistema ou gerar erros 
+  imprevisíveis, o IEEE 754 define valores especiais, como Infinito positivo/negativo e NaN (Not a Number), para 
+  lidar com essas situações de forma controlada.
 
- Facilitar a interoperabilidade entre diferentes plataformas: Com o padrão IEEE 754, um número armazenado em um computador pode ser enviado para outro dispositivo (seja um supercomputador ou um simples smartphone) sem risco de alterações inesperadas nos cálculos. Isso é essencial para garantir compatibilidade entre sistemas diferentes.
+ * Facilitar a interoperabilidade entre diferentes plataformas: Com o padrão IEEE 754, um número armazenado em um 
+  computador pode ser enviado para outro dispositivo (seja um supercomputador ou um simples smartphone) sem risco 
+ de alterações inesperadas nos cálculos. Isso é essencial para garantir compatibilidade entre sistemas diferentes.
 
-Em suma, o padrão IEEE 754 não é apenas um jeito de armazenar números, mas sim um conjunto de regras que garantem que cálculos numéricos sejam confiáveis, precisos e consistentes em qualquer plataforma. Ele evita problemas que poderiam comprometer desde simples operações financeiras até simulações científicas e gráficos 3D. Graças a esse padrão, os computadores conseguem trabalhar com números de maneira previsível e eficiente, tornando-se ferramentas poderosas para resolver problemas do mundo real.
+ Em suma, o padrão IEEE 754 não é apenas um jeito de armazenar números, mas sim um conjunto de regras que garantem 
+que cálculos numéricos sejam confiáveis, precisos e consistentes em qualquer plataforma. Ele evita problemas que 
+poderiam comprometer desde simples operações financeiras até simulações científicas e gráficos 3D. Graças a esse 
+padrão, os computadores conseguem trabalhar com números de maneira previsível e eficiente, tornando-se ferramentas 
+poderosas para resolver problemas do mundo real.
