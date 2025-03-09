@@ -359,108 +359,143 @@ representação binária do número.
   eficiente, utilizando um formato padronizado e preciso.
 
 
-Conversão do Padrão IEEE 754 para número decimal:
+ * Conversão do Padrão IEEE 754 para número decimal:
 
-A conversão do IEEE 754 para um número decimal é o processo de transformar a representação binária de ponto flutuante de volta para o formato decimal, ou seja, o número que conseguimos ler e entender. Esse processo começa com a interpretação do bit de sinal, passa pela recuperação do expoente com ajuste do viés, e termina com a reconstrução da mantissa. Ao contrário da conversão de decimal para IEEE 754, onde transformamos um número em uma representação binária normalizada, agora estamos realizando o caminho inverso para interpretar e entender o número original. Vamos detalhar o processo da conversão inversa em três etapas principais, que são fundamentais para garantir que o valor final seja calculado corretamente. Usaremos o formato simples de 32 bits (também conhecido como IEEE 754 de precisão simples) para ilustrar cada uma dessas etapas de forma clara.
+   A conversão do Padrão IEEE 754 para um número decimal é o processo de transformar a representação binária de 
+  ponto flutuante de volta para o formato decimal, ou seja, o número que conseguimos ler e entender. Esse processo 
+  começa com a interpretação do bit de sinal, passa pela recuperação do expoente com ajuste do viés, e termina com 
+  a reconstrução da mantissa. Ao contrário da conversão de decimal para IEEE 754, onde transformamos um número em 
+  uma representação binária normalizada, agora estamos realizando o caminho inverso para interpretar e entender o 
+  número original. Vamos detalhar o processo da conversão inversa em três etapas principais, que são fundamentais 
+  para garantir que o valor final seja calculado corretamente. Usaremos o formato simples de 32 bits (também   
+  conhecido como IEEE 754 de precisão simples) para ilustrar cada uma dessas etapas de forma clara.
 
-Passos para a conversão inversa de IEEE 754 para decimal:
+   Passos para a conversão inversa de IEEE 754 para decimal:
 
-1. Identificar o sinal do número: O primeiro passo é observar o bit de sinal, que fica na posição mais à esquerda. Esse bit nos diz se o número é positivo ou negativo. Se o bit de sinal for 0, o número é positivo, e se for 1, o número é negativo. Esse bit é importante porque definirá o sinal do número no cálculo final.
+    1. Identificar o sinal do número: O primeiro passo é observar o bit de sinal, que fica na posição mais à 
+      esquerda. Esse bit nos diz se o número é positivo ou negativo. Se o bit de sinal for 0, o número é positivo, 
+      e se for 1, o número é negativo. Esse bit é importante porque definirá o sinal do número no cálculo final.
 
- Para a representação 0 10000010 10101000000000000000000, o primeiro bit é 0, indicando que o número é positivo.
+        Exemplo: Para a representação 0 10000010 10101000000000000000000, o primeiro bit é 0, indicando que o 
+                número é positivo.
 
-O sinal do número é simples de identificar e será determinante para o valor final do número decimal.
-
-2. Extrair o expoente e ajustar com o viés: Agora, vamos olhar para os 8 bits seguintes, que representam o expoente. O expoente no IEEE 754 é armazenado com um viés, ou seja, o valor real do expoente é calculado subtraindo-se o viés do valor binário extraído. No caso do formato simples, o viés é 127. Portanto, o expoente real é obtido subtraindo 127 do valor binário do expoente.
-
-Exemplo: Para o expoente 10000010 (que é igual a 130 em decimal):
-
-          Subtraímos o viés: 130 - 127 = 3.
-
-         O expoente real é 3.
-
-O expoente ajustado com o viés é fundamental para determinar a escala do número, ou seja, a magnitude da base 2 a ser usada no cálculo.
-
-
-3. Recuperar a mantissa: Agora, precisamos lidar com a mantissa, que ocupa os 23 bits restantes. A mantissa é armazenada sem o bit 1 implícito à esquerda. Então, ao reconstruir a mantissa, devemos colocar esse 1 de volta antes dos bits da mantissa, resultando em um número binário normalizado. Após isso, descartamos os zeros à direita do último 1, que não afetam o valor do número.
-
-Exemplo: Para a mantissa 10101000000000000000000, adicionamos o 1 implícito, e descantamos os 0 desnecessários  após o ultimo 1 a direita o que nos dá: 
-                    
-           1,10101
-         
-         Que é a mantissa completa em formato binário.
-
-A mantissa é essencial para a precisão do número. Ao reconstruí-la, podemos calcular seu valor corretamente.
+       O sinal do número é simples de identificar e será determinante para o valor final do número decimal.
 
 
-4. Calcular o número final: Agora que temos o sinal, o expoente real e a mantissa, podemos calcular o número decimal final. A fórmula para isso é:
+    2. Extrair o expoente e ajustar com o viés: Agora, vamos olhar para os 8 bits seguintes, que representam o 
+      expoente. O expoente no IEEE 754 é armazenado com um viés, ou seja, o valor real do expoente é calculado 
+      subtraindo-se o viés do valor binário extraído. No caso do formato simples, o viés é 127. Portanto, o 
+      expoente real é obtido subtraindo 127 do valor binário do expoente.
 
-                                N = (-1)ˢ × m × 2ᵉ
+        Exemplo: Para o expoente 10000010 (que é igual a 130 em decimal):
 
-Onde:
-
-"s" é o bit de sinal (0 para positivo, 1 para negativo).
-
-"m"  é a mantissa reconstruída, que sempre começa com 1. seguido dos bits da fração extraídos da representação IEEE 754.
-
-"e " é o expoente ajustado (já subtraído do viés de 127).
-
- Exemplo: Usando o expoente real de 3, a mantissa de 1.10101 e o sinal 0 (positivo), a fórmula fica:
-
-                 N = (-1)⁰ × 1.10101 × 2³
-
-Após identificar o sinal, ajustar o expoente e reconstruir a mantissa, descobrimos a fórmula que  é a chave para reconstruir o número original a partir dos dados armazenados.
-
-
-5. Converter a mantissa para decimal: Agora, precisamos converter a mantissa binária para decimal. Lembre-se de que a parte fracionária é calculada com potências negativas de 2.
-
- Exemplo: A mantissa 1.10101 significa:
-
-          1 + (1 × 2⁻¹) + (0 × 2⁻²) + (1 × 2⁻³) + (0 × 2⁻⁴) + (1 × 2⁻⁵) = 
-
-          1 +     0,5   +     0     +   0.125   +     0     +  0.03125  =   
+                 Subtraímos o viés: 130 - 127 = 3.
  
-                                    1.625
+                 O expoente real é 3.
 
-          Portanto, o valor decimal da mantissa é 1.625.
-
-A mantissa contém a parte fracionária do número, e convertê-la corretamente é essencial para obter o valor exato.
-
+       O expoente ajustado com o viés é fundamental para determinar a escala do número, ou seja, a magnitude da 
+      base 2 a ser usada no cálculo.
 
 
-6. Aplicar o expoente: Agora, pegamos o expoente real, que já ajustamos com o viés (subtraindo 127 do valor armazenado na representação IEEE 754).
+    3. Recuperar a mantissa: Agora, precisamos lidar com a mantissa, que ocupa os 23 bits restantes. A mantissa é 
+      armazenada sem o bit 1 implícito à esquerda. Então, ao reconstruir a mantissa, devemos colocar esse 1 de 
+      volta antes dos bits da mantissa, resultando em um número binário normalizado. Após isso, descartamos os 
+      zeros à direita do último 1, que não afetam o valor do número.
 
-Exemplo: o expoente real é 3, o que significa que multiplicamos a mantissa por 2³:
+        Exemplo: Para a mantissa 10101000000000000000000, adicionamos o 1 implícito, e descartamos os 0 
+                desnecessários  após o ultimo 1 a direita o que nos dá: 
+                    
+                                      1,10101
+         
+                 Que é a mantissa completa em formato binário.
 
-                                1.625 x 2³ =
+       A mantissa é essencial para a precisão do número. Ao reconstruí-la, podemos calcular seu valor corretamente.
+
+
+    4. Calcular o número final: Agora que temos o sinal, o expoente real e a mantissa, podemos calcular o número 
+      decimal final. A fórmula para isso é:
+
+                                 N = (-1)ˢ × m × 2ᵉ
+
+       Onde:
+
+       "s" é o bit de sinal (0 para positivo, 1 para negativo).
+
+       "m"  é a mantissa reconstruída, que sempre começa com 1. seguido dos bits da fração extraídos da 
+      representação IEEE 754.
+
+       "e " é o expoente ajustado (já subtraído do viés de 127).
+
+        Exemplo: Usando o expoente real de 3, a mantissa de 1.10101 e o sinal 0 (positivo), a fórmula fica:
+
+                             N = (-1)⁰ × 1,10101 × 2³
+
+       Após identificar o sinal, ajustar o expoente e reconstruir a mantissa, descobrimos a fórmula que  é a chave 
+      para reconstruir o número original a partir dos dados armazenados.
+
+
+    5. Converter a mantissa para decimal: Agora, precisamos converter a mantissa binária para decimal. Lembre-se de 
+      que a parte fracionária é calculada com potências negativas de 2.
+
+        Exemplo: A mantissa 1,10101 significa:
+
+                  1 + (1 × 2⁻¹) + (0 × 2⁻²) + (1 × 2⁻³) + (0 × 2⁻⁴) + (1 × 2⁻⁵) = 
+
+                  1 +     0,5   +     0     +   0,125   +     0     +  0,03125  =   
+ 
+                                         1.625
+
+                 Portanto, o valor decimal da mantissa é 1,625
+
+       A mantissa contém a parte fracionária do número, e convertê-la corretamente é essencial para obter o valor 
+      exato.
+
+
+    6. Aplicar o expoente: Agora, pegamos o expoente real, que já ajustamos com o viés (subtraindo 127 do valor 
+      armazenado na representação IEEE 754).
+
+        Exemplo: o expoente real é 3, o que significa que multiplicamos a mantissa por 2³:
+
+                                1,625 x 2³ =
                                  
-                                1.625 x 8  = 
+                                1,625 x 8  = 
                                 
-                                   13.25
+                                   13,25
+
+       Agora temos o valor final do número antes de montarmos a resposta.
 
 
-Agora temos o valor final do número antes de montarmos a resposta.
+    7. Montar a representação final: Agora que aplicamos todas as conversões, temos o valor final de 
+      0 10000010 10101000000000000000000 convertido para decimal que é :
 
-7. Montar a representação final: Agora que aplicamos todas as conversões, temos o valor final de 0 10000010 10101000000000000000000 convertido para decimal que é :
+         Sinal: 0 (número positivo)
 
-Sinal: 0 (número positivo)
+         Expoente: 10000010 = 3
 
-Expoente: 10000010 = 3
+         Mantissa: 1,10101 = 1,65625
 
-Mantissa: 1.10101 = 1.65625
+         Resultado final: 13,25
 
-Resultado final: 13.25
+       O valor decimal final é 13.25, que corresponde ao número representado na forma IEEE 754.
 
-O valor decimal final é 13.25, que corresponde ao número representado na forma IEEE 754.
+       O número binário no formato IEEE 754 foi convertido com sucesso para sua forma decimal original.
 
-O número binário no formato IEEE 754 foi convertido com sucesso para sua forma decimal original.
+   A conversão de IEEE 754 para decimal exige a interpretação cuidadosa do sinal, expoente e mantissa. Depois de 
+  realizar esses passos, podemos reconstruir o número decimal original com precisão. Embora o processo seja 
+  meticuloso, ele é fundamental para entender como os computadores lidam com números de ponto flutuante e como os 
+  cálculos podem ser realizados de forma eficiente.
 
-A conversão de IEEE 754 para decimal exige a interpretação cuidadosa do sinal, expoente e mantissa. Depois de realizar esses passos, podemos reconstruir o número decimal original com precisão. Embora o processo seja meticuloso, ele é fundamental para entender como os computadores lidam com números de ponto flutuante e como os cálculos podem ser realizados de forma eficiente.
+ Em suma, o padrão IEEE 754 fornece uma maneira padronizada e eficiente de representar números de ponto flutuante 
+em computadores. Ao entender como ele funciona, podemos perceber como números decimais são convertidos em uma forma 
+binária que os processadores podem manipular de maneira rápida e precisa. As conversões de decimal para IEEE 754 e 
+vice-versa são processos importantes e essenciais para garantir que os cálculos em sistemas computacionais sejam 
+realizados corretamente.
 
-
-Em suma, o padrão IEEE 754 fornece uma maneira padronizada e eficiente de representar números de ponto flutuante em computadores. Ao entender como ele funciona, podemos perceber como números decimais são convertidos em uma forma binária que os processadores podem manipular de maneira rápida e precisa. As conversões de decimal para IEEE 754 e vice-versa são processos importantes e essenciais para garantir que os cálculos em sistemas computacionais sejam realizados corretamente.
-
-Compreender essas conversões e como o padrão IEEE 754 organiza e estrutura os números nos permite projetar sistemas mais eficientes e resolver problemas de precisão e desempenho de maneira mais eficaz. Embora os detalhes técnicos possam ser complexos, entender o básico sobre como esses números são representados e convertidos ajuda a desmistificar o funcionamento interno dos computadores e oferece uma base sólida para trabalhos avançados em computação.
+ Compreender essas conversões e como o padrão IEEE 754 organiza e estrutura os números nos permite projetar 
+sistemas mais eficientes e resolver problemas de precisão e desempenho de maneira mais eficaz. Embora os detalhes 
+técnicos possam ser complexos, entender o básico sobre como esses números são representados e convertidos ajuda a 
+desmistificar o funcionamento interno dos computadores e oferece uma base sólida para trabalhos avançados em 
+computação.
 
 
 
