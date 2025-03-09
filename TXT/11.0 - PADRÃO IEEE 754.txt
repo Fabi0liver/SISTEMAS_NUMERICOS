@@ -618,3 +618,83 @@ corretamente cada tipo permite evitar armadilhas matemáticas e projetar algorit
 
 
 
+                       "Modos de Arredondamento do Padrão IEEE 754"
+
+ Os cálculos com números de ponto flutuante frequentemente geram resultados que não podem ser representados 
+exatamente na quantidade limitada de bits disponível. Para lidar com isso, o padrão IEEE 754 define modos de 
+arredondamento, que determinam como os valores devem ser ajustados ao serem armazenados. Esses modos garantem que 
+os números fiquem o mais próximo possível do valor real, seguindo regras bem definidas para evitar inconsistências.
+
+ Escolher o modo de arredondamento correto é essencial para garantir precisão nos cálculos. Em algumas aplicações, 
+como finanças e engenharia, pequenos erros podem causar grandes impactos, então o arredondamento deve ser feito de 
+maneira previsível e confiável. O IEEE 754 define quatro modos principais de arredondamento: arredondamento para o 
+mais próximo (padrão), arredondamento para zero, arredondamento para infinito positivo (+∞) e arredondamento para 
+infinito negativo (-∞). Vamos explorar cada um deles em detalhes.
+
+ * Arredondamento para o mais próximo: Esse é o modo de arredondamento mais utilizado no Padrão IEEE 754. Ele 
+  ajusta o número para o valor mais próximo que pode ser representado, minimizando o erro. Se um número estiver 
+  exatamente no meio de dois valores possíveis, a regra adotada é arredondar para o número cujo último dígito seja 
+  par. Esse método reduz o viés acumulado em cálculos sucessivos, evitando tendências para cima ou para baixo.
+
+    Exemplo: Suponha que um sistema só possa armazenar três casas decimais e precise arredondar o número 2,3456. 
+            Como 2,3456 está mais próximo de 2,346 do que de 2,345, o número final será 2,346. Agora, se tivermos 
+            2,3450, que está exatamente no meio, aplicamos a regra do "último dígito par", arredondando para 2,34 
+            ao invés de 2,35. Isso ajuda a equilibrar os arredondamentos ao longo de vários cálculos.
+
+   Esse modo de arredondamento é o mais indicado para a maioria das aplicações, pois distribui os erros de forma 
+  uniforme, evitando tendências que poderiam distorcer os resultados de cálculos matemáticos e estatísticos. É 
+  especialmente útil em cálculos financeiros, onde pequenas variações podem gerar impactos significativos.
+
+
+ * Arredondamento para zero: Esse modo de arredondamento sempre ajusta o número na direção do zero, descartando as 
+  casas decimais extras sem aumentar ou diminuir o valor. Esse método é semelhante ao truncamento, onde 
+  simplesmente cortamos os dígitos excedentes sem compensação para cima ou para baixo.
+
+    Exemplo: Se tivermos 3,987 e precisarmos armazená-lo com apenas duas casas decimais, o número será 3,98. Já 
+            para -3,987, o número final será -3,98. Isso ocorre porque estamos simplesmente "cortando" os dígitos 
+            extras, sem considerar qual é o número mais próximo.
+
+   O arredondamento para zero é útil em aplicações onde é necessário evitar superestimação ou subestimação do 
+  resultado. Ele é comumente usado em programação para cálculos que envolvem divisões inteiras ou quando queremos 
+  apenas uma aproximação sem arredondamento tradicional. No entanto, como ele sempre descarta a parte decimal, pode 
+  introduzir um viés, especialmente em cálculos acumulativos.
+
+
+ * Arredondamento para infinito positivo (+∞): Esse modo de  arredondamento sempre aproxima o número para o 
+  próximo valor maior possível. Isso significa que qualquer fração decimal remanescente faz o número aumentar, 
+  independentemente do seu valor. Esse método garante que os resultados nunca sejam menores do que o valor real.
+
+    Exemplo: Se tivermos 2,341 e precisarmos armazenar apenas duas casas decimais, o valor será 2,35. Para um 
+            número negativo, como -2,341, ele será arredondado para -2,34, pois o arredondamento ocorre sempre na 
+            direção do infinito positivo.
+
+   Esse modo de arredondamento é útil em cálculos onde é necessário garantir que os resultados nunca sejam 
+  subestimados, como em estatísticas de segurança e margens de erro em cálculos de engenharia. No entanto, ele pode 
+  gerar um viés positivo ao longo de múltiplas operações, tornando-o inadequado para certas aplicações financeiras 
+  e científicas.
+
+
+ * Arredondamento para infinito negativo (-∞): Esse modo de arredondamento funciona de maneira oposta ao 
+  arredondamento para infinito positivo, ele sempre aproxima o número para o menor valor possível. Isso significa 
+  que qualquer fração decimal faz o número diminuir.
+
+    Exemplo: Se tivermos 2,341 e precisarmos arredondá-lo para duas casas decimais, o resultado será 2,34. Para um 
+            número negativo, como -2,341, ele será arredondado para -2,35, pois o arredondamento ocorre sempre na 
+            direção do infinito negativo.
+
+   Esse modo de arredondamento é útil em cenários onde é necessário garantir que os valores nunca sejam 
+  superestimados, como em cálculos de impostos ou limites mínimos de produção. No entanto, ele pode criar um viés 
+  para números menores ao longo de operações repetidas.
+
+ Em suma, os modos de arredondamento do Padrão IEEE 754 foram projetados para fornecer flexibilidade no tratamento 
+de números de ponto flutuante, garantindo que os cálculos sejam precisos e previsíveis em diferentes contextos. 
+Cada método tem vantagens e desvantagens, e a escolha depende das necessidades da aplicação.
+
+ O arredondamento para o mais próximo é o mais equilibrado e evita viés, sendo o padrão na maioria dos sistemas. O 
+arredondamento para zero é útil quando queremos simplesmente ignorar as casas decimais extras sem alterar 
+significativamente o número. Já os arredondamentos para +∞ e -∞ são importantes em cálculos onde garantir um 
+limite superior ou inferior é essencial. Compreender essas diferenças ajuda a evitar erros e melhora a precisão dos 
+resultados em diversas áreas da computação.
+
+
+
