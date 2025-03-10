@@ -1,4 +1,4 @@
-                                          PADRÃO IEEE 754
+                                           PADRÃO IEEE 754
 
 
  O IEEE 754 é um padrão fundamental na computação, responsável por definir como os números de ponto flutuante 
@@ -36,7 +36,7 @@ matemáticas com precisão e eficiência.
 
 
 
-                            "Principais Objetivos do Padrão IEEE 754"
+                              "Principais Objetivos do Padrão IEEE 754"
 
  O Padrão IEEE 754 foi criado para resolver um problema essencial na computação: como representar números que podem 
 ser imensamente grandes ou incrivelmente pequenos de maneira eficiente e padronizada? Antes desse padrão, cada 
@@ -77,7 +77,7 @@ poderosas para resolver problemas do mundo real.
 
 
 
-                                   "Versões do Padrão IEEE 754"
+                                     "Versões do Padrão IEEE 754"
 
  O padrão IEEE 754 é a principal referência para a representação e manipulação de números de ponto flutuante em 
 computadores modernos. Desde sua primeira versão, em 1985, ele passou por revisões para melhorar a precisão, a 
@@ -163,7 +163,7 @@ realizem cálculos precisos e confiáveis.
 
 
 
-                           "Estrutura de um Número no Padrão IEEE 754"
+                              "Estrutura de um Número no Padrão IEEE 754"
 
  Quando um computador precisa armazenar um número decimal, como 3,14 ou 0,00025, ele não pode simplesmente guardar 
 as casas decimais da mesma forma que fazemos no papel. Os sistemas digitais trabalham com representação binária, ou 
@@ -217,7 +217,7 @@ como simulações científicas e gráficos 3D.
 
 
 
-                                   "Formatos do Padrão IEEE 754"
+                                    "Formatos do Padrão IEEE 754"
 
  O padrão IEEE 754 define como os números de ponto flutuante devem ser representados e manipulados em sistemas 
 computacionais, garantindo precisão e consistência nos cálculos. Ele especifica diferentes formatos para armazenar 
@@ -319,7 +319,7 @@ realizar operações de ponto flutuante.
 
 
 
-                                 "Como o Padrão IEEE 754 Funciona"
+                                  "Como o Padrão IEEE 754 Funciona"
 
  Após explorarmos a estrutura e os formatos do padrão IEEE 754, é importante entender como ele funciona 
 internamente para representar números de ponto flutuante. O padrão divide cada número em duas partes principais: a 
@@ -585,7 +585,7 @@ computação.
 
 
 
-                        "Tipos de Representação no Padrão  IEEE 754"
+                            "Tipos de Representação no Padrão  IEEE 754"
 
  A forma como os números de ponto flutuante são armazenados no padrão IEEE 754 não é única. Dependendo do valor do 
 expoente e da mantissa, os números podem se enquadrar em diferentes categorias, cada uma com um propósito 
@@ -704,7 +704,7 @@ corretamente cada tipo permite evitar armadilhas matemáticas e projetar algorit
 
 
 
-                       "Modos de Arredondamento do Padrão IEEE 754"
+                            "Modos de Arredondamento do Padrão IEEE 754"
 
  Os cálculos com números de ponto flutuante frequentemente geram resultados que não podem ser representados 
 exatamente na quantidade limitada de bits disponível. Para lidar com isso, o padrão IEEE 754 define modos de 
@@ -784,7 +784,7 @@ resultados em diversas áreas da computação.
 
 
 
-                       "Erros Comuns e Limitações do Padrão IEEE 754"
+                           "Erros Comuns e Limitações do Padrão IEEE 754"
 
  A representação de números em ponto flutuante pelo padrão IEEE 754 é amplamente utilizada em computadores 
 modernos, garantindo cálculos eficientes e consistentes. No entanto, como qualquer sistema de aproximação numérica, 
@@ -874,7 +874,7 @@ decisões mais informadas e evitem armadilhas que podem comprometer a exatidão 
 
 
 
-                                 "Conclusão sobre o Padrão IEEE 754"
+                                    "Conclusão sobre o Padrão IEEE 754"
 
  O padrão IEEE 754 é uma das maiores conquistas no mundo da computação numérica, pois trouxe uma forma padronizada 
 de representar números de ponto flutuante, garantindo que cálculos sejam consistentes em diferentes sistemas e 
