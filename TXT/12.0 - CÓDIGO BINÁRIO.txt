@@ -441,7 +441,8 @@ enquanto a computação quântica será usada para tarefas altamente especializa
  Portanto, o futuro da computação não é uma substituição do código binário pela computação quântica, mas sim uma 
 evolução onde ambas coexistem. O código binário permanecerá essencial para a tecnologia cotidiana, enquanto os 
 computadores quânticos abrirão novas possibilidades para desafios que antes pareciam impossíveis de resolver. Essa 
-transição será gradual, e o avanço das pesquisas na área determinará como essa integração acontecerá, moldando a próxima era da computação.
+transição será gradual, e o avanço das pesquisas na área determinará como essa integração acontecerá, moldando a 
+próxima era da computação.
 
 
 
