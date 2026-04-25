@@ -191,7 +191,7 @@ ciência, engenharia e computação.
 
 
 
-                      "O que é o Valor Algarismos Mais e Menos Significativos?"
+                      "O que são os Algarismos Mais e Menos Significativos?"
 
  Quando olhamos para um número, cada dígito tem um papel específico na sua composição. Alguns carregam mais peso na 
 definição do valor total, enquanto outros têm um impacto menor. Os algarismos mais e menos significativos são 
